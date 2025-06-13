@@ -1,6 +1,6 @@
-import React from 'react';
-import DesktopFooter from '@/components/footer/DesktopFooter';
-import MobileFooter from '@/components/footer/MobileFooter';
+import React from "react";
+import DesktopFooter from "@/components/footer/DesktopFooter";
+import MobileFooter from "@/components/footer/MobileFooter";
 
 export default function Footer() {
   return (
