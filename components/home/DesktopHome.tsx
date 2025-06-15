@@ -162,8 +162,8 @@ export default function DesktopHome() {
               src="/debit-card.png"
               alt="debit card"
               width={564}
-              height={728}
-              className="w-401-h-518-lg w-501-h-647-xl xxl:w-[564px] xxl:h-[728px]"
+              height={650}
+              className="w-401-h-518-lg w-501-h-647-xl xxl:w-[564px] xxl:h-[650px]"
             />
           </div>
         </section>
@@ -203,11 +203,11 @@ export default function DesktopHome() {
 
             <Image
               loading="lazy"
-              src="/zero-knowledge.png"
-              alt="zero knowledge"
+              src="/learn-the-why.png"
+              alt="learn the why"
               width={564}
-              height={728}
-              className="w-401-h-518-lg w-501-h-647-xl xxl:w-[564px] xxl:h-[728px]"
+              height={650}
+              className="w-401-h-518-lg w-501-h-647-xl xxl:w-[564px] xxl:h-[650px]"
             />
           </div>
         </section>

@@ -62,7 +62,7 @@ export default function MobileHome() {
         </section>
 
         {/* Section 1 - With Streple, Trading becomes easier */}
-        <section className="flex flex-col section-1-bg-mobile mx-auto px-4 pb-8">
+        <section className="flex flex-col section-1-bg-mobile mx-auto px-4 py-8">
           <div className="flex flex-col mt-18 gap-4">
             <div
               className={`items-center text-center  tracking-[2px] leading-[150%] text-2xl text-white font-normal ${anton.className}`}
@@ -127,7 +127,7 @@ export default function MobileHome() {
         </section>
 
         {/* Section 2 - Earn profits without lifting a finger */}
-        <section className="flex flex-col md:flex-row md:gap-10 section-3-bg-mobile mx-auto px-4 py-8">
+        <section className="flex flex-col md:flex-row md:gap-10 section-3-bg-mobile mx-auto px-4 pb-8 pt-[72px]">
           <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
             <div className="why-people-choose-us bw-lr-gradient w-max">
               <span className="font-normal text-[9px] leading-4 text-white">
@@ -163,7 +163,7 @@ export default function MobileHome() {
             src="/debit-card.png"
             alt="debit card"
             width={564}
-            height={728}
+            height={650}
             className="md:hidden mt-12 mx-auto"
           />
           <Image
@@ -171,13 +171,13 @@ export default function MobileHome() {
             src="/debit-card.png"
             alt="debit card"
             width={564}
-            height={728}
+            height={650}
             className="hidden md:block h-[491px] w-[380px]"
           />
         </section>
 
         {/* Section 3 - Start with Zero Trading Knowledge */}
-        <section className="flex flex-col md:flex-row md:gap-10 section-3-bg-mobile mx-auto px-4 py-8">
+        <section className="flex flex-col md:flex-row md:gap-10 section-3-bg-mobile mx-auto px-4 pb-8 pt-[72px]">
           <div className="flex flex-col md:mt-12 gap-6">
             <div className="why-people-choose-us bw-lr-gradient w-max">
               <span className="font-normal text-[9px] leading-4 text-white">
@@ -188,14 +188,13 @@ export default function MobileHome() {
             <span
               className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-2xl xs:text-[27px] md:text-3xl ${anton.className}`}
             >
-              Start with Zero Trading Knowledge
+              Learn the Why Behind Every Trade
             </span>
 
             <div className="flex flex-col gap-6">
               <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 text-white">
-                No need to “know the market.” Streple simplifies everything From
-                choosing a trader to earning from their strategies. If you can
-                tap a button, you can trade...
+                Go beyond just copying — discover what each trade means, why it
+                happened, and how to build confidence with every move you make.
               </p>
 
               <Link
@@ -210,10 +209,10 @@ export default function MobileHome() {
 
           <Image
             loading="lazy"
-            src="/zero-knowledge.png"
-            alt="zero knowledge"
+            src="/learn-the-why.png"
+            alt="learn the why"
             width={564}
-            height={728}
+            height={650}
             className="md:hidden mt-12 mx-auto"
           />
           <Image
@@ -221,7 +220,7 @@ export default function MobileHome() {
             src="/zero-knowledge.png"
             alt="zero knowledge"
             width={564}
-            height={728}
+            height={650}
             className="hidden md:block h-[491px] w-[380px] mt-12 mx-auto"
           />
         </section>
@@ -321,52 +320,6 @@ export default function MobileHome() {
         </section>
 
         {/* Section 5 - With Streple, you copy trades with limited risks */}
-        {/* <section className="flex flex-col md:flex-row section-5-bg-mobile mx-auto px-4 pb-8">
-          <div className="flex flex-col mt-18 gap-6">
-            <span
-              className={`font-normal text-[27px] leading-[150%] text-gradient-real-results ${anton.className}`}
-            >
-              With Streple, you copy trades with limited risks
-            </span>
-
-            <p className="font-normal text-sm md:text-base leading-6 md:leading-8 text-white">
-              Streple protects your funds and gives you full control.
-              Here&apos;s how we keep your journey safe from day one.
-            </p>
-
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-row items-center gap-4">
-                <FaRegCheckCircle
-                  size={16}
-                  className="font-extrabold text-[#FFFFFFA6]"
-                />
-                <span className="font-normal text-sm md:text-base leading-6 md:leading-8 text-white">
-                  Verified traders
-                </span>
-              </div>
-
-              <div className="flex flex-row items-center gap-4">
-                <FaRegCheckCircle
-                  size={16}
-                  className="font-extrabold text-[#FFFFFFA6]"
-                />
-                <span className="font-normal text-sm md:text-base leading-6 md:leading-8 text-white">
-                  Risk control tools
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <Image
-            loading="lazy"
-            src="/verified.png"
-            alt="verified"
-            width={564}
-            height={534}
-            className="md:w-[401px] md:h-[380px] mt-12 mx-auto"
-          />
-        </section> */}
-
         <JoinProtraderProgramSection />
 
         {/* Section 6 - Start trading smarter today with Streple */}

@@ -30,7 +30,7 @@ export default function JoinProtraderProgramSection() {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row gap-12 md:gap-[82px] mx-[5%] py-8 lg:py-0 lg:mx-auto">
+    <div className="flex flex-col lg:flex-row gap-12 md:gap-[82px] mx-[5%] py-8 lg:py-0 lg:mx-auto pt-[72px] lg:pt-0">
       <div className="flex flex-col gap-6 md:gap-10 w-435-lg w-544-xl xxl:w-[612px]">
         <h3
           className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-2xl xs:text-[27px] md:text-3xl lg:text-4xl xl:text-5xl xxl:text-[52px] ${anton.className}`}
@@ -49,7 +49,7 @@ export default function JoinProtraderProgramSection() {
             <h5 className="text-base md:text-xl xl:text-2xl leading-8 tracking-[1px] font-bold">
               {title}
             </h5>
-            <p className="text-sm md:text-base xl:text-[21px] leading-8 tracking-[1px]">
+            <p className="text-sm md:text-base xl:text-[21px] leading-6 md:leading-8 tracking-[1px]">
               {desc}
             </p>
           </div>
