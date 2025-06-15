@@ -1,11 +1,10 @@
-import React from "react";
+import { anton } from "@/app/fonts";
+import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import { FaRegCheckCircle } from "react-icons/fa";
-import { anton, roboto } from "@/app/fonts";
-import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
+import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
 
 export default function DesktopHome() {
   return (
@@ -18,18 +17,18 @@ export default function DesktopHome() {
             <span
               className={`justify-center items-center font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
-              COPY TOP TRADERS AND EARN SMARTER
+              Learn. Trade. Tokenize
             </span>
 
             <p className="font-normal leading-8 text-sm xl:text-[21px] text-[#FFFFFFB2] max-w-[694px]">
-              Streple lets you mirror top traders in real-time — no experience
-              needed.
+              Streple lets you follow expert traders live, learn as you go, and
+              grow your confidence, all in one place. No experience needed.
             </p>
 
             <div className="flex flex-row items-center gap-11">
               <Link
                 href="#"
-                className="flex flex-row items-center rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold text-base text-[#2C2D28]"
+                className="flex flex-row items-center rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[1px] leading-6 text-base text-[#2C2D28]"
               >
                 Start coying trades
                 <GoArrowRight size={20} />
@@ -37,15 +36,16 @@ export default function DesktopHome() {
 
               <Link
                 href="#"
-                className="flex flex-row items-center gap-3 font-bold text-base text-[#EBF0D5]"
+                className="flex flex-row items-center gap-3 font-bold leading-[150%] text-base text-[#EBF0D5]"
               >
-                Streple for Pro traders
+                Apply to be a Pro Trader
                 <GoArrowRight size={20} />
               </Link>
             </div>
 
             <div className="flex container w-max h-max">
               <Image
+                loading="lazy"
                 src="/portfolio.png"
                 alt="portfolio"
                 width={464}
@@ -62,10 +62,12 @@ export default function DesktopHome() {
               className={`items-center text-center text-44-lg text-55-xl xxl:text-[62px] 2xl:text-[66px] text-white font-normal ${anton.className}`}
             >
               <span className="text-[#B39FF0]">With Streple</span>
-              <span className="text-gradient-with-streple">
-                , Trading becomes
+              <span>
+                <span className="text-gradient-with-streple">
+                  , Trading becomes
+                </span>
                 <br />
-                easier
+                <span>easier</span>
               </span>
             </div>
 
@@ -75,61 +77,47 @@ export default function DesktopHome() {
               start earning automatically.
             </p>
 
-            <div className="flex flex-row mx-auto w-898-lg w-1122-xl xxl:w-[1262px] 2xl:w-[1346px] justify-between">
-              {/* <div className="flex flex-row gap-6 items-center">
-                <div className="flex flex-row justify-center items-center w-8 lg:h-10 lg:w-10 xl:h-14 xl:w-14 xxl:w-[75px] xxl:h-[75px] border border-[#70568D47] rounded-[46px] bg-[#5A555C1A]">
-                  <span className="font-normal text-lg lg:text-xl xl:text-2xl xxl:text-[27px] text-[#DDC4F8]">
-                    1
-                  </span>
-                </div>
-                <p
-                  className={`font-normal text-base lg:text-lg xl:text-xl xxl:text-2xl text-white ${roboto.className}`}
-                >
-                  Sign Up
-                </p>
-              </div>
-
-              <div className="flex flex-row gap-6 items-center">
-                <div className="flex flex-row justify-center items-center w-8 lg:h-10 lg:w-10 xl:h-14 xl:w-14 xxl:w-[75px] xxl:h-[75px] border border-[#70568D47] rounded-[46px] bg-[#5A555C1A]">
-                  <span className="font-normal text-lg lg:text-xl xl:text-2xl xxl:text-[27px] text-[#DDC4F8]">
-                    2
-                  </span>
-                </div>
-                <p
-                  className={`font-normal text-base lg:text-lg xl:text-xl xxl:text-2xl text-white ${roboto.className}`}
-                >
-                  Find a Verified Trader
-                </p>
-              </div>
-
-              <div className="flex flex-row gap-6 items-center">
-                <div className="flex flex-row justify-center items-center w-8 lg:h-10 lg:w-10 xl:h-14 xl:w-14 xxl:w-[75px] xxl:h-[75px] border border-[#70568D47] rounded-[46px] bg-[#5A555C1A]">
-                  <span className="font-normal text-lg lg:text-xl xl:text-2xl xxl:text-[27px] text-[#DDC4F8]">
-                    3
-                  </span>
-                </div>
-                <p
-                  className={`font-normal text-base lg:text-lg xl:text-xl xxl:text-2xl text-white ${roboto.className}`}
-                >
-                  Start copying Trades
-                </p>
-              </div> */}
+            <div className="flex gap-8 mx-auto w-898-lg w-1122-xl xxl:w-[1262px] 2xl:w-[1346px] justify-between">
               {[
-                "Sign Up",
-                "Find a Verified Trader",
-                "Start Copying Trades",
-              ].map((item, idx) => (
-                <div key={idx} className="flex flex-row gap-6 items-center">
-                  <div className="flex flex-row justify-center items-center size-[4.6875rem] border border-[#70568D47] rounded-[46px] bg-[#5A555C1A]">
-                    <span className="font-normal text-[27px] text-[#DDC4F8]">
-                      {idx + 1}
-                    </span>
+                {
+                  img: "/follow-trade.svg",
+                  title: "Follow top traders",
+                  desc: "Browse verified expert traders, check their stats, risk levels, and trading style before following.",
+                },
+                {
+                  img: "/copy-trades.svg",
+                  title: "Copy Trades in Real Time",
+                  desc: "Once you follow a trader, Streple mirrors their trades to your simulated account.",
+                },
+                {
+                  img: "/learn-more.svg",
+                  title: "Learn As you Grow",
+                  desc: "Each trade comes with tips, insights, and clear breakdowns so you understand the reason behind every move.",
+                },
+              ].map(({ img, desc, title }, i) => (
+                <div
+                  key={i}
+                  className="shadow-sm backdrop-blur-[4px] bw-tb-gradient w-full max-w-[391px] flex items-center flex-col gap-10 rounded-3xl px-8 py-11"
+                >
+                  <Image
+                    loading="lazy"
+                    src={img}
+                    alt="image"
+                    width={120}
+                    height={120}
+                    className="w-[90px] h-[90px] xl:w-[120px] xl:h-[120px] object-center object-fill"
+                  />
+
+                  <div className="space-y-4">
+                    <h4
+                      className={`text-2xl xl:text-[28px] text-white leading-[35px] tracking-[2px] ${anton.className}`}
+                    >
+                      {title}
+                    </h4>
+                    <p className="text-white/80 text-sm xl:text-base leading-[35px] tracking-[1px]">
+                      {desc}
+                    </p>
                   </div>
-                  <p
-                    className={`font-normal text-2xl text-white ${roboto.className}`}
-                  >
-                    {item}
-                  </p>
                 </div>
               ))}
             </div>
@@ -140,20 +128,20 @@ export default function DesktopHome() {
         <section className="flex flex-col my-[96px] px-2">
           <div className="flex flex-row gap-[82px] mx-auto">
             <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
-              <div className="why-people-choose-us w-max">
-                <span className="font-normal text-xs text-white">
+              <div className="why-people-choose-us bw-lr-gradient w-max">
+                <span className="font-normal text-xs leading-4 text-white">
                   Why people choose us
                 </span>
               </div>
 
-              <span
-                className={`text-gradient-earn-profits leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
+              <h3
+                className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
               >
                 Earn profits without lifting a finger
-              </span>
+              </h3>
 
               <div className="flex flex-col gap-[60px]">
-                <p className="font-normal text-sm leading-8 xl:text-[21px] text-white">
+                <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
                   Stop stressing over charts and market news. With Streple, you
                   copy the exact trades of top-performing experts automatically.
                   You trade smarter, even when you&apos;re offline.
@@ -161,7 +149,7 @@ export default function DesktopHome() {
 
                 <Link
                   href="#"
-                  className="flex flex-row items-center gap-3 font-bold text-[20px] text-[#DFD735]"
+                  className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
                 >
                   Get started
                   <GoArrowRight size={16} />
@@ -170,6 +158,7 @@ export default function DesktopHome() {
             </div>
 
             <Image
+              loading="lazy"
               src="/debit-card.png"
               alt="debit card"
               width={564}
@@ -183,36 +172,37 @@ export default function DesktopHome() {
         <section className="flex flex-col my-[96px] px-2">
           <div className="flex flex-row gap-[82px] mx-auto">
             <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
-              <div className="why-people-choose-us w-max">
-                <span className="font-normal text-base text-white">
+              <div className="why-people-choose-us bw-lr-gradient w-max">
+                <span className="font-normal text-xs leading-4 text-white">
                   Why people choose us
                 </span>
               </div>
 
-              <span
-                className={`text-gradient-earn-profits leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
+              <h3
+                className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
               >
-                Start with Zero Trading Knowledge
-              </span>
+                Learn the Why Behind Every Trade
+              </h3>
 
               <div className="flex flex-col gap-[60px]">
-                <p className="font-normal leading-8 text-sm xl:text-[21px] text-white">
-                  No need to “know the market.” Streple simplifies everything
-                  From choosing a trader to earning from their strategies. If
-                  you can tap a button, you can trade...
+                <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
+                  Go beyond just copying — discover what each trade means, why
+                  it happened, and how to build confidence with every move you
+                  make.
                 </p>
 
                 <Link
                   href="#"
-                  className="flex flex-row items-center gap-3 font-bold text-[20px] text-[#DFD735]"
+                  className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
                 >
-                  Explore Streple Learn
+                  Get started
                   <GoArrowRight size={16} />
                 </Link>
               </div>
             </div>
 
             <Image
+              loading="lazy"
               src="/zero-knowledge.png"
               alt="zero knowledge"
               width={564}
@@ -225,14 +215,14 @@ export default function DesktopHome() {
         {/* Section 4 - Testimonials */}
         <section className="flex flex-col my-[96px] px-2 items-center">
           <div className="flex flex-col w-892-lg w-1114-xl xxl:w-[1254px] gap-[36px] items-center mx-auto">
-            <div className="why-people-choose-us w-max">
-              <span className="font-normal text-xs text-white">
+            <div className="why-people-choose-us bw-lr-gradient w-max">
+              <span className="font-normal text-xs leading-4 text-white">
                 Testimonials
               </span>
             </div>
 
             <span
-              className={`font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] text-gradient-real-results ${anton.className}`}
+              className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
             >
               Real results from real people
             </span>
@@ -241,6 +231,7 @@ export default function DesktopHome() {
               <div className="testimonial-card">
                 <div className="flex flex-row gap-3 items-center">
                   <Image
+                    loading="lazy"
                     src="/amaka-ugwu.jpg"
                     alt="Amaka Ugwu's Photo"
                     width={60}
@@ -248,13 +239,13 @@ export default function DesktopHome() {
                     className="w-[60px] h-[60px] rounded-full"
                   />
                   <span
-                    className={`font-normal text-base text-white ${anton.className}`}
+                    className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
                   >
                     Amaka Ugwu
                   </span>
                 </div>
 
-                <p className="font-normal text-sm xl:text-[21px] text-white">
+                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
                   “I never thought I could trade. I just picked a top trader,
                   set my budget, and boom. I made a small profit in my first
                   week. Streple made me feel like I actually belong in the
@@ -265,6 +256,7 @@ export default function DesktopHome() {
               <div className="testimonial-card">
                 <div className="flex flex-row gap-3 items-center">
                   <Image
+                    loading="lazy"
                     src="/david-ossai.jpg"
                     alt="David Ossai's Photo"
                     width={60}
@@ -272,13 +264,13 @@ export default function DesktopHome() {
                     className="w-[60px] h-[60px] rounded-full"
                   />
                   <span
-                    className={`font-normal text-base text-white ${anton.className}`}
+                    className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
                   >
                     David Ossai
                   </span>
                 </div>
 
-                <p className="font-normal text-sm xl:text-[21px] text-white">
+                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
                   “I work full time, so I don&apos;t have time to sit with
                   charts all day. Streple lets me copy traders with proven
                   stats. I just check my phone, adjust my limits, and go about
@@ -289,6 +281,7 @@ export default function DesktopHome() {
               <div className="testimonial-card">
                 <div className="flex flex-row gap-3 items-center">
                   <Image
+                    loading="lazy"
                     src="/femi-adetola.jpg"
                     alt="Femi Adetola's Photo"
                     width={60}
@@ -296,13 +289,13 @@ export default function DesktopHome() {
                     className="w-[60px] h-[60px] rounded-full"
                   />
                   <span
-                    className={`font-normal text-base text-white ${anton.className}`}
+                    className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
                   >
                     Femi Adetola
                   </span>
                 </div>
 
-                <p className="font-normal text-sm xl:text-[21px] text-white">
+                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
                   “I wanted to grow my savings but had zero knowledge of crypto.
                   Streple made it easy to get started without stress. I feel
                   like my money is working for me now.”
@@ -312,59 +305,17 @@ export default function DesktopHome() {
           </div>
         </section>
 
-        {/* Section 5 - With Streple, you copy trades with limited risks */}
+        {/* Section 5 - join protrader program */}
         <section className="flex flex-col my-[96px] px-2">
-          <div className="flex flex-row mx-auto gap-[82px] items-center">
-            <div className="flex flex-col w-435-lg w-544-xl xxl:w-[612px] gap-[39px]">
-              <span
-                className={`font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] text-gradient-real-results ${anton.className}`}
-              >
-                With Streple, you copy trades with limited risks
-              </span>
-
-              <p className="font-normal text-sm xl:text-[21px] text-white">
-                Streple protects your funds and gives you full control.
-                Here&apos;s how we keep your journey safe from day one.
-              </p>
-
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row items-center gap-4">
-                  <FaRegCheckCircle
-                    size={28}
-                    className="font-extrabold text-[#FFFFFFA6]"
-                  />
-                  <span className="font-normal text-base text-white">
-                    Verified traders
-                  </span>
-                </div>
-
-                <div className="flex flex-row items-center gap-4">
-                  <FaRegCheckCircle
-                    size={28}
-                    className="font-extrabold text-[#FFFFFFA6]"
-                  />
-                  <span className="font-normal text-base text-white">
-                    Risk control tools
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <Image
-              src="/verified.png"
-              alt="verified"
-              width={564}
-              height={534}
-              className="w-401-h-380-lg w-501-h-475-xl xxl:w-[564px] xxl:h-[534px]"
-            />
-          </div>
+          <JoinProtraderProgramSection />
         </section>
 
         {/* Start trading smarter today with Streple */}
-        <section className="flex flex-col items-center section-6-bg justify-center">
+        <section className="flex flex-col items-center section-6-bg justify-center relative overflow-x-hidden">
+          {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.png')]" /> */}
           <div className="flex flex-col mx-auto gap-10 start-trading-bg">
             <span
-              className={`flex flex-row mx-auto justify-center text-center font-normal text-44-lg text-55-xl xxl:text-[62px] text-white max-w-[700px] ${anton.className}`}
+              className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-44-lg text-55-xl xxl:text-[62px] text-white max-w-[700px] ${anton.className}`}
             >
               Start trading smarter today with Streple
             </span>
@@ -374,13 +325,13 @@ export default function DesktopHome() {
                 href="#"
                 className="flex flex-row items-center rounded-[20px] px-[16px] py-[12px] gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"
               >
-                <span className="font-bold text-base text-[#2C2C26]">
+                <span className="font-bold text-base leading-[150%] tracking-[2px] text-[#2C2C26]">
                   Start copying trades
                 </span>
                 <GoArrowRight size={20} className="text-[#2C2D28]" />
               </Link>
               <Link href="#" className="flex flex-row items-center gap-3">
-                <span className="font-bold text-xl text-[#EBF0D5]">
+                <span className="font-bold text-xl leading-[150%] tracking-[2px] text-[#EBF0D5]">
                   Streple for Pro traders
                 </span>
                 <GoArrowRight size={20} className="text-[#EBF0D5]" />

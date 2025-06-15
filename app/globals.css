@@ -34,11 +34,9 @@ body {
 
 .why-people-choose-us {
   border-radius: 21px;
-  border-width: 1px;
   padding: 4px 10px;
   background: #5a555c1a;
   border: 1px solid;
-  border-color: #7f7f7fa6;
 }
 
 .text-gradient-earn-profits {
@@ -67,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 396px;
-  height: 496px;
+  min-height: 496px;
   gap: 40px;
   border-radius: 24px;
   border-width: 3px;
@@ -79,6 +77,17 @@ body {
   border: 3px solid;
   border-color: #434343c2;
   backdrop-filter: blur(4px);
+  /* border: 5px solid;
+  border-image-source: linear-gradient(
+      159.57deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(255, 255, 255, 0.7) 98.54%
+    ),
+    linear-gradient(
+      160.42deg,
+      rgba(255, 255, 255, 0.2) 0.52%,
+      rgba(0, 0, 0, 0.2) 98.96%
+    ); */
 }
 
 .hero-section-bg {
@@ -110,13 +119,12 @@ body {
 
 .start-trading-bg {
   background-image: url("../public/start-trading-bg.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 1082px;
   height: 424px;
-  padding-inline: 92px;
-  padding-block: 80px;
+  padding: 92px 80px;
   border-radius: 26px;
 }
 
@@ -165,7 +173,7 @@ body {
 
   .testimonial-card {
     width: 352px;
-    height: 440px;
+    min-height: 440px;
   }
 
   .w-1114-xl {
@@ -305,4 +313,38 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.bw-tb-gradient {
+  position: relative;
+  border: 1px solid transparent;
+}
+.bw-tb-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(to bottom, #00000080, #ffffff80);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.bw-lr-gradient {
+  position: relative;
+  border: 1px solid transparent;
+}
+.bw-lr-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(to right, #00000099, #ffffffb2);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
 }
