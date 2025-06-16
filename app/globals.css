@@ -119,12 +119,13 @@ body {
 
 .start-trading-bg {
   background-image: url("../public/start-trading-bg.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1082px;
-  height: 424px;
-  padding: 92px 80px;
+  max-width: 1082px;
+  width: 90%;
+  min-height: 424px;
+  /* padding: 92px 80px; */
   border-radius: 26px;
 }
 

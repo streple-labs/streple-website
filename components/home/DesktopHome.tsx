@@ -20,7 +20,7 @@ export default function DesktopHome() {
               Learn. Trade. Tokenize
             </span>
 
-            <p className="font-normal leading-8 text-sm xl:text-[21px] text-[#FFFFFFB2] max-w-[694px]">
+            <p className="font-normal leading-8 text-[21px] text-[#FFFFFFB2] max-w-[694px]">
               Streple lets you follow expert traders live, learn as you go, and
               grow your confidence, all in one place. No experience needed.
             </p>
