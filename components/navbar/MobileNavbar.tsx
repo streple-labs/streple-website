@@ -1,13 +1,22 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseOutline } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { href: "/explore-traders", label: "Explore traders" },
+  { href: "/learn", label: "Learn" },
+  { href: "/about", label: "About us" },
+  { href: "/faqs", label: "FAQs" },
+];
 
 export default function MobileNavbar() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -15,15 +24,23 @@ export default function MobileNavbar() {
   }
 
   return (
-    <nav className='flex flex-col lg:hidden relative'>
+    <nav className="flex flex-col lg:hidden relative">
       {!isMenuOpen && (
-        <div className='flex flex-row items-center mx-auto w-full justify-between mt-6 px-4'>
+        <div className="flex flex-row items-center mx-auto w-full justify-between mt-6 px-4">
           <Link href="/">
-            <Image src="/streple.png" alt="streple logo" width={80} height={34} />
+            <Image
+              src="/streple.png"
+              alt="streple logo"
+              width={80}
+              height={34}
+            />
           </Link>
 
-          <div className='flex flex-row gap-4 items-center'>
-            <Link href="#" className="flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-3 py-2 gap-2 font-bold text-sm text-[#2C2C26]">
+          <div className="flex flex-row gap-4 items-center">
+            <Link
+              href="#"
+              className="max-[300px]:hidden flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-3 py-2 gap-2 font-bold text-sm text-[#2C2C26]"
+            >
               Sign up
               <GoArrowRight size={16} className="text-[#2C2D28] font-bold" />
             </Link>
@@ -31,7 +48,7 @@ export default function MobileNavbar() {
             <button
               onClick={toggleMenu}
               aria-label="Open menu"
-              className='text-[#FFFFFFCC] cursor-pointer'
+              className="text-[#FFFFFFCC] cursor-pointer"
               type="button"
             >
               <RxHamburgerMenu size={28} />
@@ -47,13 +64,13 @@ export default function MobileNavbar() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className='fixed inset-0 z-50 flex flex-col bg-[#1B191C] px-4 pt-6'
+            className="fixed inset-0 z-50 flex flex-col bg-[#1B191C] px-4 pt-6"
           >
-            <div className='flex justify-end'>
+            <div className="flex justify-end">
               <button
                 onClick={toggleMenu}
                 aria-label="Close menu"
-                className='text-[#FFFFFFCC] cursor-pointer'
+                className="text-[#FFFFFFCC] cursor-pointer"
                 type="button"
               >
                 <IoCloseOutline size={28} />
@@ -61,22 +78,38 @@ export default function MobileNavbar() {
             </div>
 
             {/* mobile menu items */}
-            <div className='my-auto'>
-              <div className='flex flex-col text-center gap-6 font-normal text-base text-white'>
-                <Link href="#">Explore traders</Link>
-                <Link href="#">Learn</Link>
-                <Link href="#">About us</Link>
-                <Link href="#">FAQs</Link>
+            <div className="my-auto">
+              <div className="flex flex-col text-center gap-6 font-normal text-base">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`leading-6 tracking-[1px] ${
+                      pathname === item.href ? "text-[#F4E90EB2]" : "text-white"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </div>
 
               <div className="flex flex-col gap-3 mt-12 text-center">
-                <Link href="#" className="items-center border border-[#EBF0D5] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-white">
+                <Link
+                  href="#"
+                  className="items-center border border-[#EBF0D5] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-white"
+                >
                   Login
                 </Link>
 
-                <Link href="#" className="flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-[#2C2C26]">
+                <Link
+                  href="#"
+                  className="flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-[#2C2C26]"
+                >
                   Sign up
-                  <GoArrowRight size={20} className="text-[#2C2D28] font-bold" />
+                  <GoArrowRight
+                    size={20}
+                    className="text-[#2C2D28] font-bold"
+                  />
                 </Link>
               </div>
             </div>

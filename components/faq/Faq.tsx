@@ -37,7 +37,7 @@ export default function Faq() {
     <div className="w-full max-w-[932px] space-y-6">
       {faqs.map((faq, i) => (
         <div
-          className="rounded-[20px] px-3 md:px-8 py-5 md:py-6 bg-[#242324] flex flex-col gap-4 min-h-[108px] justify-center"
+          className="rounded-[20px] px-3 md:px-8 py-5 md:py-6 bg-[#242324] flex flex-col gap-4 md:min-h-[108px] justify-center"
           key={i}
         >
           <div className="w-full flex items-center justify-between gap-8">
