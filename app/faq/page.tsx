@@ -24,9 +24,9 @@ export default function page() {
             </h3>
 
             <p className="font-normal leading-8 text-sm sm:text-base xl:text-[21px] text-[#FFFFFFB2] max-w-[694px]">
-              Browse through our most common questions below and if you can't
-              find your answer?, Drop us a question and we'll get back to you
-              quickly.
+              Browse through our most common questions below and if you
+              can&apos;t find your answer?, Drop us a question and we&apos;ll
+              get back to you quickly.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 w-full">

@@ -1,5 +1,5 @@
 "use client";
-import { anton } from "@/app/fonts";
+
 import { useState } from "react";
 import { GoDash, GoPlus } from "react-icons/go";
 
