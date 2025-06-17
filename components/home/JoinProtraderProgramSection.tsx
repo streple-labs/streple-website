@@ -55,12 +55,14 @@ export default function JoinProtraderProgramSection() {
           </div>
         ))}
 
-        <Link
-          href="#"
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://forms.gle/77BS1RtnUBjxWANZ8"
           className="w-fit flex flex-row items-center rounded-[20px] px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[2px] leading-[150%] text-base text-[#2C2D26]"
         >
           Apply to be a ProTrader
-        </Link>
+        </a>
       </div>
 
       <Image
