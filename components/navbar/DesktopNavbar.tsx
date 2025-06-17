@@ -1,15 +1,14 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { GoArrowRight } from "react-icons/go";
 import { usePathname } from "next/navigation";
+import { GoArrowRight } from "react-icons/go";
 
 const navItems = [
-  { href: "/explore-traders", label: "Explore traders" },
-  { href: "/learn", label: "Learn" },
-  { href: "/about-us", label: "About us" },
+  { href: "", label: "Explore traders" },
+  { href: "", label: "Learn" },
+  { href: "", label: "About us" },
   { href: "/faq", label: "FAQs" },
 ];
 

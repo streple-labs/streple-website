@@ -1,18 +1,19 @@
 "use client";
-import React, { useState } from "react";
+
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { GoArrowRight } from "react-icons/go";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { IoCloseOutline } from "react-icons/io5";
-import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { GoArrowRight } from "react-icons/go";
+import { IoCloseOutline } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const navItems = [
-  { href: "/explore-traders", label: "Explore traders" },
-  { href: "/learn", label: "Learn" },
-  { href: "/about-us", label: "About us" },
-  { href: "/faqs", label: "FAQs" },
+  { href: "", label: "Explore traders" },
+  { href: "", label: "Learn" },
+  { href: "", label: "About us" },
+  { href: "/faq", label: "FAQs" },
 ];
 
 export default function MobileNavbar() {

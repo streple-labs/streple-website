@@ -2,7 +2,6 @@
 
 import { anton } from "@/app/fonts";
 import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 
 export default function JoinProtraderProgramSection() {

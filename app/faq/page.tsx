@@ -8,7 +8,7 @@ import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
 import Image from "next/image";
 
-export default function page() {
+export default function Page() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
