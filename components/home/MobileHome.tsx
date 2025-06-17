@@ -30,21 +30,15 @@ export default function MobileHome() {
               </div>
 
               <div className="flex flex-col gap-4 items-center">
-                <Link
-                  href="#"
-                  className="tracking-[1px] leading-6 flex flex-row w-max items-center rounded-3xl px-4 py-2.5 gap-3 bg-[#B39FF0] font-bold text-sm text-[#2C2D28]"
+                <a
+                  href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="tracking-[1px] leading-6 flex w-full max-w-[245px] justify-center items-center rounded-3xl px-4 py-2.5 gap-3 bg-[#B39FF0] font-bold text-sm text-[#2C2D28]"
                 >
-                  Start coying trades
+                  Get early access
                   <GoArrowRight size={20} />
-                </Link>
-
-                <Link
-                  href="#"
-                  className="tracking-[2px] leading-[150%] flex flex-row w-max items-center gap-3 font-bold text-sm md:text-lg text-[#EBF0D5]"
-                >
-                  Streple for Pro traders
-                  <GoArrowRight size={20} />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -74,9 +68,8 @@ export default function MobileHome() {
             </div>
 
             <p className="font-normal text-sm sm:text-base md:text-xl leading-[30px] text-[#FFFFFFB2] max-w-lg text-center mx-auto">
-              With just 3 steps, you can start trading like a pro. No
-              experience, no stress. Find a top trader, set your limits, and
-              start earning automatically.
+              With just 3 steps, you can start trading like a pro, earn
+              automatically.
             </p>
           </div>
 
@@ -328,25 +321,27 @@ export default function MobileHome() {
             <span
               className={`flex flex-row mx-auto justify-center text-center font-normal leading-[150%] tracking-[2px] text-2xl xs:text-[27px] md:text-3xl text-white ${anton.className}`}
             >
-              Start trading smarter today with Streple
+              Join Streple and build your trading skills the smart way
             </span>
 
             <div className="flex flex-col items-center gap-6 mx-auto">
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center rounded-[20px] px-[16px] py-[12px] gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"
               >
                 <span className="font-bold leading-[150%] tracking-[2px] text-sm md:text-base text-[#2C2C26]">
-                  Start copying trades
+                  Secure your spot
                 </span>
                 <GoArrowRight className="text-[#2C2D28] size-4 md:size-6" />
-              </Link>
-              <Link href="#" className="flex flex-row items-center gap-3">
+              </a>
+              {/* <Link href="#" className="flex flex-row items-center gap-3">
                 <span className="font-bold leading-[150%] tracking-[2px] text-base text-[#EBF0D5]">
                   Streple for Pro traders
                 </span>
                 <GoArrowRight size={16} className="text-[#EBF0D5]" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </section>

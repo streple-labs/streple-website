@@ -15,7 +15,7 @@ export default function DesktopHome() {
           {/* HERO Section */}
           <div className="flex flex-col mx-auto w-916-h-603-xl w-732-h-482-xl xxl:w-[1030px] xxl:h-[678px] mt-16 gap-[17px] items-center text-center px-2">
             <span
-              className={`justify-center items-center font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
+              className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
               Learn. Trade. Tokenize
             </span>
@@ -26,21 +26,15 @@ export default function DesktopHome() {
             </p>
 
             <div className="flex flex-row items-center gap-11">
-              <Link
-                href="#"
-                className="flex flex-row items-center rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[1px] leading-6 text-base text-[#2C2D28]"
+              <a
+                href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center w-[245px] rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[1px] leading-6 text-base text-[#2C2D28]"
               >
-                Start coying trades
+                Get early access
                 <GoArrowRight size={20} />
-              </Link>
-
-              <Link
-                href="#"
-                className="flex flex-row items-center gap-3 font-bold leading-[150%] text-base text-[#EBF0D5]"
-              >
-                Apply to be a Pro Trader
-                <GoArrowRight size={20} />
-              </Link>
+              </a>
             </div>
 
             <div className="flex container w-max h-max">
@@ -72,9 +66,8 @@ export default function DesktopHome() {
             </div>
 
             <p className="font-normal text-[20px] text-[#FFFFFFB2] max-w-3xl leading-[40px] text-center mx-auto">
-              With just 3 steps, you can start trading like a pro. No
-              experience, no stress. Find a top trader, set your limits, and
-              start earning automatically.
+              With just 3 steps, you can start trading like a pro, earn
+              automatically.
             </p>
 
             <div className="flex gap-8 mx-auto w-898-lg w-1122-xl xxl:w-[1262px] 2xl:w-[1346px] justify-between">
@@ -317,25 +310,27 @@ export default function DesktopHome() {
             <span
               className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-44-lg text-55-xl xxl:text-[62px] text-white max-w-[700px] ${anton.className}`}
             >
-              Start trading smarter today with Streple
+              Join Streple and build your trading skills the smart way
             </span>
 
             <div className="flex flex-row items-center gap-6 mx-auto">
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center rounded-[20px] px-[16px] py-[12px] gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"
               >
-                <span className="font-bold text-base leading-[150%] tracking-[2px] text-[#2C2C26]">
-                  Start copying trades
+                <span className="font-bold leading-[150%] tracking-[2px] text-sm md:text-base text-[#2C2C26]">
+                  Secure your spot
                 </span>
-                <GoArrowRight size={20} className="text-[#2C2D28]" />
-              </Link>
-              <Link href="#" className="flex flex-row items-center gap-3">
+                <GoArrowRight className="text-[#2C2D28] size-4 md:size-6" />
+              </a>
+              {/* <Link href="#" className="flex flex-row items-center gap-3">
                 <span className="font-bold text-xl leading-[150%] tracking-[2px] text-[#EBF0D5]">
                   Streple for Pro traders
                 </span>
                 <GoArrowRight size={20} className="text-[#EBF0D5]" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </section>

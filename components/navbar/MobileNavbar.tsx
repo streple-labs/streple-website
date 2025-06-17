@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/explore-traders", label: "Explore traders" },
   { href: "/learn", label: "Learn" },
-  { href: "/about", label: "About us" },
+  { href: "/about-us", label: "About us" },
   { href: "/faqs", label: "FAQs" },
 ];
 
@@ -29,7 +29,7 @@ export default function MobileNavbar() {
         <div className="flex flex-row items-center mx-auto w-full justify-between mt-6 px-4">
           <Link href="/">
             <Image
-              src="/streple.png"
+              src="/streple-logo.png"
               alt="streple logo"
               width={80}
               height={34}

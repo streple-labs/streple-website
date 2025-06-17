@@ -48,11 +48,11 @@ export default function page() {
 
                 <div className="space-y-3 mx-auto">
                   <h4
-                    className={`${anton.className} text-[27px] leading-[150%] tracking-[2px] text-white font-normal`}
+                    className={`${anton.className} text-[21px] md:text-[27px] leading-[150%] tracking-[2px] text-white font-normal`}
                   >
                     Thanks! You&apos;ll hear from us soon.
                   </h4>
-                  <p className="text-base font-normal leading-6 tracking-[1px] text-white">
+                  <p className="text-sm md:text-base font-normal leading-6 tracking-[1px] text-white">
                     Check your inbox for a reply from the Streple team.
                   </p>
                 </div>
@@ -74,12 +74,12 @@ export default function page() {
               </>
             ) : (
               <>
-                <h5 className="text-xl leading-6 tracking-[1px] text-white font-bold">
+                <h5 className="text-base md:text-xl leading-6 tracking-[1px] text-white font-bold">
                   Enter your details and we will get back to you
                 </h5>
 
                 <label className="space-y-3">
-                  <p className="text-white font-normal text-base leading-6 tracking-[1px]">
+                  <p className="text-white font-normal text-sm md:text-base leading-6 tracking-[1px]">
                     Full name
                   </p>
                   <input
@@ -92,7 +92,7 @@ export default function page() {
                   />
                 </label>
                 <label className="space-y-3">
-                  <p className="text-white font-normal text-base leading-6 tracking-[1px]">
+                  <p className="text-white font-normal text-sm md:text-base leading-6 tracking-[1px]">
                     Email address
                   </p>
                   <input
@@ -106,7 +106,7 @@ export default function page() {
                 </label>
                 {showMessage && (
                   <label className="space-y-3">
-                    <p className="text-white font-normal text-base leading-6 tracking-[1px]">
+                    <p className="text-white font-normal text-sm md:text-base leading-6 tracking-[1px]">
                       How can we help you?
                     </p>
                     <textarea
@@ -155,7 +155,7 @@ export default function page() {
               Your copy trading questions, answered.
             </h3>
 
-            <p className="font-normal leading-8 text-sm sm:text-base xl:text-[21px] text-[#FFFFFFB2] max-w-[694px]">
+            <p className="font-normal leading-8 text-sm sm:text-base lg:text-[21px] text-[#FFFFFFB2] max-w-[694px]">
               Browse through our most common questions below and if you
               can&apos;t find your answer?, Drop us a question and we&apos;ll
               get back to you quickly.
