@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
 import { openSans } from "@/app/fonts";
-import "./globals.css";
-import type { Viewport } from "next";
-import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Streple | Copy Top Traders and Earn Smarter",

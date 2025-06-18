@@ -1,5 +1,4 @@
 import { anton } from "@/app/fonts";
-import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
