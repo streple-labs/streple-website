@@ -2,11 +2,12 @@ import { anton } from "@/app/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <div className="w-full flex items-center justify-center">
-      <footer className="flex flex-col gap-[72px] lg:gap-[92px] py-[92px] px-4 lg:px-[92px] lg:2xl:mx-0 lg:mx-auto lg:2xl:w-[1356px] w-full">
+    <div className="w-full flex items-center justify-center px-4 sm:px-[6.4%] py-[92px]">
+      <footer className="flex flex-col gap-[72px] lg:gap-[92px] w-full max-w-[1356px]">
         <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-[5%]">
           <h3
             className={`${anton.className} w-auto text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
@@ -18,7 +19,7 @@ export default function Footer() {
             <input
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               placeholder="ENTER EMAIL ADDRESS"
-              className="pr-12 border-b-[3px] border-b-white/70 leading-[150%] tracking-[2px] font-normal text-base sm:text-lg md:text-2xl lg:text-4xl placeholder:text-white/40 text-white w-full ring-0 border-0 outline-0"
+              className={`pr-12 border-b-[3px] border-b-white/70 leading-[150%] tracking-[2px] font-normal text-base sm:text-lg md:text-2xl lg:text-4xl placeholder:text-white/40 text-white w-full ring-0 border-0 outline-0 ${anton.className}`}
             />
             <span className="w-6 h-5 md:w-7 md:h-6 lg:w-[42px] lg:h-[36px] absolute right-0 top-0 md:top-2 cursor-pointer">
               <svg
@@ -84,6 +85,14 @@ export default function Footer() {
                 className="size-[45px] bg-[#5A555C4D] rounded-full flex items-center justify-center"
               >
                 <FaLinkedin size={20} className="text-white/70" />
+              </a>
+              <a
+                href="https://x.com/streplenetwork"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="size-[45px] bg-[#5A555C4D] rounded-full flex items-center justify-center"
+              >
+                <FaXTwitter size={20} className="text-white/70" />
               </a>
             </div>
           </div>

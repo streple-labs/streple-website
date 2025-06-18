@@ -18,6 +18,11 @@ button {
   cursor: pointer;
 }
 
+.mw {
+  width: 100%;
+  max-width: 1356px;
+}
+
 .text-gradient-copy-top-traders {
   background: linear-gradient(95.11deg, #f9f3ff 23.83%, #999999 74.29%);
   background-clip: text;
@@ -117,7 +122,7 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 610px;
+  min-height: 610px;
   width: 100%;
 }
 
@@ -347,6 +352,23 @@ button {
   inset: 0;
   padding: 1px;
   background: linear-gradient(to right, #00000099, #ffffffb2);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.pp-lr-gradient {
+  position: relative;
+  border: 1px solid transparent;
+}
+.pp-lr-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(to right, #6f627d66, #b39ff080);
   border-radius: inherit;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;

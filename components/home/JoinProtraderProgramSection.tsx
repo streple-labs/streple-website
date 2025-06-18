@@ -29,8 +29,8 @@ export default function JoinProtraderProgramSection() {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row gap-12 md:gap-[82px] mx-[5%] py-8 lg:py-0 lg:mx-auto pt-[72px] lg:pt-0">
-      <div className="flex flex-col gap-6 md:gap-10 w-435-lg w-544-xl xxl:w-[612px]">
+    <div className="flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-[82px] max-lg:mx-[5%] py-8 lg:py-0 pt-[72px] lg:pt-0">
+      <div className="flex flex-col gap-6 md:gap-10 w-435-lg w-544-xl xxl:w-[650px]">
         <h3
           className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-2xl xs:text-[27px] md:text-3xl lg:text-4xl xl:text-5xl xxl:text-[52px] ${anton.className}`}
         >
@@ -69,7 +69,7 @@ export default function JoinProtraderProgramSection() {
         alt={steps[activeStep].title}
         width={564}
         height={504}
-        className="mx-auto w-[260px] h-[250px] min-[400px]:w-[320px] min-[400px]:h-[300px] sm:w-[564px] sm:h-[504px] lg:h-[380px] xl:h-[504px] lg:w-[401px] xl:w-[501px] xxl:w-[564px]"
+        className="max-lg:mx-auto w-[260px] h-[250px] min-[400px]:w-[320px] min-[400px]:h-[300px] sm:w-[564px] sm:h-[504px] lg:h-[380px] xl:h-[504px] lg:w-[401px] xl:w-[501px] xxl:w-[564px]"
       />
     </div>
   );

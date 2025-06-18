@@ -12,7 +12,9 @@ export default function MobileHome() {
       <main className="flex flex-col">
         {/* HERO Section */}
         <section className="flex flex-col hero-section-bg-mobile">
-          <Navbar />
+          <div className="px-4">
+            <Navbar />
+          </div>
 
           {/* HERO */}
           <div className="flex flex-col mx-auto px-4 mt-12">
@@ -336,18 +338,10 @@ export default function MobileHome() {
                 </span>
                 <GoArrowRight className="text-[#2C2D28] size-4 md:size-6" />
               </a>
-              {/* <Link href="#" className="flex flex-row items-center gap-3">
-                <span className="font-bold leading-[150%] tracking-[2px] text-base text-[#EBF0D5]">
-                  Streple for Pro traders
-                </span>
-                <GoArrowRight size={16} className="text-[#EBF0D5]" />
-              </Link> */}
             </div>
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }
