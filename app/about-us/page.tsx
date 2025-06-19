@@ -22,7 +22,7 @@ export default function Page() {
 
   return (
     <main className="lex flex-col">
-      <section className="flex justify-center hero-section-bg">
+      <section className="flex justify-center hero-section-bg px-4 sm:px-[6.4%]">
         <div className="mw max-xxl:min-h-screen relative overflow-hidden">
           <span className="hidden md:block absolute top-[39%] left-1/2 -translate-1/2">
             <PurpleShimmer />

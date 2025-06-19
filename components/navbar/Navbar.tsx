@@ -25,7 +25,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="flex flex-col items-center">
+    <header className="flex flex-col relative">
       {/* Desktop */}
       <nav className="hidden w-full lg:flex items-center lg:gap-7 gap-37-xl xxl:gap-[42px] 2xl:gap-[45px] mt-6">
         <Link href="/">
