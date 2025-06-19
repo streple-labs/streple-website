@@ -1,35 +1,23 @@
-"use client";
-
 import Navbar from "@/components/navbar/Navbar";
-import { anton } from "../fonts";
-import SwigglyLine from "@/public/swiggly-line";
 import PurpleShimmer from "@/public/purple-shimmer-aboutus";
+import SwigglyLine from "@/public/swiggly-line";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
-import { useEffect, useRef } from "react";
+import SponsorCarousel from "../../components/about-us/SponsorCarousel";
+import { anton } from "../fonts";
+import TradingInfo from "@/components/about-us/TradingInfo";
 
 export default function Page() {
-  const logosRef = useRef<HTMLUListElement>(null);
-
-  useEffect(() => {
-    if (logosRef.current) {
-      const ul = logosRef.current;
-      const clonedUl = ul.cloneNode(true) as HTMLElement;
-      ul.parentNode?.insertBefore(clonedUl, ul.nextSibling);
-      clonedUl.setAttribute("aria-hidden", "true");
-    }
-  }, []);
-
   return (
     <main className="lex flex-col">
       <section className="flex justify-center hero-section-bg px-4 sm:px-[6.4%]">
-        <div className="mw max-xxl:min-h-screen relative overflow-hidden">
-          <span className="hidden md:block absolute top-[39%] left-1/2 -translate-1/2">
+        <div className="mw md:xxl:min-h-screen relative overflow-hidden">
+          <span className="hidden lg:block absolute top-[39%] left-1/2 -translate-1/2">
             <PurpleShimmer />
           </span>
           <Navbar />
           {/* HERO Section */}
-          <div className="flex flex-col min-h-[678px] mt-24 gap-[60px] items-center text-center">
+          <div className="flex flex-col md:min-h-[678px] my-24 gap-[60px] items-center text-center">
             <h2
               className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-6xl max-w-[855px] text-gradient-copy-top-traders ${anton.className} relative`}
             >
@@ -66,8 +54,8 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="flex justify-between gap-6 my-[96px]">
-            <div className="flex flex-col gap-[60px] w-full md:w-1/2">
+          <div className="flex flex-col md:flex-row justify-between gap-[62px] md:gap-6 my-16 md:my-[96px]">
+            <div className="flex flex-col gap-8 md:gap-[60px] w-full md:w-1/2">
               <h3
                 className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-[27px] sm:text-2xl md:text-3xl lg:text-4xl ${anton.className}`}
               >
@@ -105,7 +93,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* <section className="w-full flex items-center justify-center h-[413px] relative overflow-hidden"></section> */}
+      <TradingInfo />
 
       <section className="flex justify-center px-4 sm:px-[6.4%] relative bg-[#1D1B1E]">
         <div className="flex items-center flex-col mw my-[54px] md:my-[92px] gap-16 md:gap-[84px]">
@@ -122,48 +110,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="w-full mx-auto inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_32px,_black_calc(100%-32px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-            <div className="flex infinite-scroll-right">
-              <ul
-                ref={logosRef}
-                className="flex items-center md:justify-start justify-center shrink-0"
-              >
-                <li className="bg-[#5A555C1A] mx-3 w-[296px] h-[239px] flex items-center justify-center">
-                  <Image
-                    src={"/elysium.png"}
-                    alt="logo"
-                    width={188}
-                    height={48}
-                  />
-                </li>
-                <li className="bg-[#5A555C1A] mx-3 w-[296px] h-[239px] flex items-center justify-center">
-                  <Image src={"/enet.png"} alt="logo" width={131} height={35} />
-                </li>
-                <li className="bg-[#5A555C1A] mx-3 w-[296px] h-[239px] flex items-center justify-center">
-                  <Image
-                    src={"/elysium.png"}
-                    alt="logo"
-                    width={188}
-                    height={48}
-                  />
-                </li>
-                <li className="bg-[#5A555C1A] mx-3 w-[296px] h-[239px] flex items-center justify-center">
-                  <Image src={"/enet.png"} alt="logo" width={131} height={35} />
-                </li>
-                <li className="bg-[#5A555C1A] mx-3 w-[296px] h-[239px] flex items-center justify-center">
-                  <Image
-                    src={"/elysium.png"}
-                    alt="logo"
-                    width={188}
-                    height={48}
-                  />
-                </li>
-                <li className="bg-[#5A555C1A] mx-3 w-[296px] h-[239px] flex items-center justify-center">
-                  <Image src={"/enet.png"} alt="logo" width={131} height={35} />
-                </li>
-              </ul>
-            </div>
-          </div>
+          <SponsorCarousel />
         </div>
       </section>
 
