@@ -238,8 +238,8 @@ export default function page() {
         </div>
       </section>
 
-      <div className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.png')]">
-        <section className="flex flex-col items-center md:min-h-[610px] justify-center my-8 md:my-16 w-full mw">
+      <section className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.png')]">
+        <div className="flex flex-col items-center md:min-h-[610px] justify-center my-8 md:my-16 w-full mw">
           {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.png')]" /> */}
           <div className="flex flex-col justify-center mx-auto gap-10 start-trading-bg py-[52px] px-3 md:px-8 lg:py-[92px] lg:px-[80px]">
             <span
@@ -266,8 +266,8 @@ export default function page() {
               </button>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }
