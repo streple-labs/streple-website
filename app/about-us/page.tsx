@@ -8,7 +8,7 @@ import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
 import { useEffect, useRef } from "react";
 
-export default function page() {
+export default function Page() {
   const logosRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
