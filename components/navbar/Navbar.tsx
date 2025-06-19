@@ -12,7 +12,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const navItems = [
   { href: "", label: "Explore traders" },
   { href: "/learn", label: "Learn" },
-  { href: "", label: "About us" },
+  { href: "/about-us", label: "About us" },
   { href: "/faq", label: "FAQs" },
 ];
 
@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <header className="flex flex-col items-center">
       {/* Desktop */}
-      <nav className="hidden lg:flex flex-row items-center lg:gap-7 gap-37-xl xxl:gap-[42px] 2xl:gap-[45px] mt-6">
+      <nav className="hidden w-full lg:flex items-center lg:gap-7 gap-37-xl xxl:gap-[42px] 2xl:gap-[45px] mt-6">
         <Link href="/">
           <Image
             src="/streple-logo.png"
@@ -37,7 +37,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex flex-row w-796-lg w-996-xl xxl:w-[1120px] 2xl:w-[1195px] justify-between items-center">
+        <div className="flex justify-between items-center w-full">
           <div className="flex flex-row gap-6 xxl:gap-8 2xl:gap-9 font-normal text-base">
             {navItems.map((item) => (
               <Link

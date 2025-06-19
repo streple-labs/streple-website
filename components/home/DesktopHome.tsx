@@ -8,11 +8,11 @@ import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
 export default function DesktopHome() {
   return (
     <main className="hidden lg:flex flex-col">
-      <section className="flex justify-center hero-section-bg">
+      <section className="flex justify-center px-4 sm:px-[6.4%] hero-section-bg">
         <div className="mw max-xxl:min-h-screen relative overflow-hidden">
           <Navbar />
           {/* HERO Section */}
-          <div className="flex flex-col min-h-[678px] mt-16 gap-[17px] items-center text-center px-2">
+          <div className="flex flex-col min-h-[678px] mt-16 gap-[17px] items-center text-center">
             <span
               className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
