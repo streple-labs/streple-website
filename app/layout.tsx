@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Streple",
     images: [
       {
-        url: "https://streple.com/og-image.png",
+        url: "https://streple.com/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Streple - Copy Top Traders",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Streple | Copy Top Traders and Earn Smarter",
     description:
       "Start trading like a pro with Streple. No experience needed — copy top-performing experts and automate your trading journey.",
-    images: ["https://streple.com/og-image.png"],
+    images: ["https://streple.com/opengraph-image.png"],
     creator: "@StrepleNetwork",
   },
   metadataBase: new URL("https://streple.com"),
