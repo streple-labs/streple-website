@@ -306,7 +306,7 @@ export default function DesktopHome() {
       <section className="flex flex-col items-center section-6-bg justify-center relative overflow-x-hidden">
         <div className="flex flex-col mx-auto gap-10 start-trading-bg lg:py-16">
           <h4
-            className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-44-lg text-55-xl xxl:text-[62px] text-white max-w-[700px] ${anton.className}`}
+            className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-44-lg text-55-xl xxl:text-[62px] text-white max-w-[800px] ${anton.className}`}
           >
             Join Streple and build your trading skills the smart way
           </h4>
