@@ -18,11 +18,11 @@ const faqs = [
     answer:
       "You can do everything from your phone. Streple is designed to be simple and mobile-friendly.",
   },
-  {
-    question: "Can I try it before using real money?",
-    answer:
-      "Yes! Every user starts with a free demo account loaded with virtual funds. Practice copy trading, test out the platform, and build confidence before switching to real money.",
-  },
+  // {
+  //   question: "Can I try it before using real money?",
+  //   answer:
+  //     "Yes! Every user starts with a free demo account loaded with virtual funds. Practice copy trading, test out the platform, and build confidence before switching to real money.",
+  // },
 ];
 
 export default function Faq() {

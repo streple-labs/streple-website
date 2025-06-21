@@ -132,14 +132,13 @@ export default function DesktopHome() {
             <h3
               className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
             >
-              Earn profits without lifting a finger
+              Learn From the Best
             </h3>
 
             <div className="flex flex-col gap-[60px]">
               <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
-                Stop stressing over charts and market news. With Streple, you
-                copy the exact trades of top-performing experts automatically.
-                You trade smarter, even when you&apos;re offline.
+                Copy verified expert traders with proven track records. Analyze
+                their approaches and replicate their success.{" "}
               </p>
 
               <Link
@@ -181,8 +180,10 @@ export default function DesktopHome() {
 
             <div className="flex flex-col gap-[60px]">
               <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
-                Go beyond just copying — discover what each trade means, why it
-                happened, and how to build confidence with every move you make.
+                Get clear, step-by-step breakdowns of every trading decision. We
+                explain the reasoning, market conditions, and key factors behind
+                each move so you can learn, understand, and make informed
+                decisions with confidence.
               </p>
 
               <Link

@@ -146,7 +146,10 @@ export default function Page() {
         <div className="mw max-xxl:min-h-screen w-full relative overflow-hidden">
           <Navbar />
 
-          <div className="relative flex flex-col items-center justify-center gap-12 md:gap-[78px] min-h-[70vh] my-16">
+          <div className="absolute size-[280px] min-[320px]:size-[315px] sm:size-[650px] xl:size-[868px] -bottom-[220px] sm:-bottom-[480px] xl:-bottom-[600px] left-1/2 -translate-x-1/2 bg-contain bg-no-repeat bg-[url('../public/eclipse.png')]" />
+          <div className="absolute size-[124px] sm:size-[186px] xl:size-[242px] -bottom-[70px] sm:-bottom-[90px] xl:-bottom-[110px]  left-1/2 -translate-x-1/2 bg-no-repeat bg-contain bg-[url('../public/bitcoin-faq.png')]" />
+
+          <div className="relative flex flex-col items-center justify-center gap-12 md:gap-[78px] min-h-[70vh] my-20">
             <h3
               className={`justify-center items-center font-normal leading-[150%] tracking-[2%] text-center text-2xl xs:text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
