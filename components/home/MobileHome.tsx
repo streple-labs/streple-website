@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
+// import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
 
 export default function MobileHome() {
   return (
@@ -19,14 +19,15 @@ export default function MobileHome() {
           <div className="flex flex-col mx-auto px-4 mt-12">
             <div className="flex flex-col px-4 gap-4">
               <div className="flex flex-col gap-8">
-                <span
+                <h2
                   className={`font-normal tracking-[2px] leading-[150%] text-2xl xs:text-[27px] text-gradient-copy-top-traders text-center ${anton.className}`}
                 >
-                  Your Journey Into Digital Ownership Starts Here
-                </span>
+                  Learn. Trade. Tokenize
+                </h2>
                 <p className="font-normal text-sm sm:text-base text-[#FFFFFFB2] text-center">
-                  Streple lets you mirror top traders in real-time, no
-                  experience needed.
+                  Your Journey Into Digital Ownership Starts Here
+                  {/* Streple lets
+                  you mirror top traders in real-time, no experience needed. */}
                 </p>
               </div>
 
@@ -314,7 +315,7 @@ export default function MobileHome() {
         </section>
 
         {/* Section 5 - With Streple, you copy trades with limited risks */}
-        <JoinProtraderProgramSection />
+        {/* <JoinProtraderProgramSection /> */}
 
         {/* Section 6 - Start trading smarter today with Streple */}
         <section className="flex flex-col section-6-bg-mobile pb-8 bg-[url('../public/section-6-bg.png')]">

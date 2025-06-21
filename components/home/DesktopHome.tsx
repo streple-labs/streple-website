@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
+// import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
 
 export default function DesktopHome() {
   return (
@@ -13,15 +13,17 @@ export default function DesktopHome() {
           <Navbar />
           {/* HERO Section */}
           <div className="flex flex-col min-h-[678px] mt-16 gap-[17px] items-center text-center">
-            <span
+            <h2
               className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
-              Your Journey Into Digital Ownership Starts Here
-            </span>
+              Learn. Trade. Tokenize
+            </h2>
 
             <p className="font-normal leading-8 text-[21px] text-[#FFFFFFB2] max-w-[694px]">
-              Streple lets you follow expert traders live, learn as you go, and
-              grow your confidence, all in one place. No experience needed.
+              Your Journey Into Digital Ownership Starts Here
+              {/* Streple lets you
+              follow expert traders live, learn as you go, and grow your
+              confidence, all in one place. No experience needed. */}
             </p>
 
             <div className="flex flex-row items-center gap-11">
@@ -296,11 +298,11 @@ export default function DesktopHome() {
       </section>
 
       {/* Section 5 - join protrader program */}
-      <section className="flex px-4 sm:px-[6.4%] justify-center">
+      {/* <section className="flex px-4 sm:px-[6.4%] justify-center">
         <div className="mw my-[96px]">
           <JoinProtraderProgramSection />
         </div>
-      </section>
+      </section> */}
 
       {/* Start trading smarter today with Streple */}
       <section className="flex flex-col items-center section-6-bg justify-center relative overflow-x-hidden">
