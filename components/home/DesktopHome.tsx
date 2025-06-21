@@ -16,7 +16,7 @@ export default function DesktopHome() {
             <span
               className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
-              Learn. Trade. Tokenize
+              Your Journey Into Digital Ownership Starts Here
             </span>
 
             <p className="font-normal leading-8 text-[21px] text-[#FFFFFFB2] max-w-[694px]">
@@ -26,7 +26,7 @@ export default function DesktopHome() {
 
             <div className="flex flex-row items-center gap-11">
               <a
-                href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex justify-center items-center w-[245px] rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[1px] leading-6 text-base text-[#2C2D28]"
@@ -313,7 +313,7 @@ export default function DesktopHome() {
 
           <div className="flex flex-row items-center gap-6 mx-auto">
             <a
-              href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+              href="https://forms.gle/FZmzQX3SbVjiHPo18"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-row items-center rounded-[20px] px-[16px] py-[12px] gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"

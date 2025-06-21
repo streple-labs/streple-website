@@ -22,7 +22,7 @@ export default function MobileHome() {
                 <span
                   className={`font-normal tracking-[2px] leading-[150%] text-2xl xs:text-[27px] text-gradient-copy-top-traders text-center ${anton.className}`}
                 >
-                  Learn. Trade. Tokenize
+                  Your Journey Into Digital Ownership Starts Here
                 </span>
                 <p className="font-normal text-sm sm:text-base text-[#FFFFFFB2] text-center">
                   Streple lets you mirror top traders in real-time, no
@@ -32,7 +32,7 @@ export default function MobileHome() {
 
               <div className="flex flex-col gap-4 items-center">
                 <a
-                  href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+                  href="https://forms.gle/FZmzQX3SbVjiHPo18"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="tracking-[1px] leading-6 flex w-full max-w-[245px] justify-center items-center rounded-3xl px-4 py-2.5 gap-3 bg-[#B39FF0] font-bold text-sm text-[#2C2D28]"
@@ -327,7 +327,7 @@ export default function MobileHome() {
 
             <div className="flex flex-col items-center gap-6 mx-auto">
               <a
-                href="https://forms.gle/FoHBRNQwbeSBCr8a7"
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-row items-center rounded-[20px] px-[16px] py-[12px] gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"
