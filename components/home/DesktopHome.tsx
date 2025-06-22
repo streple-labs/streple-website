@@ -299,6 +299,47 @@ export default function DesktopHome() {
       </section>
 
       {/* Section 5 - join protrader program */}
+      <section className="flex px-4 sm:px-[6.4%] justify-center">
+        <div className="flex justify-between gap-[82px] mw my-[96px]">
+          <Image
+            loading="lazy"
+            src="/earn-while-you-teach.jpg"
+            alt="earn while you teach"
+            width={564}
+            height={650}
+            className="w-401-h-518-lg w-501-h-647-xl xxl:w-[564px] xxl:h-[650px] rounded-[23px]"
+          />
+
+          <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
+            <div className="why-people-choose-us bw-lr-gradient w-max">
+              <span className="font-normal text-xs leading-4 text-white">
+                Streple for ProTraders
+              </span>
+            </div>
+
+            <h3
+              className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
+            >
+              Earn While You Teach
+            </h3>
+
+            <div className="flex flex-col gap-[60px]">
+              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
+                Join our Pro Trader Program, share your expertise, grow your
+                community, and monetize your trading skills.
+              </p>
+
+              <Link
+                href="#"
+                className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
+              >
+                Explore ProTraders
+                <GoArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* <section className="flex px-4 sm:px-[6.4%] justify-center">
         <div className="mw my-[96px]">
           <JoinProtraderProgramSection />

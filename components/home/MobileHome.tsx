@@ -221,7 +221,7 @@ export default function MobileHome() {
         </section>
 
         {/* Section 4 - Testimonials */}
-        <section className="flex flex-col section-4-bg-mobile mx-auto px-4 pb-8">
+        <section className="flex flex-col section-4-bg-mobile mx-auto px-4 pb-12">
           <div className="flex flex-col gap-13 items-center mx-auto">
             <div className="flex flex-col mt-18 gap gap-6 items-center mx-auto">
               <div className="why-people-choose-us bw-lr-gradient w-max">
@@ -315,6 +315,53 @@ export default function MobileHome() {
         </section>
 
         {/* Section 5 - With Streple, you copy trades with limited risks */}
+        <section className="flex flex-col md:flex-row gap-10 section-3-bg-mobile mx-auto px-4 pb-8 pt-[72px]">
+          <Image
+            loading="lazy"
+            src="/earn-while-you-teach.jpg"
+            alt="earn while you teach"
+            width={564}
+            height={650}
+            className="md:hidden mt-12 mx-auto rounded-[23px]"
+          />
+          <Image
+            loading="lazy"
+            src="/earn-while-you-teach.jpg"
+            alt="earn while you teach"
+            width={564}
+            height={650}
+            className="hidden md:block h-[491px] w-[380px] rounded-[23px]"
+          />
+
+          <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
+            <div className="why-people-choose-us bw-lr-gradient w-max">
+              <span className="font-normal text-[9px] leading-4 text-white">
+                Streple for ProTraders
+              </span>
+            </div>
+
+            <h3
+              className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-2xl xs:text-[27px] md:text-3xl ${anton.className}`}
+            >
+              Earn While You Teach
+            </h3>
+
+            <div className="flex flex-col gap-8">
+              <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 text-white">
+                Join our Pro Trader Program, share your expertise, grow your
+                community, and monetize your trading skills.
+              </p>
+
+              <Link
+                href="#"
+                className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
+              >
+                Explore ProTraders
+                <GoArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </section>
         {/* <JoinProtraderProgramSection /> */}
 
         {/* Section 6 - Start trading smarter today with Streple */}
