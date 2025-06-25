@@ -49,7 +49,7 @@ export default function PurpleShimmer() {
           y2="412.641"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D28BF6" />
+          <stop stopColor="#D28BF6" />
           <stop offset="1" stopColor="#D28BF6" stopOpacity="0" />
         </linearGradient>
       </defs>
