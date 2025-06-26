@@ -61,7 +61,7 @@ export default function MobileHome() {
         <section className="flex flex-col section-1-bg-mobile mx-auto px-4 py-8">
           <div className="flex flex-col mt-18 gap-4">
             <div
-              className={`items-center text-center  tracking-[2px] leading-[150%] text-2xl text-white font-normal ${anton.className}`}
+              className={`items-center text-center  tracking-[2px] leading-[150%] text-2xl  font-normal ${anton.className}`}
             >
               <span className="text-[#B39FF0]">With Streple</span>
               <span className="text-gradient-with-streple">
@@ -108,7 +108,7 @@ export default function MobileHome() {
 
                 <div className="space-y-4">
                   <h4
-                    className={`text-2xl xl:text-[28px] text-white leading-[35px] tracking-[2px] ${anton.className}`}
+                    className={`text-2xl xl:text-[28px]  leading-[35px] tracking-[2px] ${anton.className}`}
                   >
                     {title}
                   </h4>
@@ -125,7 +125,7 @@ export default function MobileHome() {
         <section className="flex flex-col md:flex-row md:gap-10 section-3-bg-mobile mx-auto px-4 pb-8 pt-[72px]">
           <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
             <div className="why-people-choose-us bw-lr-gradient w-max">
-              <span className="font-normal text-[9px] leading-4 text-white">
+              <span className="font-normal text-[9px] leading-4 ">
                 Why people choose us
               </span>
             </div>
@@ -137,7 +137,7 @@ export default function MobileHome() {
             </h3>
 
             <div className="flex flex-col gap-8">
-              <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 text-white">
+              <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 ">
                 Stop stressing over charts and market news. With Streple, you
                 copy the exact trades of top-performing experts automatically.
                 You trade smarter, even when you&apos;re offline.
@@ -175,7 +175,7 @@ export default function MobileHome() {
         <section className="flex flex-col md:flex-row md:gap-10 section-3-bg-mobile mx-auto px-4 pb-8 pt-[72px]">
           <div className="flex flex-col md:mt-12 gap-6">
             <div className="why-people-choose-us bw-lr-gradient w-max">
-              <span className="font-normal text-[9px] leading-4 text-white">
+              <span className="font-normal text-[9px] leading-4 ">
                 Why people choose us
               </span>
             </div>
@@ -187,7 +187,7 @@ export default function MobileHome() {
             </span>
 
             <div className="flex flex-col gap-6">
-              <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 text-white">
+              <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 ">
                 Go beyond just copying — discover what each trade means, why it
                 happened, and how to build confidence with every move you make.
               </p>
@@ -225,7 +225,7 @@ export default function MobileHome() {
           <div className="flex flex-col gap-13 items-center mx-auto">
             <div className="flex flex-col mt-18 gap gap-6 items-center mx-auto">
               <div className="why-people-choose-us bw-lr-gradient w-max">
-                <span className="font-normal text-[9px] leading-4 text-white">
+                <span className="font-normal text-[9px] leading-4 ">
                   Testimonials
                 </span>
               </div>
@@ -249,13 +249,13 @@ export default function MobileHome() {
                     className="w-[60px] h-[60px] rounded-full"
                   />
                   <span
-                    className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
+                    className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
                   >
                     Amaka Ugwu
                   </span>
                 </div>
 
-                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
+                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
                   “I never thought I could trade. I just picked a top trader,
                   set my budget, and boom. I made a small profit in my first
                   week. Streple made me feel like I actually belong in the
@@ -274,13 +274,13 @@ export default function MobileHome() {
                     className="w-[60px] h-[60px] rounded-full"
                   />
                   <span
-                    className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
+                    className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
                   >
                     David Ossai
                   </span>
                 </div>
 
-                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
+                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
                   “I work full time, so I don&apos;t have time to sit with
                   charts all day. Streple lets me copy traders with proven
                   stats. I just check my phone, adjust my limits, and go about
@@ -299,12 +299,12 @@ export default function MobileHome() {
                     className="w-[60px] h-[60px] rounded-full"
                   />
                   <span
-                    className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
+                    className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
                   >
                     Femi Adetola
                   </span>
                 </div>
-                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
+                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
                   “I wanted to grow my savings but had zero knowledge of crypto.
                   Streple made it easy to get started without stress. I feel
                   like my money is working for me now.”
@@ -335,7 +335,7 @@ export default function MobileHome() {
 
           <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
             <div className="why-people-choose-us bw-lr-gradient w-max">
-              <span className="font-normal text-[9px] leading-4 text-white">
+              <span className="font-normal text-[9px] leading-4 ">
                 Streple for ProTraders
               </span>
             </div>
@@ -347,7 +347,7 @@ export default function MobileHome() {
             </h3>
 
             <div className="flex flex-col gap-8">
-              <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 text-white">
+              <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 ">
                 Join our Pro Trader Program, share your expertise, grow your
                 community, and monetize your trading skills.
               </p>
@@ -368,7 +368,7 @@ export default function MobileHome() {
         <section className="flex flex-col section-6-bg-mobile pb-8 bg-[url('../public/section-6-bg.png')]">
           <div className="flex flex-col mx-auto mt-18 gap-10 w-[90%] min-h-[424px] bg-[#FFFFFF0D] rounded-[26px] justify-center px-2 bg-no-repeat bg-cover bg-center bg-[url('../public/start-trading-bg.png')]">
             <span
-              className={`flex flex-row mx-auto justify-center text-center font-normal leading-[150%] tracking-[2px] text-2xl xs:text-[27px] md:text-3xl text-white ${anton.className}`}
+              className={`flex flex-row mx-auto justify-center text-center font-normal leading-[150%] tracking-[2px] text-2xl xs:text-[27px] md:text-3xl  ${anton.className}`}
             >
               Join Streple and build your trading skills the smart way
             </span>

@@ -43,7 +43,7 @@ export default function JoinProtraderProgramSection() {
             onClick={() => setActiveStep(i)}
             className={`${
               activeStep !== i && "opacity-30"
-            } py-3 md:py-4 px-4 md:px-6 rounded-[10px] cursor-pointer gap-[18px] flex flex-col bg-[#5A555C1A] text-white`}
+            } py-3 md:py-4 px-4 md:px-6 rounded-[10px] cursor-pointer gap-[18px] flex flex-col bg-[#5A555C1A] `}
           >
             <h5 className="text-base md:text-xl xl:text-2xl leading-8 tracking-[1px] font-bold">
               {title}

@@ -10,10 +10,10 @@ import { IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const navItems = [
-  { href: "", label: "Explore traders" },
   { href: "/learn", label: "Learn" },
   { href: "/about-us", label: "About us" },
   { href: "/faq", label: "FAQs" },
+  { href: "/protraders", label: "ProTraders" },
 ];
 
 export default function Navbar() {
@@ -53,7 +53,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-row items-center gap-6">
-            <Link href="#" className="font-normal text-base text-white">
+            <Link href="#" className="font-normal text-base ">
               Login
             </Link>
 
@@ -143,7 +143,7 @@ export default function Navbar() {
                 <div className="flex flex-col gap-3 mt-12 text-center">
                   <Link
                     href="#"
-                    className="items-center border border-[#EBF0D5] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-white"
+                    className="items-center border border-[#EBF0D5] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base "
                   >
                     Login
                   </Link>

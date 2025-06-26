@@ -6,12 +6,12 @@ import { anton } from "../fonts";
 
 export default function page() {
   return (
-    <main className="flex flex-col">
+    <main>
       <section className="flex flex-col hero-section-bg px-4 sm:px-[6.4%] items-center">
-        <div className="mw max-xxl:min-h-screen relative overflow-hidden">
+        <div className="mw md:min-h-screen xl:min-h-auto relative overflow-hidden">
           <Navbar />
 
-          <div className="relative flex flex-col lg:flex-row min-h-[70vh] items-center justify-between my-16 gap-16 lg:gap-[5%]">
+          <div className="relative flex flex-col lg:flex-row min-h-[70vh] xxl:min-h-[50vh] items-center justify-between my-16 xl:my-32 gap-16 lg:gap-[5%]">
             <div className="w-full lg:w-[50%] flex flex-col gap-[40px]">
               <h3
                 className={`justify-center items-center font-normal leading-[150%] tracking-[2%] text-2xl xs:text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] lg:max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
@@ -48,7 +48,7 @@ export default function page() {
         {Array.from({ length: 100 }).map((_, i) => (
           <h4
             key={i}
-            className={` ${anton.className} text-2xl md:text-4xl leading-[150%] tracking-[2px] text-white font-normal`}
+            className={` ${anton.className} text-2xl md:text-4xl leading-[150%] tracking-[2px]  font-normal`}
           >
             {i % 3 === 0 ? "LEARN" : i % 3 === 1 ? "GROW" : "EARN"}
           </h4>
@@ -66,17 +66,17 @@ export default function page() {
         </span>
         <div className="flex items-center justify-between flex-col md:flex-row gap-8 w-full mw py-12 md:py-[92px]">
           <h4
-            className={` ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px] text-white font-normal text-center text-gradient-copy-top-traders`}
+            className={` ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal text-center text-gradient-copy-top-traders`}
           >
             150+ <br /> Video lessons
           </h4>
           <h4
-            className={` ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px] text-white font-normal text-center text-gradient-copy-top-traders`}
+            className={` ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal text-center text-gradient-copy-top-traders`}
           >
             300+ <br /> Article guides
           </h4>
           <h4
-            className={` ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px] text-white font-normal text-center text-gradient-copy-top-traders`}
+            className={` ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal text-center text-gradient-copy-top-traders`}
           >
             2000+ <br /> Active learners
           </h4>
@@ -84,10 +84,10 @@ export default function page() {
       </section>
 
       <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-        <div className="relative flex flex-col items-center mw my-16 px-2 gap-[40px]">
+        <div className="relative flex flex-col items-center mw my-16 gap-[40px]">
           <div className="flex flex-col justify-center items-center gap-[31px]">
             <h4
-              className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl text-center leading-[150%] tracking-[2px] text-white font-normal`}
+              className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl text-center leading-[150%] tracking-[2px]  font-normal`}
             >
               Master Copy Trading at Your Own Pace
             </h4>
@@ -186,7 +186,7 @@ export default function page() {
       </section>
 
       <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-        <div className="relative flex flex-col items-center mw my-16 px-2 gap-[40px]">
+        <div className="relative flex flex-col items-center mw my-16 gap-[40px]">
           <h4
             className={`${anton.className} text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
           >
@@ -243,7 +243,7 @@ export default function page() {
           {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.png')]" /> */}
           <div className="flex flex-col justify-center mx-auto gap-10 start-trading-bg py-[52px] px-3 md:px-8 lg:py-[92px] lg:px-[80px]">
             <span
-              className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] text-white max-w-[700px] ${anton.className}`}
+              className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px]  max-w-[700px] ${anton.className}`}
             >
               Sign up to unlock full access to guides and resources
             </span>

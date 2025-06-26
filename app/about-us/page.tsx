@@ -8,15 +8,15 @@ import { anton } from "../fonts";
 
 export default function Page() {
   return (
-    <main className="lex flex-col">
+    <main className="flex flex-col">
       <section className="flex justify-center hero-section-bg px-4 sm:px-[6.4%]">
-        <div className="mw md:xxl:min-h-screen relative overflow-hidden">
-          <span className="hidden lg:block absolute top-[38%] left-1/2 -translate-1/2">
+        <div className="mw md:min-h-screen xl:min-h-auto relative overflow-hidden">
+          <span className="hidden lg:block absolute top-[38%] xl:top-[20%] left-1/2 -translate-1/2">
             <PurpleShimmer />
           </span>
           <Navbar />
           {/* HERO Section */}
-          <div className="flex flex-col md:min-h-[578px] my-24 gap-[60px] items-center text-center">
+          <div className="flex flex-col md:min-h-[70vh] xl:min-h-[50vh] my-24 xl:my-32 gap-[60px] items-center text-center">
             <h2
               className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-6xl max-w-[855px] text-gradient-copy-top-traders ${anton.className} relative`}
             >
@@ -48,21 +48,21 @@ export default function Page() {
               <div className="col-span-1 px-4 py-3 space-y-2.5 rounded-[10px] backdrop-blur-sm bg-gradient-to-b to-[#2A282B1A] from-[#8B799480]">
                 <Image src={"/atstreple1.png"} alt="" width={28} height={25} />
 
-                <p className="font-normal leading-6 tracking-[1px] text-base text-white">
+                <p className="font-normal leading-6 tracking-[1px] text-base ">
                   People don&apos;t just use digital tools, they own with them
                 </p>
               </div>
               <div className="col-span-1 px-4 py-3 space-y-2.5 rounded-[10px] backdrop-blur-sm bg-gradient-to-b to-[#2A282B1A] from-[#8B799480]">
                 <Image src={"/atstreple2.png"} alt="" width={23} height={24} />
 
-                <p className="font-normal leading-6 tracking-[1px] text-base text-white">
+                <p className="font-normal leading-6 tracking-[1px] text-base ">
                   Participation in digital economies is open to everyone{" "}
                 </p>
               </div>
               <div className="col-span-1 px-4 py-3 space-y-2.5 rounded-[10px] backdrop-blur-sm bg-gradient-to-b to-[#2A282B1A] from-[#8B799480]">
                 <Image src={"/atstreple3.png"} alt="" width={23} height={22} />
 
-                <p className="font-normal leading-6 tracking-[1px] text-base text-white">
+                <p className="font-normal leading-6 tracking-[1px] text-base ">
                   Knowledge replaces fear, and ownership replaces limitation
                 </p>
               </div>
@@ -100,7 +100,7 @@ export default function Page() {
             </h3>
 
             <div className="flex flex-col gap-[60px]">
-              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white/70">
+              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] /70">
                 Especially for African youth and underserved communities. Our
                 mission is to make digital ownership simple to understand, safe
                 to explore, and accessible to all, because opportunity
@@ -154,7 +154,7 @@ export default function Page() {
           <div className="hidden md:block absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.png')]" />
           <div className="relative flex flex-col justify-center mx-auto gap-10 start-trading-bg py-[52px] px-3 md:px-8 lg:py-[92px] lg:px-[80px]">
             <h3
-              className={`flex mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] text-white max-w-[800px] ${anton.className}`}
+              className={`flex mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px]  max-w-[800px] ${anton.className}`}
             >
               Join thousands and start trading smarter with Streple
             </h3>

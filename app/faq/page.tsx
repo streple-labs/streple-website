@@ -28,7 +28,7 @@ export default function Page() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <main className="flex flex-col">
+    <main>
       {/* faq form modal */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -52,11 +52,11 @@ export default function Page() {
 
                 <div className="space-y-3 mx-auto">
                   <h4
-                    className={`${anton.className} text-[21px] md:text-[27px] leading-[150%] tracking-[2px] text-white font-normal`}
+                    className={`${anton.className} text-[21px] md:text-[27px] leading-[150%] tracking-[2px]  font-normal`}
                   >
                     Thanks! You&apos;ll hear from us soon.
                   </h4>
-                  <p className="text-sm md:text-base font-normal leading-6 tracking-[1px] text-white">
+                  <p className="text-sm md:text-base font-normal leading-6 tracking-[1px] ">
                     Check your inbox for a reply from the Streple team.
                   </p>
                 </div>
@@ -77,12 +77,12 @@ export default function Page() {
               </>
             ) : (
               <>
-                <h5 className="text-base md:text-xl leading-6 tracking-[1px] text-white font-bold">
+                <h5 className="text-base md:text-xl leading-6 tracking-[1px]  font-bold">
                   Enter your details and we will get back to you
                 </h5>
 
                 <label className="space-y-1.5 md:space-y-3">
-                  <p className="text-white font-normal text-sm md:text-base leading-6 tracking-[1px]">
+                  <p className=" font-normal text-sm md:text-base leading-6 tracking-[1px]">
                     Full name
                   </p>
                   <input
@@ -91,11 +91,11 @@ export default function Page() {
                     onChange={handleChange}
                     type="text"
                     placeholder="e.g John Doe"
-                    className="h-[82px] w-full text-base px-6 py-5 rounded-[20px] md:rounded-3xl gap-4 bg-[#302D30] text-white leading-6 tracking-[1px] placeholder:text-white/50 placeholder:text-xs sm:placeholder:text-base border-0 outline-0 ring-0"
+                    className="h-[82px] w-full text-base px-6 py-5 rounded-[20px] md:rounded-3xl gap-4 bg-[#302D30]  leading-6 tracking-[1px] placeholder:text-white/50 placeholder:text-xs sm:placeholder:text-base border-0 outline-0 ring-0"
                   />
                 </label>
                 <label className="space-y-1.5 md:space-y-3">
-                  <p className="text-white font-normal text-sm md:text-base leading-6 tracking-[1px]">
+                  <p className=" font-normal text-sm md:text-base leading-6 tracking-[1px]">
                     Email address
                   </p>
                   <input
@@ -104,12 +104,12 @@ export default function Page() {
                     onChange={handleChange}
                     type="text"
                     placeholder="Input your email address"
-                    className="h-[82px] w-full text-base px-6 py-5 rounded-[20px] md:rounded-3xl gap-4 bg-[#302D30] text-white leading-6 tracking-[1px] placeholder:text-white/50 placeholder:text-xs sm:placeholder:text-base border-0 outline-0 ring-0"
+                    className="h-[82px] w-full text-base px-6 py-5 rounded-[20px] md:rounded-3xl gap-4 bg-[#302D30]  leading-6 tracking-[1px] placeholder:text-white/50 placeholder:text-xs sm:placeholder:text-base border-0 outline-0 ring-0"
                   />
                 </label>
 
                 <label className="space-y-1.5 md:space-y-3">
-                  <p className="text-white font-normal text-sm md:text-base leading-6 tracking-[1px]">
+                  <p className=" font-normal text-sm md:text-base leading-6 tracking-[1px]">
                     How can we help you?
                   </p>
                   <textarea
@@ -118,7 +118,7 @@ export default function Page() {
                     name="message"
                     onChange={handleChange}
                     placeholder="I'd like to..."
-                    className="h-[129px] w-full text-base px-6 py-5 rounded-[20px] md:rounded-3xl gap-4 bg-[#302D30] text-white leading-6 tracking-[1px] placeholder:text-white/50 placeholder:text-xs sm:placeholder:text-base border-0 outline-0 ring-0"
+                    className="h-[129px] w-full text-base px-6 py-5 rounded-[20px] md:rounded-3xl gap-4 bg-[#302D30]  leading-6 tracking-[1px] placeholder:text-white/50 placeholder:text-xs sm:placeholder:text-base border-0 outline-0 ring-0"
                   />
                 </label>
 
@@ -143,7 +143,7 @@ export default function Page() {
 
       {/* faq page */}
       <section className="flex flex-col hero-section-bg px-4 sm:px-[6.4%] items-center">
-        <div className="mw max-xxl:min-h-screen w-full relative overflow-hidden">
+        <div className="mw md:min-h-screen xl:min-h-auto w-full relative overflow-hidden">
           <Navbar />
 
           <div className="absolute size-[280px] min-[320px]:size-[315px] sm:size-[650px] xl:size-[868px] -bottom-[220px] sm:-bottom-[480px] xl:-bottom-[600px] left-1/2 -translate-x-1/2 bg-contain bg-no-repeat bg-[url('../public/eclipse.png')]" />
@@ -165,7 +165,7 @@ export default function Page() {
         {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.png')]" /> */}
         <div className="flex flex-col justify-center mx-auto gap-10 start-trading-bg my-[52px] px-3 md:px-8 lg:my-[92px] lg:px-[80px]">
           <span
-            className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] text-white max-w-[700px] ${anton.className}`}
+            className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px]  max-w-[700px] ${anton.className}`}
           >
             Need more help?
           </span>

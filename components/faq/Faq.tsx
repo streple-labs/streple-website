@@ -41,7 +41,7 @@ export default function Faq() {
           key={i}
         >
           <div className="w-full flex items-center justify-between gap-8">
-            <p className="text-sm md:text-[21px] leading-8 tracking-[1px] font-normal text-white">
+            <p className="text-sm md:text-[21px] leading-8 tracking-[1px] font-normal ">
               {faq.question}
             </p>
             <span

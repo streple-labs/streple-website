@@ -19,7 +19,7 @@ export default function Footer() {
             <input
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               placeholder="ENTER EMAIL ADDRESS"
-              className={`pr-12 border-b-[3px] border-b-white/70 leading-[150%] tracking-[2px] font-normal text-base sm:text-lg md:text-2xl lg:text-4xl placeholder:text-white/40 text-white w-full ring-0 border-0 outline-0 ${anton.className}`}
+              className={`pr-12 border-b-[3px] border-b-white/70 leading-[150%] tracking-[2px] font-normal text-base sm:text-lg md:text-2xl lg:text-4xl placeholder:text-white/40  w-full ring-0 border-0 outline-0 ${anton.className}`}
             />
             <span className="w-6 h-5 md:w-7 md:h-6 lg:w-[42px] lg:h-[36px] absolute right-0 top-0 md:top-2 cursor-pointer">
               <svg
@@ -99,63 +99,63 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 lg:gap-8 xl:gap-16">
             <div className="gap-4 flex flex-col">
               <h5
-                className={`${anton.className} leading-6 tracking-[1px] text-white mb-2`}
+                className={`${anton.className} leading-6 tracking-[1px]  mb-2`}
               >
                 Products
               </h5>
               <Link
                 href={""}
-                className="text-sm leading-[25px] tracking-[1px] text-white"
+                className="text-sm leading-[25px] tracking-[1px] "
               >
                 Learn
               </Link>
               <Link
                 href={""}
-                className="text-sm leading-[25px] tracking-[1px] text-white"
+                className="text-sm leading-[25px] tracking-[1px] "
               >
                 ProTraders
               </Link>
               <Link
                 href={"/faq"}
-                className="text-sm leading-[25px] tracking-[1px] text-white"
+                className="text-sm leading-[25px] tracking-[1px] "
               >
                 FAQs
               </Link>
             </div>
             <div className="gap-4 flex flex-col">
               <h5
-                className={`${anton.className} leading-6 tracking-[1px] text-white mb-2`}
+                className={`${anton.className} leading-6 tracking-[1px]  mb-2`}
               >
                 Company
               </h5>
               <Link
                 href={""}
-                className="text-sm leading-[25px] tracking-[1px] text-white"
+                className="text-sm leading-[25px] tracking-[1px] "
               >
                 About us
               </Link>
               <Link
                 href={""}
-                className="text-sm leading-[25px] tracking-[1px] text-white"
+                className="text-sm leading-[25px] tracking-[1px] "
               >
                 Blog
               </Link>
             </div>
             <div className="gap-4 flex flex-col">
               <h5
-                className={`${anton.className} leading-6 tracking-[1px] text-white mb-2`}
+                className={`${anton.className} leading-6 tracking-[1px]  mb-2`}
               >
                 Legal
               </h5>
               <Link
                 href={""}
-                className="text-sm leading-[25px] tracking-[1px] text-white"
+                className="text-sm leading-[25px] tracking-[1px] "
               >
                 Privacy and Policy
               </Link>
               <Link
                 href={""}
-                className="text-sm leading-[25px] tracking-[1px] text-white"
+                className="text-sm leading-[25px] tracking-[1px] "
               >
                 Terms and Conditions
               </Link>

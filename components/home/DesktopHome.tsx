@@ -3,7 +3,6 @@ import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-// import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
 
 export default function DesktopHome() {
   return (
@@ -12,18 +11,15 @@ export default function DesktopHome() {
         <div className="mw max-xxl:min-h-screen relative overflow-hidden">
           <Navbar />
           {/* HERO Section */}
-          <div className="flex flex-col min-h-[678px] mt-16 gap-[17px] items-center text-center">
+          <div className="flex flex-col min-h-[678px] mt-16 xl:mt-32 gap-[17px] items-center text-center">
             <h2
-              className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
+              className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-2xl xs:text-[27px] sm:text-4xl md:text-5xl lg:text-[52px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
               Learn. Trade. Tokenize
             </h2>
 
-            <p className="font-normal leading-8 text-[21px] text-[#FFFFFFB2] max-w-[694px]">
+            <p className="font-normal leading-8 text-[21px] text-sm sm:text-base text-[#FFFFFFB2] max-w-[694px]">
               Your Journey Into Digital Ownership Starts Here
-              {/* Streple lets you
-              follow expert traders live, learn as you go, and grow your
-              confidence, all in one place. No experience needed. */}
             </p>
 
             <div className="flex flex-row items-center gap-11">
@@ -31,20 +27,30 @@ export default function DesktopHome() {
                 href="https://forms.gle/FZmzQX3SbVjiHPo18"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex justify-center items-center w-[245px] rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[1px] leading-6 text-base text-[#2C2D28]"
+                className="flex justify-center items-center w-[245px] rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[1px] leading-6 text-sm md:text-base text-[#2C2D28]"
               >
                 Get early access
                 <GoArrowRight size={20} />
               </a>
             </div>
 
-            <div className="flex container w-max h-max">
+            <div className="container w-max h-max hidden lg:flex">
               <Image
                 loading="lazy"
                 src="/portfolio.png"
                 alt="portfolio"
                 width={464}
                 height={528}
+              />
+            </div>
+            <div className="flex lg:hidden w-max h-max mx-auto">
+              <Image
+                loading="lazy"
+                src="/portfolio.png"
+                alt="portfolio"
+                width={372}
+                height={372}
+                className="w-[240px] min-[320px]:w-[280px] min-[425px]:w-[372px]"
               />
             </div>
           </div>
@@ -55,7 +61,7 @@ export default function DesktopHome() {
       <section className="section-1-bg flex px-4 sm:px-[6.4%] justify-center">
         <div className="mw flex flex-col gap-10 my-[96px]">
           <div
-            className={`items-center text-center text-44-lg text-55-xl xxl:text-[62px] 2xl:text-[66px] text-white font-normal ${anton.className}`}
+            className={`items-center text-center text-44-lg text-55-xl xxl:text-[62px] 2xl:text-[66px]  font-normal ${anton.className}`}
           >
             <span className="text-[#B39FF0]">With Streple</span>
             <span>
@@ -105,7 +111,7 @@ export default function DesktopHome() {
 
                 <div className="space-y-4">
                   <h4
-                    className={`text-2xl xl:text-[28px] text-white leading-[35px] tracking-[2px] ${anton.className}`}
+                    className={`text-2xl xl:text-[28px]  leading-[35px] tracking-[2px] ${anton.className}`}
                   >
                     {title}
                   </h4>
@@ -124,7 +130,7 @@ export default function DesktopHome() {
         <div className="flex justify-between gap-[82px] mw my-[96px]">
           <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
             <div className="why-people-choose-us bw-lr-gradient w-max">
-              <span className="font-normal text-xs leading-4 text-white">
+              <span className="font-normal text-xs leading-4 ">
                 Why people choose us
               </span>
             </div>
@@ -136,7 +142,7 @@ export default function DesktopHome() {
             </h3>
 
             <div className="flex flex-col gap-[60px]">
-              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
+              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] ">
                 Copy verified expert traders with proven track records. Analyze
                 their approaches and replicate their success.{" "}
               </p>
@@ -167,7 +173,7 @@ export default function DesktopHome() {
         <div className="flex justify-between gap-[82px] mw my-[96px]">
           <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
             <div className="why-people-choose-us bw-lr-gradient w-max">
-              <span className="font-normal text-xs leading-4 text-white">
+              <span className="font-normal text-xs leading-4 ">
                 Why people choose us
               </span>
             </div>
@@ -179,7 +185,7 @@ export default function DesktopHome() {
             </h3>
 
             <div className="flex flex-col gap-[60px]">
-              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
+              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] ">
                 Get clear, step-by-step breakdowns of every trading decision. We
                 explain the reasoning, market conditions, and key factors behind
                 each move so you can learn, understand, and make informed
@@ -211,9 +217,7 @@ export default function DesktopHome() {
       <section className="flex px-4 sm:px-[6.4%] justify-center">
         <div className="mw my-[96px] flex flex-col gap-[36px] items-center">
           <div className="why-people-choose-us bw-lr-gradient w-max">
-            <span className="font-normal text-xs leading-4 text-white">
-              Testimonials
-            </span>
+            <span className="font-normal text-xs leading-4 ">Testimonials</span>
           </div>
 
           <span
@@ -234,13 +238,13 @@ export default function DesktopHome() {
                   className="w-[60px] h-[60px] rounded-full"
                 />
                 <span
-                  className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
+                  className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
                 >
                   Amaka Ugwu
                 </span>
               </div>
 
-              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
+              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
                 “I never thought I could trade. I just picked a top trader, set
                 my budget, and boom. I made a small profit in my first week.
                 Streple made me feel like I actually belong in the market.”
@@ -258,13 +262,13 @@ export default function DesktopHome() {
                   className="w-[60px] h-[60px] rounded-full"
                 />
                 <span
-                  className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
+                  className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
                 >
                   David Ossai
                 </span>
               </div>
 
-              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
+              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
                 “I work full time, so I don&apos;t have time to sit with charts
                 all day. Streple lets me copy traders with proven stats. I just
                 check my phone, adjust my limits, and go about my day.”
@@ -282,13 +286,13 @@ export default function DesktopHome() {
                   className="w-[60px] h-[60px] rounded-full"
                 />
                 <span
-                  className={`font-normal text-base leading-[150%] tracking-[2px] text-white ${anton.className}`}
+                  className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
                 >
                   Femi Adetola
                 </span>
               </div>
 
-              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] text-white">
+              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
                 “I wanted to grow my savings but had zero knowledge of crypto.
                 Streple made it easy to get started without stress. I feel like
                 my money is working for me now.”
@@ -312,7 +316,7 @@ export default function DesktopHome() {
 
           <div className="flex flex-col gap-6 w-435-lg w-544-xl xxl:w-[612px]">
             <div className="why-people-choose-us bw-lr-gradient w-max">
-              <span className="font-normal text-xs leading-4 text-white">
+              <span className="font-normal text-xs leading-4 ">
                 Streple for ProTraders
               </span>
             </div>
@@ -324,7 +328,7 @@ export default function DesktopHome() {
             </h3>
 
             <div className="flex flex-col gap-[60px]">
-              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] text-white">
+              <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] ">
                 Join our Pro Trader Program, share your expertise, grow your
                 community, and monetize your trading skills.
               </p>
@@ -340,17 +344,12 @@ export default function DesktopHome() {
           </div>
         </div>
       </section>
-      {/* <section className="flex px-4 sm:px-[6.4%] justify-center">
-        <div className="mw my-[96px]">
-          <JoinProtraderProgramSection />
-        </div>
-      </section> */}
 
       {/* Start trading smarter today with Streple */}
       <section className="flex flex-col items-center section-6-bg justify-center relative overflow-x-hidden">
         <div className="flex flex-col mx-auto gap-10 start-trading-bg lg:py-16">
           <h4
-            className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-44-lg text-55-xl xxl:text-[62px] text-white max-w-[800px] ${anton.className}`}
+            className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-44-lg text-55-xl xxl:text-[62px]  max-w-[800px] ${anton.className}`}
           >
             Join Streple and build your trading skills the smart way
           </h4>
