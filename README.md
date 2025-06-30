@@ -37,11 +37,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ### Add an Asterisk (*) here to update README
 
-Add Asterisk (*) here, update readme and commit.
-This will trigger deployment on vercel.
+Add Asterisk (*) here, update the readme, and commit.
+This will trigger deployment on Vercel.
 
 Add Asterisk (*) here:
 
 ```
-********************
+*********************
 ```
