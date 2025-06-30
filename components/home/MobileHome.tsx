@@ -26,8 +26,6 @@ export default function MobileHome() {
                 </h2>
                 <p className="font-normal text-sm sm:text-base text-[#FFFFFFB2] text-center">
                   Your Journey Into Digital Ownership Starts Here
-                  {/* Streple lets
-                  you mirror top traders in real-time, no experience needed. */}
                 </p>
               </div>
 

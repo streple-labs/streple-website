@@ -83,69 +83,32 @@ export default function page() {
         </div>
       </section>
 
-      <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-        <div className="relative flex flex-col items-center mw my-16 gap-[40px]">
-          <div className="flex flex-col justify-center items-center gap-[31px]">
+      <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center relative">
+        <div className="relative flex flex-col mw my-16 gap-[40px]">
+          <div className="flex flex-col w-full gap-[31px]">
             <h4
-              className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl text-center leading-[150%] tracking-[2px]  font-normal`}
+              className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal`}
             >
-              Master Copy Trading at Your Own Pace
+              Beginner guides
             </h4>
 
-            <p className="font-normal leading-8 text-sm sm:text-base lg:text-[21px] tracking-[1px] text-white/70 max-w-4xl text-center">
+            <p className="font-normal leading-8 text-sm sm:text-base lg:text-[21px] tracking-[1px] text-white/70 max-w-4xl">
               Explore our complete library of expert videos and articles,
-              designed to take you from trading newbie to confident copier
+              designed to take you from trading newbie to confident copier{" "}
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12 lg:gap-[52px] flex-wrap">
-            {["All", "Beginner", "Advanced", "Top guides"].map((item, i) => (
-              <button
-                key={i}
-                className={`${
-                  i == 0
-                    ? "bg-[#A082F9] text-black"
-                    : "text-[#E4E4D9] pp-lr-gradient"
-                } min-w-[122px] text-xs md:text-base leading-6 tracking-[1px] font-normal p-3 rounded-[25px] flex items-center justify-center gap-2.5 h-[48px]`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[40px]">
-            {Array.from({ length: 6 }).map((_, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[40px] w-full">
+            {Array.from({ length: 4 }).map((_, i) => (
               <div className="space-y-5" key={i}>
                 <Image
                   alt="image"
                   src={`/trader-${
-                    i == 0
-                      ? 1
-                      : i == 1
-                      ? 2
-                      : i == 2
-                      ? 3
-                      : i == 3
-                      ? 3
-                      : i == 4
-                      ? 2
-                      : 1
+                    i == 0 ? 1 : i == 1 ? 2 : i == 2 ? 3 : i == 3 ? 2 : 1
                   }.jpg`}
                   width={401}
-                  height={319}
-                  className={`w-full object-cover object-center bg-no-repeat rounded-[14px] ${
-                    i == 0
-                      ? "h-[372px]"
-                      : i == 1
-                      ? "h-[319px]"
-                      : i == 2
-                      ? "h-[319px]"
-                      : i == 3
-                      ? "h-[319px]"
-                      : i == 4
-                      ? "h-[319px]"
-                      : "h-[372px]"
-                  }`}
+                  height={327}
+                  className={`w-full h-[327px] object-cover object-center bg-no-repeat rounded-[14px]`}
                 />
                 <div className="space-y-2">
                   <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
@@ -159,18 +122,9 @@ export default function page() {
                   >
                     How to choose a trader to copy
                   </p>
-                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 w-4/5">
+                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 md:w-3/5">
                     Spot real performance vs hype. Avoid common beginner traps
                   </p>
-
-                  <div className="pt-2 flex gap-2 items-center text-white/50">
-                    <span className="min-w-[89px] px-1 py-2 gap-2.5 flex items-center justify-center border border-[#FDF9FF99] rounded-[21px] text-xs leading-4 tracking-[1px]">
-                      Beginner
-                    </span>
-                    <span className="min-w-[89px] px-1 py-2 gap-2.5 flex items-center justify-center border border-[#FDF9FF99] rounded-[21px] text-xs leading-4 tracking-[1px]">
-                      Video
-                    </span>
-                  </div>
                 </div>
               </div>
             ))}
@@ -186,15 +140,15 @@ export default function page() {
       </section>
 
       <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-        <div className="relative flex flex-col items-center mw my-16 gap-[40px]">
+        <div className="relative flex flex-col items-center mw my-16 md:my-24 gap-[40px]">
           <h4
             className={`${anton.className} text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
           >
             Latest
           </h4>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[40px]">
-            {Array.from({ length: 3 }).map((_, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-[40px]">
+            {Array.from({ length: 2 }).map((_, i) => (
               <div className="space-y-5" key={i}>
                 <Image
                   alt="image"
@@ -219,18 +173,9 @@ export default function page() {
                   >
                     How to choose a trader to copy
                   </p>
-                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 w-4/5">
+                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 md:w-3/5">
                     Spot real performance vs hype. Avoid common beginner traps
                   </p>
-
-                  <div className="pt-2 flex gap-2 items-center text-white/50">
-                    <span className="min-w-[89px] px-1 py-2 gap-2.5 flex items-center justify-center border border-[#FDF9FF99] rounded-[21px] text-xs leading-4 tracking-[1px]">
-                      Beginner
-                    </span>
-                    <span className="min-w-[89px] px-1 py-2 gap-2.5 flex items-center justify-center border border-[#FDF9FF99] rounded-[21px] text-xs leading-4 tracking-[1px]">
-                      Video
-                    </span>
-                  </div>
                 </div>
               </div>
             ))}
@@ -239,7 +184,7 @@ export default function page() {
       </section>
 
       <section className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.png')]">
-        <div className="flex flex-col items-center md:min-h-[610px] justify-center my-8 md:my-16 w-full mw">
+        <div className="flex flex-col items-center md:min-h-[610px] justify-center my-16 md:my-24 w-full mw">
           {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.png')]" /> */}
           <div className="flex flex-col justify-center mx-auto gap-10 start-trading-bg py-[52px] px-3 md:px-8 lg:py-[92px] lg:px-[80px]">
             <span
