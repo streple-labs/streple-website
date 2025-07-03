@@ -57,8 +57,7 @@ export default function Footer() {
                 />
               </Link>
               <p className="font-normal text-base leading-6 text-[#FFFFFFB2] tracking-[1px] lg:text-[21px] lg:leading-8">
-                Streple lets you copy top traders in real-time with no
-                experience needed.
+                Licensed Virtual Asset Service Provider
               </p>
             </div>
             <div className="flex items-center gap-6 md:gap-8">
