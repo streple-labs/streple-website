@@ -130,12 +130,15 @@ export default function page() {
             ))}
           </div>
 
-          <h4 className="text-[#EBF0D5] text-base md:text-2xl font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3">
+          <Link
+            href={"/learn/blog"}
+            className="text-[#EBF0D5] text-base md:text-2xl font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3"
+          >
             View all
             <span>
               <GoArrowRight size={16} className="text-[#EBF0D5]" />
             </span>
-          </h4>
+          </Link>
         </div>
       </section>
 

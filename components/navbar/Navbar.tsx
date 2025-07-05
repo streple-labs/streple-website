@@ -44,7 +44,9 @@ export default function Navbar() {
                 key={Math.random()}
                 href={item.href}
                 className={`leading-6 tracking-[1px] ${
-                  pathname === item.href ? "text-[#F4E90EB2]" : "text-white"
+                  pathname.startsWith(item.href)
+                    ? "text-[#F4E90EB2]"
+                    : "text-white"
                 }`}
               >
                 {item.label}

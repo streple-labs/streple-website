@@ -103,13 +103,13 @@ export default function Footer() {
                 Products
               </h5>
               <Link
-                href={""}
+                href={"/learn"}
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 Learn
               </Link>
               <Link
-                href={""}
+                href={"/protraders"}
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 ProTraders
@@ -128,13 +128,13 @@ export default function Footer() {
                 Company
               </h5>
               <Link
-                href={""}
+                href={"/about-us"}
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 About us
               </Link>
               <Link
-                href={""}
+                href={"/blog"}
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 Blog
@@ -147,13 +147,13 @@ export default function Footer() {
                 Legal
               </h5>
               <Link
-                href={""}
+                href={"/privacy-and-policy"}
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 Privacy and Policy
               </Link>
               <Link
-                href={""}
+                href={"/terms-and-conditions"}
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 Terms and Conditions
