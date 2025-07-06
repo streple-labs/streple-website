@@ -34,7 +34,7 @@ export default function page() {
                 {Array.from({ length: 4 }).map((_, i) => (
                   <Link
                     href={
-                      "/learn/blog/how-to-choose-the-right-trader-without-getting-burned"
+                      "/learn/blog/how-to-choose-the-right-trader-without-getting-burned-article"
                     }
                     className="space-y-5"
                     key={i}
@@ -81,7 +81,7 @@ export default function page() {
                   <p className="leading-[25px] font-semibold text-sm tracking-[1px]">
                     <Link
                       href={
-                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned"
+                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned-article"
                       }
                     >
                       Why Copy Trading Is Gaining Massive Popularity in 2025
@@ -90,7 +90,7 @@ export default function page() {
                     <br />
                     <Link
                       href={
-                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned"
+                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned-article"
                       }
                     >
                       How to Spot a Reliable Trader Before You Copy
@@ -99,7 +99,7 @@ export default function page() {
                     <br />
                     <Link
                       href={
-                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned"
+                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned-article"
                       }
                     >
                       Why Copy Trading Is Gaining Massive Popularity in 2025
@@ -108,7 +108,7 @@ export default function page() {
                     <br />
                     <Link
                       href={
-                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned"
+                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned-article"
                       }
                     >
                       Crypto Market Volatility: What It Means for Copy Traders
@@ -124,7 +124,7 @@ export default function page() {
                   <p className="leading-[25px] font-semibold text-sm tracking-[1px]">
                     <Link
                       href={
-                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned"
+                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned-article"
                       }
                     >
                       Copy Trading 101: What It Is and How It Works (With
@@ -134,7 +134,7 @@ export default function page() {
                     <br />
                     <Link
                       href={
-                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned"
+                        "/learn/blog/how-to-choose-the-right-trader-without-getting-burned-article"
                       }
                     >
                       How to Choose the Right Trader to Copy Without Getting

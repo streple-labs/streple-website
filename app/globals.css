@@ -446,3 +446,11 @@ button {
       rgba(0, 0, 0, 0.12) 74.68%
     );
 }
+
+.article-bg {
+  background-image: url("../public/article-thumbnail.jpg");
+}
+
+.article-ci {
+  background-image: url("../public/article-cover-img.jpg");
+}
