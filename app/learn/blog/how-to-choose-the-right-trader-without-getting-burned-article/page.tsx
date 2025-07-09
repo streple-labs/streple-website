@@ -22,7 +22,7 @@ export default function page() {
               >
                 How to Choose the Right Trader to Copy Without Getting Burned
               </h1>
-              <div className="flex items-center justify-between gap-8">
+              <div className="flex md:items-center justify-between flex-col md:flex-row gap-4">
                 <p className="flex gap-1.5 items-center font-semibold text-sm leading-[150%] tracking-[2px]">
                   <span>7 min</span>
                   <span>|</span>
@@ -145,7 +145,7 @@ export default function page() {
                   >
                     <Image
                       alt="image"
-                      src={`/trader-${i == 0 ? 2 : 3}.jpg`}
+                      src={`/trader-${i == 0 ? 2 : 3}.webp`}
                       width={401}
                       height={327}
                       className="w-full h-[327px] object-cover object-center bg-no-repeat rounded-[14px]"

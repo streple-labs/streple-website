@@ -155,7 +155,7 @@ export default function Page() {
                   >
                     <Image
                       alt="image"
-                      src={`/trader-${i == 0 ? 2 : 3}.jpg`}
+                      src={`/trader-${i == 0 ? 2 : 3}.webp`}
                       width={401}
                       height={327}
                       className="w-full h-[327px] object-cover object-center bg-no-repeat rounded-[14px]"

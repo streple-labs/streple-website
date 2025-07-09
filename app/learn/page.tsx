@@ -34,7 +34,7 @@ export default function page() {
             </div>
             <div className="">
               <Image
-                src={"/about-us-hero-img.png"}
+                src={"/about-us-hero-img.webp"}
                 alt="hero img"
                 width={564}
                 height={413}
@@ -58,7 +58,7 @@ export default function page() {
       <section className="flex items-center justify-center px-4 sm:px-[6.4%] relative">
         <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
           <Image
-            src={"/purple-shimmer.png"}
+            src={"/purple-shimmer.webp"}
             alt="purple shimmer"
             width={750}
             height={324}
@@ -105,7 +105,7 @@ export default function page() {
                   alt="image"
                   src={`/trader-${
                     i == 0 ? 1 : i == 1 ? 2 : i == 2 ? 3 : i == 3 ? 2 : 1
-                  }.jpg`}
+                  }.webp`}
                   width={401}
                   height={327}
                   className={`w-full h-[327px] object-cover object-center bg-no-repeat rounded-[14px]`}
@@ -157,7 +157,7 @@ export default function page() {
                   alt="image"
                   src={`/trader-${
                     i == 0 ? 4 : i == 1 ? 5 : i == 2 ? 6 : 4
-                  }.jpg`}
+                  }.webp`}
                   width={401}
                   height={319}
                   className={`w-full object-cover object-center bg-no-repeat rounded-[14px] ${
@@ -186,9 +186,9 @@ export default function page() {
         </div>
       </section>
 
-      <section className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.png')]">
+      <section className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.webp')]">
         <div className="flex flex-col items-center md:min-h-[610px] justify-center my-16 md:my-24 w-full mw">
-          {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.png')]" /> */}
+          {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.webp')]" /> */}
           <div className="flex flex-col justify-center mx-auto gap-10 start-trading-bg py-[52px] px-3 md:px-8 lg:py-[92px] lg:px-[80px]">
             <span
               className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px]  max-w-[700px] ${anton.className}`}

@@ -101,7 +101,7 @@ button {
 }
 
 .hero-section-bg {
-  background-image: url("../public/hero-bg.png");
+  background-image: url("../public/hero-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@ button {
 }
 
 .section-1-bg {
-  background-image: url("../public/section-1-bg.png");
+  background-image: url("../public/section-1-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -119,7 +119,7 @@ button {
 }
 
 .section-6-bg {
-  background-image: url("../public/section-6-bg.png");
+  background-image: url("../public/section-6-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -128,7 +128,7 @@ button {
 }
 
 .start-trading-bg {
-  background-image: url("../public/start-trading-bg.png");
+  background-image: url("../public/start-trading-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -266,14 +266,14 @@ button {
 }
 
 .hero-section-bg-mobile {
-  background-image: url("../public/hero-bg-mobile.png");
+  background-image: url("../public/hero-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .section-1-bg-mobile {
-  background-image: url("../public/section-1-bg-mobile.png");
+  background-image: url("../public/section-1-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -281,14 +281,14 @@ button {
 
 .section-2-bg-mobile,
 .section-3-bg-mobile {
-  background-image: url("../public/section-2to5-bg-mobile.png");
+  background-image: url("../public/section-2to5-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .section-4-bg-mobile {
-  background-image: url("../public/section-2to5-bg-mobile.png");
+  background-image: url("../public/section-2to5-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -313,14 +313,14 @@ button {
 }
 
 .section-5-bg-mobile {
-  background-image: url("../public/section-2to5-bg-mobile.png");
+  background-image: url("../public/section-2to5-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .section-6-bg-mobile {
-  background-image: url("../public/section-6-bg-mobile.png");
+  background-image: url("../public/section-6-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -448,9 +448,9 @@ button {
 }
 
 .article-bg {
-  background-image: url("../public/article-thumbnail.jpg");
+  background-image: url("../public/article-thumbnail.webp");
 }
 
 .article-ci {
-  background-image: url("../public/article-cover-img.jpg");
+  background-image: url("../public/article-cover-img.webp");
 }

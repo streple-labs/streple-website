@@ -43,7 +43,7 @@ export default function page() {
                       alt="image"
                       src={`/trader-${
                         i == 0 ? 2 : i == 1 ? 3 : i == 2 ? 2 : i == 3 ? 1 : 1
-                      }.jpg`}
+                      }.webp`}
                       width={401}
                       height={327}
                       className={`w-full ${

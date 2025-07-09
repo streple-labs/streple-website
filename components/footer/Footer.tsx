@@ -42,14 +42,14 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <Link href="/">
                 <Image
-                  src="/streple-logo.png"
+                  src="/streple-logo.webp"
                   alt="streple logo"
                   width={100}
                   height={45}
                   className="lg:hidden"
                 />
                 <Image
-                  src="/streple-logo.png"
+                  src="/streple-logo.webp"
                   alt="streple logo"
                   width={112}
                   height={34}
@@ -146,18 +146,20 @@ export default function Footer() {
               >
                 Legal
               </h5>
-              <Link
-                href={"/privacy-and-policy"}
+              <a
+                target="_blank"
+                href="/Streple Privacy Policy.docx"
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 Privacy and Policy
-              </Link>
-              <Link
-                href={"/terms-and-conditions"}
+              </a>
+              <a
+                target="_blank"
+                href="/Streple Terms and Conditions.docx"
                 className="text-sm leading-[25px] tracking-[1px] "
               >
                 Terms and Conditions
-              </Link>
+              </a>
             </div>
           </div>
         </div>

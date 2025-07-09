@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav className="hidden w-full lg:flex items-center lg:gap-7 gap-37-xl xxl:gap-[42px] 2xl:gap-[45px] mt-6">
         <Link href="/">
           <Image
-            src="/streple-logo.png"
+            src="/streple-logo.webp"
             alt="streple logo"
             width={112}
             height={34}
@@ -76,7 +76,7 @@ export default function Navbar() {
           <div className="flex flex-row items-center mx-auto w-full justify-between">
             <Link href="/">
               <Image
-                src="/streple-logo.png"
+                src="/streple-logo.webp"
                 alt="streple logo"
                 width={80}
                 height={34}

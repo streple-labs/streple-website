@@ -45,7 +45,7 @@ export default function MobileHome() {
             <div className="flex w-max h-max mx-auto">
               <Image
                 loading="lazy"
-                src="/portfolio.png"
+                src="/portfolio.webp"
                 alt="portfolio"
                 width={372}
                 height={372}
@@ -153,7 +153,7 @@ export default function MobileHome() {
 
           <Image
             loading="lazy"
-            src="/debit-card.png"
+            src="/debit-card.webp"
             alt="debit card"
             width={564}
             height={650}
@@ -161,7 +161,7 @@ export default function MobileHome() {
           />
           <Image
             loading="lazy"
-            src="/debit-card.png"
+            src="/debit-card.webp"
             alt="debit card"
             width={564}
             height={650}
@@ -202,7 +202,7 @@ export default function MobileHome() {
 
           <Image
             loading="lazy"
-            src="/learn-the-why.png"
+            src="/learn-the-why.webp"
             alt="learn the why"
             width={564}
             height={650}
@@ -210,7 +210,7 @@ export default function MobileHome() {
           />
           <Image
             loading="lazy"
-            src="/zero-knowledge.png"
+            src="/zero-knowledge.webp"
             alt="zero knowledge"
             width={564}
             height={650}
@@ -240,7 +240,7 @@ export default function MobileHome() {
                 <div className="flex flex-row gap-3 items-center">
                   <Image
                     loading="lazy"
-                    src="/amaka-ugwu.jpg"
+                    src="/amaka-ugwu.webp"
                     alt="Amaka Ugwu's Photo"
                     width={60}
                     height={60}
@@ -265,7 +265,7 @@ export default function MobileHome() {
                 <div className="flex flex-row gap-3 items-center">
                   <Image
                     loading="lazy"
-                    src="/david-ossai.jpg"
+                    src="/david-ossai.webp"
                     alt="David Ossai's Photo"
                     width={60}
                     height={60}
@@ -290,7 +290,7 @@ export default function MobileHome() {
                 <div className="flex flex-row gap-3 items-center">
                   <Image
                     loading="lazy"
-                    src="/femi-adetola.jpg"
+                    src="/femi-adetola.webp"
                     alt="Femi Adetola's Photo"
                     width={60}
                     height={60}
@@ -316,7 +316,7 @@ export default function MobileHome() {
         <section className="flex flex-col md:flex-row gap-10 section-3-bg-mobile mx-auto px-4 pb-8 pt-[72px]">
           <Image
             loading="lazy"
-            src="/earn-while-you-teach.jpg"
+            src="/earn-while-you-teach.webp"
             alt="earn while you teach"
             width={564}
             height={650}
@@ -324,7 +324,7 @@ export default function MobileHome() {
           />
           <Image
             loading="lazy"
-            src="/earn-while-you-teach.jpg"
+            src="/earn-while-you-teach.webp"
             alt="earn while you teach"
             width={564}
             height={650}
@@ -363,8 +363,8 @@ export default function MobileHome() {
         {/* <JoinProtraderProgramSection /> */}
 
         {/* Section 6 - Start trading smarter today with Streple */}
-        <section className="flex flex-col section-6-bg-mobile pb-8 bg-[url('../public/section-6-bg.png')]">
-          <div className="flex flex-col mx-auto mt-18 gap-10 w-[90%] min-h-[424px] bg-[#FFFFFF0D] rounded-[26px] justify-center px-2 bg-no-repeat bg-cover bg-center bg-[url('../public/start-trading-bg.png')]">
+        <section className="flex flex-col section-6-bg-mobile pb-8 bg-[url('../public/section-6-bg.webp')]">
+          <div className="flex flex-col mx-auto mt-18 gap-10 w-[90%] min-h-[424px] bg-[#FFFFFF0D] rounded-[26px] justify-center px-2 bg-no-repeat bg-cover bg-center bg-[url('../public/start-trading-bg.webp')]">
             <span
               className={`flex flex-row mx-auto justify-center text-center font-normal leading-[150%] tracking-[2px] text-2xl xs:text-[27px] md:text-3xl  ${anton.className}`}
             >

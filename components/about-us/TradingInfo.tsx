@@ -21,7 +21,7 @@ export default function TradingInfo() {
   }, []);
 
   return (
-    <section className="w-full flex items-center justify-center relative overflow-hidden bg-[url('../public/purple-bg.png')] bg-cover bg-no-repeat bg-center px-4 md:px-[6.4%] py-16 lg:py-[72px]">
+    <section className="w-full flex items-center justify-center relative overflow-hidden bg-[url('../public/purple-bg.webp')] bg-cover bg-no-repeat bg-center px-4 md:px-[6.4%] py-16 lg:py-[72px]">
       <p className="text-[#EACAFA] text-3xl md:text-5xl lg:text-7xl leading-[150%] tracking-[1px] font-bold max-w-[753px] text-center">
         {texts[currentTextIndex]}
       </p>

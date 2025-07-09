@@ -12,17 +12,17 @@ export default function JoinProtraderProgramSection() {
       {
         title: "Share your strategy",
         desc: "Publish your trades, explain your moves, and let your skills speak for themselves. Whether it's spot, futures, or bot strategies — your edge becomes your value.",
-        img: "/share-strategy.png",
+        img: "/share-strategy.webp",
       },
       {
         title: "Grow a Following",
         desc: "Attract a loyal base of copiers who trust your style and performance. As your track record grows, so does your influence right inside the Streple ecosystem.",
-        img: "/grow-following.png",
+        img: "/grow-following.webp",
       },
       {
         title: "Earn a Commission",
         desc: "Get rewarded every time someone copies your trades. Your insights generate income — and Streple handles the rest automatically.",
-        img: "/earn-commission.png",
+        img: "/earn-commission.webp",
       },
     ],
     []

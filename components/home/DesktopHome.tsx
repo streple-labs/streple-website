@@ -37,7 +37,7 @@ export default function DesktopHome() {
             <div className="container w-max h-max hidden lg:flex">
               <Image
                 loading="lazy"
-                src="/portfolio.png"
+                src="/portfolio.webp"
                 alt="portfolio"
                 width={464}
                 height={528}
@@ -46,7 +46,7 @@ export default function DesktopHome() {
             <div className="flex lg:hidden w-max h-max mx-auto">
               <Image
                 loading="lazy"
-                src="/portfolio.png"
+                src="/portfolio.webp"
                 alt="portfolio"
                 width={372}
                 height={372}
@@ -159,7 +159,7 @@ export default function DesktopHome() {
 
           <Image
             loading="lazy"
-            src="/debit-card.png"
+            src="/debit-card.webp"
             alt="debit card"
             width={564}
             height={650}
@@ -204,7 +204,7 @@ export default function DesktopHome() {
 
           <Image
             loading="lazy"
-            src="/learn-the-why.png"
+            src="/learn-the-why.webp"
             alt="learn the why"
             width={564}
             height={650}
@@ -231,7 +231,7 @@ export default function DesktopHome() {
               <div className="flex flex-row gap-3 items-center">
                 <Image
                   loading="lazy"
-                  src="/amaka-ugwu.jpg"
+                  src="/amaka-ugwu.webp"
                   alt="Amaka Ugwu's Photo"
                   width={60}
                   height={60}
@@ -255,7 +255,7 @@ export default function DesktopHome() {
               <div className="flex flex-row gap-3 items-center">
                 <Image
                   loading="lazy"
-                  src="/david-ossai.jpg"
+                  src="/david-ossai.webp"
                   alt="David Ossai's Photo"
                   width={60}
                   height={60}
@@ -279,7 +279,7 @@ export default function DesktopHome() {
               <div className="flex flex-row gap-3 items-center">
                 <Image
                   loading="lazy"
-                  src="/femi-adetola.jpg"
+                  src="/femi-adetola.webp"
                   alt="Femi Adetola's Photo"
                   width={60}
                   height={60}
@@ -307,7 +307,7 @@ export default function DesktopHome() {
         <div className="flex justify-between gap-[82px] mw my-[96px]">
           <Image
             loading="lazy"
-            src="/earn-while-you-teach.jpg"
+            src="/earn-while-you-teach.webp"
             alt="earn while you teach"
             width={564}
             height={650}
