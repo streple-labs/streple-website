@@ -142,7 +142,7 @@ export default function Footer() {
             </div>
             <div className="gap-4 flex flex-col">
               <h5
-                className={`${anton.className} leading-6 tracking-[1px]  mb-2`}
+                className={`${anton.className} leading-6 tracking-[1px] mb-2`}
               >
                 Legal
               </h5>

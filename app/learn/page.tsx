@@ -48,7 +48,7 @@ export default function page() {
         {Array.from({ length: 100 }).map((_, i) => (
           <h4
             key={i}
-            className={` ${anton.className} text-2xl md:text-4xl leading-[150%] tracking-[2px]  font-normal`}
+            className={` ${anton.className} text-2xl md:text-4xl leading-[150%] tracking-[2px] font-normal`}
           >
             {i % 3 === 0 ? "LEARN" : i % 3 === 1 ? "GROW" : "EARN"}
           </h4>
@@ -85,30 +85,21 @@ export default function page() {
 
       <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center relative">
         <div className="relative flex flex-col mw my-16 gap-[40px]">
-          <div className="flex flex-col w-full gap-[31px]">
-            <h4
-              className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal`}
-            >
-              Beginner guides
-            </h4>
+          <h4
+            className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal`}
+          >
+            Beginner guides
+          </h4>
 
-            <p className="font-normal leading-8 text-sm sm:text-base lg:text-[21px] tracking-[1px] text-white/70 max-w-4xl">
-              Explore our complete library of expert videos and articles,
-              designed to take you from trading newbie to confident copier{" "}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[40px] w-full">
-            {Array.from({ length: 4 }).map((_, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[40px] w-full">
+            {Array.from({ length: 6 }).map((_, i) => (
               <div className="space-y-5" key={i}>
                 <Image
                   alt="image"
-                  src={`/trader-${
-                    i == 0 ? 1 : i == 1 ? 2 : i == 2 ? 3 : i == 3 ? 2 : 1
-                  }.webp`}
+                  src={`/guide-${i + 1}.png`}
                   width={401}
-                  height={327}
-                  className={`w-full h-[327px] object-cover object-center bg-no-repeat rounded-[14px]`}
+                  height={237}
+                  className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}
                 />
                 <div className="space-y-2">
                   <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
@@ -122,7 +113,7 @@ export default function page() {
                   >
                     How to choose a trader to copy
                   </p>
-                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 md:w-3/5">
+                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px]">
                     Spot real performance vs hype. Avoid common beginner traps
                   </p>
                 </div>
@@ -132,37 +123,31 @@ export default function page() {
 
           <Link
             href={"/learn/blog"}
-            className="text-[#EBF0D5] text-base md:text-2xl font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3"
+            className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
           >
             View all
-            <span>
-              <GoArrowRight size={16} className="text-[#EBF0D5]" />
-            </span>
+            <GoArrowRight size={16} className="text-[#EBF0D5]" />
           </Link>
         </div>
       </section>
 
       <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-        <div className="relative flex flex-col items-center mw my-16 md:my-24 gap-[40px]">
+        <div className="relative flex flex-col mw my-16 md:my-24 gap-[40px]">
           <h4
             className={`${anton.className} text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
           >
             Latest
           </h4>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-[40px]">
-            {Array.from({ length: 2 }).map((_, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+            {Array.from({ length: 3 }).map((_, i) => (
               <div className="space-y-5" key={i}>
                 <Image
                   alt="image"
-                  src={`/trader-${
-                    i == 0 ? 4 : i == 1 ? 5 : i == 2 ? 6 : 4
-                  }.webp`}
+                  src={`/guide-${i + 1}.png`}
                   width={401}
-                  height={319}
-                  className={`w-full object-cover object-center bg-no-repeat rounded-[14px] ${
-                    i == 0 ? "h-[372px]" : "h-[319px]"
-                  }`}
+                  height={237}
+                  className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}
                 />
                 <div className="space-y-2">
                   <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
@@ -176,13 +161,21 @@ export default function page() {
                   >
                     How to choose a trader to copy
                   </p>
-                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 md:w-3/5">
+                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px]">
                     Spot real performance vs hype. Avoid common beginner traps
                   </p>
                 </div>
               </div>
             ))}
           </div>
+
+          <Link
+            href={"/learn/blog"}
+            className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
+          >
+            View all
+            <GoArrowRight size={16} className="text-[#EBF0D5]" />
+          </Link>
         </div>
       </section>
 
