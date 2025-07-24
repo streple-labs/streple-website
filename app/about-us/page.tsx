@@ -160,8 +160,10 @@ export default function Page() {
             </h3>
 
             <div className="flex items-center justify-center w-full">
-              <button
-                // onClick={() => {}}
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 type="button"
                 title="contact support"
                 className="flex justify-center items-center w-full xs:w-[283px] h-[68px] md:h-[48px] rounded-[20px] px-4 py-3 gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"
@@ -170,7 +172,7 @@ export default function Page() {
                   Start copying trades
                 </span>
                 <GoArrowRight size={16} className="text-[#2C2D28]" />
-              </button>
+              </a>
             </div>
           </div>
         </div>

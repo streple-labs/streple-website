@@ -1,7 +1,6 @@
 import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
-import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 
 export default function DesktopHome() {
@@ -147,13 +146,15 @@ export default function DesktopHome() {
                 their approaches and replicate their success.{" "}
               </p>
 
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
               >
                 Get started
                 <GoArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -192,13 +193,15 @@ export default function DesktopHome() {
                 decisions with confidence.
               </p>
 
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
               >
                 Get started
                 <GoArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -217,7 +220,7 @@ export default function DesktopHome() {
       <section className="flex px-4 sm:px-[6.4%] justify-center">
         <div className="mw my-[96px] flex flex-col gap-[36px] items-center">
           <div className="why-people-choose-us bw-lr-gradient w-max">
-            <span className="font-normal text-xs leading-4 ">Testimonials</span>
+            <span className="font-normal text-xs leading-4">Testimonials</span>
           </div>
 
           <span
@@ -333,13 +336,15 @@ export default function DesktopHome() {
                 community, and monetize your trading skills.
               </p>
 
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
               >
                 Explore ProTraders
                 <GoArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

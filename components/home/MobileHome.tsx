@@ -1,7 +1,6 @@
 import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
-import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 // import JoinProtraderProgramSection from "./JoinProtraderProgramSection";
 
@@ -141,13 +140,15 @@ export default function MobileHome() {
                 You trade smarter, even when you&apos;re offline.
               </p>
 
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
               >
                 Get started
                 <GoArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -190,13 +191,15 @@ export default function MobileHome() {
                 happened, and how to build confidence with every move you make.
               </p>
 
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
               >
                 Explore Streple Learn
                 <GoArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -350,13 +353,15 @@ export default function MobileHome() {
                 community, and monetize your trading skills.
               </p>
 
-              <Link
-                href="#"
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
               >
                 Explore ProTraders
                 <GoArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
         </section>

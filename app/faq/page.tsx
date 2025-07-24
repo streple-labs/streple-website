@@ -29,7 +29,6 @@ export default function Page() {
 
   return (
     <main>
-      {/* faq form modal */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div
@@ -39,9 +38,9 @@ export default function Page() {
               setSubmitted(false);
             }}
           />
-          <div className="bg-[#262427] flex flex-col gap-6 md:gap-9 py-6 md:py-10 px-4 md:px-8 rounded-[10px] w-[90%] max-w-[637px] relative">
+          <div className="bg-[#262427] py-6 md:py-10 px-4 md:px-8 rounded-[10px] w-[90%] max-w-[637px] relative max-h-[90vh] overflow-y-auto">
             {submitted ? (
-              <>
+              <div className="flex flex-col gap-6 md:gap-9">
                 <Image
                   src={"/success.webp"}
                   alt="success"
@@ -52,7 +51,7 @@ export default function Page() {
 
                 <div className="space-y-3 mx-auto">
                   <h4
-                    className={`${anton.className} text-[21px] md:text-[27px] leading-[150%] tracking-[2px]  font-normal`}
+                    className={`${anton.className} text-[21px] md:text-[27px] leading-[150%] tracking-[2px] font-normal`}
                   >
                     Thanks! You&apos;ll hear from us soon.
                   </h4>
@@ -74,9 +73,9 @@ export default function Page() {
                     Go back
                   </span>
                 </button>
-              </>
+              </div>
             ) : (
-              <>
+              <div className="flex flex-col gap-6 md:gap-9">
                 <h5 className="text-base md:text-xl leading-6 tracking-[1px]  font-bold">
                   Enter your details and we will get back to you
                 </h5>
@@ -135,7 +134,7 @@ export default function Page() {
                   </span>
                   <GoArrowRight size={16} className="text-[#2C2D28]" />
                 </button>
-              </>
+              </div>
             )}
           </div>
         </div>

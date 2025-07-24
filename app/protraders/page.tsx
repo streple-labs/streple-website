@@ -24,10 +24,16 @@ export default function page() {
                 Streple.
               </p>
 
-              <button className="cursor-pointer max-w-[245px] w-full mt-6 flex justify-center items-center rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[2px] leading-[150%] text-base text-[#2C2D28]">
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
+                type="button"
+                className="cursor-pointer max-w-[245px] w-full mt-6 flex justify-center items-center rounded-3xl px-4 py-3 gap-3 bg-[#B39FF0] font-bold tracking-[2px] leading-[150%] text-base text-[#2C2D28]"
+              >
                 Apply now
                 <GoArrowRight size={16} className="text-[#2C2D28]" />
-              </button>
+              </a>
             </div>
             <div className="w-full lg:w-[50%] flex justify-center lg:justify-end">
               <Image
@@ -177,8 +183,10 @@ export default function page() {
             </h3>
 
             <div className="flex items-center justify-center w-full">
-              <button
-                // onClick={() => {}}
+              <a
+                href="https://forms.gle/FZmzQX3SbVjiHPo18"
+                target="_blank"
+                rel="noopener noreferrer"
                 type="button"
                 title="contact support"
                 className="flex flex-row justify-center items-center w-full xs:w-[283px] h-[68px] md:h-[48px] rounded-[20px] px-4 py-3 gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"
@@ -187,7 +195,7 @@ export default function page() {
                   Apply now
                 </span>
                 <GoArrowRight size={16} className="text-[#2C2D28]" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
