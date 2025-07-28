@@ -43,5 +43,5 @@ This will trigger deployment on Vercel.
 Add Asterisk (*) here:
 
 ```
-**************************
+***************************
 ```
