@@ -3,8 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
+import Courses from "./_components/courses";
+import Blogs from "./_components/blogs";
+import { Suspense } from "react";
+import ArticleSkeleton from "./_components/skeleton";
 
-export default function page() {
+export default async function page() {
   return (
     <main>
       <section className="flex flex-col hero-section-bg px-4 sm:px-[6.4%] items-center">
@@ -83,101 +87,13 @@ export default function page() {
         </div>
       </section>
 
-      <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center relative">
-        <div className="relative flex flex-col mw my-16 gap-[40px]">
-          <h4
-            className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal`}
-          >
-            Beginner guides
-          </h4>
+      <Suspense fallback={<ArticleSkeleton length={6} />}>
+        <Courses />
+      </Suspense>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[40px] w-full">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div className="space-y-5" key={i}>
-                <Image
-                  alt="image"
-                  src={`/guide-${i + 1}.png`}
-                  width={401}
-                  height={237}
-                  className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}
-                />
-                <div className="space-y-2">
-                  <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
-                    <span>7 min</span> <span className="size-0.5 bg-white/50" />
-                    <span>Apr 12, 2025</span>
-                    <span className="size-0.5 bg-white/50" />
-                    <span>24k views</span>
-                  </p>
-                  <p
-                    className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders`}
-                  >
-                    How to choose a trader to copy
-                  </p>
-                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px]">
-                    Spot real performance vs hype. Avoid common beginner traps
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <Link
-            href={"/learn/blog"}
-            className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
-          >
-            View all
-            <GoArrowRight size={16} className="text-[#EBF0D5]" />
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-        <div className="relative flex flex-col mw my-16 md:my-24 gap-[40px]">
-          <h4
-            className={`${anton.className} text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
-          >
-            Latest
-          </h4>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div className="space-y-5" key={i}>
-                <Image
-                  alt="image"
-                  src={`/guide-${i + 1}.png`}
-                  width={401}
-                  height={237}
-                  className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}
-                />
-                <div className="space-y-2">
-                  <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
-                    <span>7 min</span> <span className="size-0.5 bg-white/50" />
-                    <span>Apr 12, 2025</span>
-                    <span className="size-0.5 bg-white/50" />
-                    <span>24k views</span>
-                  </p>
-                  <p
-                    className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders`}
-                  >
-                    How to choose a trader to copy
-                  </p>
-                  <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px]">
-                    Spot real performance vs hype. Avoid common beginner traps
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <Link
-            href={"/learn/blog"}
-            className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
-          >
-            View all
-            <GoArrowRight size={16} className="text-[#EBF0D5]" />
-          </Link>
-        </div>
-      </section>
+      <Suspense fallback={<ArticleSkeleton length={3} />}>
+        <Blogs />
+      </Suspense>
 
       <section className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.webp')]">
         <div className="flex flex-col items-center md:min-h-[610px] justify-center my-16 md:my-24 w-full mw">

@@ -58,7 +58,7 @@ export default function MobileHome() {
         <section className="flex flex-col section-1-bg-mobile mx-auto px-4 py-8">
           <div className="flex flex-col mt-18 gap-4">
             <div
-              className={`items-center text-center  tracking-[2px] leading-[150%] text-2xl  font-normal ${anton.className}`}
+              className={`items-center text-center  tracking-[2px] leading-[150%] text-2xl font-normal ${anton.className}`}
             >
               <span className="text-[#B39FF0]">With Streple</span>
               <span className="text-gradient-with-streple">

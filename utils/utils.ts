@@ -1,0 +1,6 @@
+export function estimateReadingMinutes(text: string): number {
+  const words = text.trim().split(/\s+/).filter(Boolean);
+  const wordsPerMinute = 200;
+  const minutes = words.length / wordsPerMinute;
+  return Math.max(1, Math.ceil(minutes));
+}

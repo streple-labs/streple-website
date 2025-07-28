@@ -104,41 +104,57 @@ export default function Footer() {
               </h5>
               <Link
                 href={"/learn"}
-                className="text-sm leading-[25px] tracking-[1px] "
+                className="text-sm leading-[25px] tracking-[1px]"
               >
                 Learn
               </Link>
               <Link
                 href={"/protraders"}
-                className="text-sm leading-[25px] tracking-[1px] "
+                className="text-sm leading-[25px] tracking-[1px]"
               >
                 ProTraders
               </Link>
               <Link
                 href={"/faq"}
-                className="text-sm leading-[25px] tracking-[1px] "
+                className="text-sm leading-[25px] tracking-[1px]"
               >
                 FAQs
               </Link>
             </div>
             <div className="gap-4 flex flex-col">
               <h5
-                className={`${anton.className} leading-6 tracking-[1px]  mb-2`}
+                className={`${anton.className} leading-6 tracking-[1px] mb-2`}
               >
                 Company
               </h5>
               <Link
                 href={"/about-us"}
-                className="text-sm leading-[25px] tracking-[1px] "
+                className="text-sm leading-[25px] tracking-[1px]"
               >
                 About us
               </Link>
               <Link
                 href={"/learn/blog"}
-                className="text-sm leading-[25px] tracking-[1px] "
+                className="text-sm leading-[25px] tracking-[1px]"
               >
                 Blog
               </Link>
+              <a
+                href="mailto:hello@streple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm leading-[25px] tracking-[1px]"
+              >
+                Hello@streple.com
+              </a>
+              <a
+                href="mailto:partnership@streple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm leading-[25px] tracking-[1px]"
+              >
+                Partnership@streple.com
+              </a>
             </div>
             <div className="gap-4 flex flex-col">
               <h5
@@ -149,14 +165,14 @@ export default function Footer() {
               <a
                 target="_blank"
                 href="/Streple Privacy Policy.docx"
-                className="text-sm leading-[25px] tracking-[1px] "
+                className="text-sm leading-[25px] tracking-[1px]"
               >
                 Privacy and Policy
               </a>
               <a
                 target="_blank"
                 href="/Streple Terms and Conditions.docx"
-                className="text-sm leading-[25px] tracking-[1px] "
+                className="text-sm leading-[25px] tracking-[1px]"
               >
                 Terms and Conditions
               </a>

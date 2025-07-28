@@ -277,6 +277,7 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .section-2-bg-mobile,
@@ -453,4 +454,77 @@ button {
 
 .article-ci {
   background-image: url("../public/article-cover-img.webp");
+}
+
+.article-content h1 {
+  font-size: 2rem !important;
+  line-height: 3rem !important;
+  font-weight: 700 !important;
+}
+
+.article-content h2 {
+  font-size: 1.5rem !important;
+  line-height: 2.25rem !important;
+  font-weight: 600 !important;
+}
+
+.article-content h3 {
+  font-size: 1.25rem !important;
+  line-height: 2rem !important;
+  font-weight: 500 !important;
+}
+
+.article-content p {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  font-weight: 400 !important;
+}
+
+.article-content ul {
+  list-style-type: disc !important;
+  margin-left: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.article-content ol {
+  list-style-type: decimal !important;
+  margin-left: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem !important;
+}
+
+.article-content hr {
+  height: 1px !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  margin: 1rem 0 !important;
+  width: 100% !important;
+  opacity: 0.1 !important;
+}
+
+.article-content button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  height: 2.5rem !important;
+  min-width: 10rem !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  line-height: 150% !important;
+  font-size: 0.875rem !important;
+  background-color: #8b6af5 !important;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.content-chunk {
+  @apply !space-y-2;
 }
