@@ -40,10 +40,10 @@ const getPublishedCourses = unstable_cache(
 
     return response.data;
   },
-  ["blogs", "published", "limit-3"],
+  ["courses"],
   {
     revalidate: 60 * 5,
-    tags: ["all-blogs", "published-blogs"],
+    tags: ["courses"],
   }
 );
 

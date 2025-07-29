@@ -10,6 +10,7 @@ type Blog = {
   id: string;
   title: string;
   content: string;
+  description: string;
   thumbnail: string;
   createdAt: string;
   view: number;
@@ -38,10 +39,10 @@ const getPublishedBlogs = unstable_cache(
 
     return response.data;
   },
-  ["blogs", "published", "limit-3"],
+  ["blogs"],
   {
     revalidate: 60 * 5,
-    tags: ["all-blogs", "published-blogs"],
+    tags: ["blogs"],
   }
 );
 
@@ -98,7 +99,7 @@ export default async function Blogs() {
                   {blog.title}
                 </p>
                 <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px] whitespace-nowrap text-ellipsis overflow-hidden">
-                  {blog.content.replace(/<[^>]+>/g, "")}
+                  {blog.description}
                 </p>
               </div>
             </Link>
