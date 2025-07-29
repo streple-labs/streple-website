@@ -1,6 +1,7 @@
 import { anton } from "@/app/fonts";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
+import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -26,15 +27,26 @@ type BlogResponse = {
   };
 };
 
+const getPublishedBlogs = unstable_cache(
+  async (): Promise<BlogResponse["data"]> => {
+    const response: BlogResponse = await api.get("/blogs", {
+      params: {
+        limit: 3,
+        status: "Published",
+      },
+    });
+
+    return response.data;
+  },
+  ["blogs", "published", "limit-3"],
+  {
+    revalidate: 60 * 5,
+    tags: ["all-blogs", "published-blogs"],
+  }
+);
+
 export default async function Blogs() {
-  const {
-    data: { data: blogs, totalCount },
-  }: BlogResponse = await api.get("/blogs", {
-    params: {
-      limit: 3,
-      status: "Published",
-    },
-  });
+  const { data: blogs, totalCount } = await getPublishedBlogs();
 
   return (
     <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
@@ -55,7 +67,7 @@ export default async function Blogs() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
           {blogs.map((blog, i) => (
             <Link
-              href={"/learn/blog/" + blog.slug}
+              href={"/learn/blogs/" + blog.id}
               className="space-y-5"
               key={i}
             >
@@ -95,7 +107,7 @@ export default async function Blogs() {
 
         {totalCount > 3 && (
           <Link
-            href={"/learn/blog"}
+            href={"/learn/blogs"}
             className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
           >
             View all

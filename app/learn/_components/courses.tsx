@@ -1,9 +1,10 @@
+import { anton } from "@/app/fonts";
 import api from "@/utils/axios";
+import { estimateReadingMinutes } from "@/utils/utils";
+import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import { anton } from "@/app/fonts";
-import { estimateReadingMinutes } from "@/utils/utils";
 
 type Course = {
   id: string;
@@ -28,15 +29,26 @@ type CoursesResponse = {
   };
 };
 
+const getPublishedCourses = unstable_cache(
+  async (): Promise<CoursesResponse["data"]> => {
+    const response: CoursesResponse = await api.get("/learnings", {
+      params: {
+        limit: 6,
+        status: "Published",
+      },
+    });
+
+    return response.data;
+  },
+  ["blogs", "published", "limit-3"],
+  {
+    revalidate: 60 * 5,
+    tags: ["all-blogs", "published-blogs"],
+  }
+);
+
 export default async function Courses() {
-  const {
-    data: { data: courses, totalCount },
-  }: CoursesResponse = await api.get("/learnings", {
-    params: {
-      limit: 6,
-      status: "Published",
-    },
-  });
+  const { data: courses, totalCount } = await getPublishedCourses();
 
   return (
     <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center relative">

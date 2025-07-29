@@ -2,6 +2,7 @@ import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
+import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -23,15 +24,25 @@ type BlogResponse = {
   };
 };
 
+const getBlogBySlug = unstable_cache(
+  async (blog_slug: string): Promise<Blog> => {
+    const response: BlogResponse = await api.get(`/blog?id=${blog_slug}`);
+    return response.data.data;
+  },
+  ["blog", "blog-detail"],
+  {
+    revalidate: 60 * 5,
+    tags: ["blog", "blog-detail"],
+  }
+);
+
 export default async function page({
   params,
 }: {
   params: Promise<{ blog_slug: string }>;
 }) {
   const { blog_slug } = await params;
-  const {
-    data: { data: blog },
-  }: BlogResponse = await api.get(`/blog?slug=${blog_slug}`);
+  const blog = await getBlogBySlug(blog_slug);
 
   return (
     <main>

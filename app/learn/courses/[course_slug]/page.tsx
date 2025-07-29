@@ -2,6 +2,7 @@ import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
+import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -25,15 +26,27 @@ type CoursesResponse = {
   };
 };
 
+const getCourseBySlug = unstable_cache(
+  async (course_slug: string): Promise<Course> => {
+    const response: CoursesResponse = await api.get(
+      `/learning?id=${course_slug}`
+    );
+    return response.data.data;
+  },
+  ["course", "course-detail"],
+  {
+    revalidate: 60 * 5,
+    tags: ["course", "course-detail"],
+  }
+);
+
 export default async function page({
   params,
 }: {
-  params: Promise<{ course_id: string }>;
+  params: Promise<{ course_slug: string }>;
 }) {
-  const { course_id } = await params;
-  const {
-    data: { data: course },
-  }: CoursesResponse = await api.get(`/learning?id=${course_id}`);
+  const { course_slug } = await params;
+  const course = await getCourseBySlug(course_slug);
 
   return (
     <main>
