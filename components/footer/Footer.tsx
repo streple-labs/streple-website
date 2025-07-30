@@ -134,7 +134,7 @@ export default function Footer() {
                 About us
               </Link>
               <Link
-                href={"/learn/blog"}
+                href={"/learn/blogs"}
                 className="text-sm leading-[25px] tracking-[1px]"
               >
                 Blog
