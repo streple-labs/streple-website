@@ -2,7 +2,7 @@ import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,7 +45,6 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ course_slug: string }>;
-  parent: ResolvingMetadata;
 }): Promise<Metadata> {
   const { course_slug } = await params;
   const course = await getCourse(course_slug);
