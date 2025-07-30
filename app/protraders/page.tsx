@@ -1,7 +1,12 @@
 import Navbar from "@/components/navbar/Navbar";
+import { Metadata } from "next";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
+
+export const metadata: Metadata = {
+  title: "Protraders",
+};
 
 export default function page() {
   return (

@@ -2,6 +2,7 @@ import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
+import { Metadata, ResolvingMetadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,7 +27,7 @@ type CoursesResponse = {
   };
 };
 
-const getCourseBySlug = unstable_cache(
+const getCourse = unstable_cache(
   async (course_slug: string): Promise<Course> => {
     const response: CoursesResponse = await api.get(
       `/learning?id=${course_slug}`
@@ -35,10 +36,37 @@ const getCourseBySlug = unstable_cache(
   },
   ["course", "course-detail"],
   {
-    revalidate: 60 * 5,
+    revalidate: 60,
     tags: ["course", "course-detail"],
   }
 );
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ course_slug: string }>;
+  parent: ResolvingMetadata;
+}): Promise<Metadata> {
+  const { course_slug } = await params;
+  const course = await getCourse(course_slug);
+
+  return {
+    title: course.title,
+    description: course.description.slice(0, 150),
+    openGraph: {
+      title: course.title,
+      description: course.description.slice(0, 150),
+      images: [course.thumbnail || "/article-cover-img.webp"],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: course.title,
+      description: course.description.slice(0, 150),
+      images: [course.thumbnail || "/article-cover-img.webp"],
+    },
+  };
+}
 
 export default async function page({
   params,
@@ -46,7 +74,7 @@ export default async function page({
   params: Promise<{ course_slug: string }>;
 }) {
   const { course_slug } = await params;
-  const course = await getCourseBySlug(course_slug);
+  const course = await getCourse(course_slug);
 
   return (
     <main>

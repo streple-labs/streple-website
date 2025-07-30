@@ -41,7 +41,7 @@ const getPublishedBlogs = unstable_cache(
   },
   ["blogs"],
   {
-    revalidate: 60 * 5,
+    revalidate: 60,
     tags: ["blogs"],
   }
 );

@@ -7,6 +7,14 @@ import Courses from "./_components/courses";
 import Blogs from "./_components/blogs";
 import { Suspense } from "react";
 import ArticleSkeleton from "./_components/skeleton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Courses and Blogs",
+    template: "Streple | %s",
+  },
+};
 
 export default async function page() {
   return (

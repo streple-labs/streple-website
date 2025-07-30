@@ -4,7 +4,11 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Streple | Copy Top Traders and Earn Smarter",
+  title: {
+    default: "Streple | Copy Top Traders and Earn Smarter",
+    template: "Streple | %s",
+    absolute: "Streple | Copy Top Traders and Earn Smarter",
+  },
   description:
     "Mirror top traders in real time with Streple. Start trading like a pro in 3 simple steps — no experience needed. Copy verified experts, automate your trades, and earn smarter.",
   keywords: [
@@ -27,9 +31,7 @@ export const metadata: Metadata = {
     siteName: "Streple",
     images: [
       {
-        url: "https://streple.com/opengraph-image.webp",
-        width: 1200,
-        height: 630,
+        url: "https://streple.com/opengraph-image.png",
         alt: "Streple - Copy Top Traders",
       },
     ],
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     title: "Streple | Copy Top Traders and Earn Smarter",
     description:
       "Start trading like a pro with Streple. No experience needed — copy top-performing experts and automate your trading journey.",
-    images: ["https://streple.com/opengraph-image.webp"],
+    images: ["https://streple.com/opengraph-image.png"],
     creator: "@StrepleNetwork",
   },
   metadataBase: new URL("https://streple.com"),

@@ -42,7 +42,7 @@ const getPublishedCourses = unstable_cache(
   },
   ["courses"],
   {
-    revalidate: 60 * 5,
+    revalidate: 60,
     tags: ["courses"],
   }
 );
