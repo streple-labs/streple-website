@@ -1,8 +1,13 @@
 import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+
+export const metadata: Metadata = {
+  title: "Courses",
+};
 
 export default function page() {
   return (

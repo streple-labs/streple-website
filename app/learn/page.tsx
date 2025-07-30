@@ -1,13 +1,13 @@
 import Navbar from "@/components/navbar/Navbar";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
-import Courses from "./_components/courses";
 import Blogs from "./_components/blogs";
-import { Suspense } from "react";
+import Courses from "./_components/courses";
 import ArticleSkeleton from "./_components/skeleton";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
