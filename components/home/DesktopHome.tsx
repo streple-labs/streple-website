@@ -160,8 +160,8 @@ export default function DesktopHome() {
 
           <Image
             loading="lazy"
-            src="/debit-card.webp"
-            alt="debit card"
+            src="/learn-from-the-best.png"
+            alt="learn from the best"
             width={564}
             height={650}
             className="w-401-h-518-lg w-501-h-647-xl xxl:w-[564px] xxl:h-[650px]"

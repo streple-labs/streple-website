@@ -1,7 +1,6 @@
 import { anton } from "@/app/fonts";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
-import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -28,23 +27,16 @@ type BlogResponse = {
   };
 };
 
-const getPublishedBlogs = unstable_cache(
-  async (): Promise<BlogResponse["data"]> => {
-    const response: BlogResponse = await api.get("/blogs", {
-      params: {
-        limit: 3,
-        status: "Published",
-      },
-    });
+const getPublishedBlogs = async (): Promise<BlogResponse["data"]> => {
+  const response: BlogResponse = await api.get("/blogs", {
+    params: {
+      limit: 3,
+      status: "Published",
+    },
+  });
 
-    return response.data;
-  },
-  ["blogs"],
-  {
-    revalidate: 60,
-    tags: ["blogs"],
-  }
-);
+  return response.data;
+};
 
 export default async function Blogs() {
   const { data: blogs, totalCount } = await getPublishedBlogs();

@@ -1,7 +1,6 @@
 import { anton } from "@/app/fonts";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
-import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -29,23 +28,16 @@ type CoursesResponse = {
   };
 };
 
-const getPublishedCourses = unstable_cache(
-  async (): Promise<CoursesResponse["data"]> => {
-    const response: CoursesResponse = await api.get("/learnings", {
-      params: {
-        limit: 6,
-        status: "Published",
-      },
-    });
+const getPublishedCourses = async (): Promise<CoursesResponse["data"]> => {
+  const response: CoursesResponse = await api.get("/learnings", {
+    params: {
+      limit: 6,
+      status: "Published",
+    },
+  });
 
-    return response.data;
-  },
-  ["courses"],
-  {
-    revalidate: 60,
-    tags: ["courses"],
-  }
-);
+  return response.data;
+};
 
 export default async function Courses() {
   const { data: courses, totalCount } = await getPublishedCourses();
@@ -96,7 +88,7 @@ export default async function Courses() {
                       year: "numeric",
                     })}
                   </span>
-                  <span className="size-0.5 bg-white/50" />
+                  {/* <span className="size-0.5 bg-white/50" /> */}
                   {/* <span>{course.view} views</span> */}
                 </p>
                 <p
