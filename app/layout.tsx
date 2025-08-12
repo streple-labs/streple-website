@@ -1,5 +1,6 @@
 import { openSans } from "@/app/fonts";
 import Footer from "@/components/footer/Footer";
+import QueryProvider from "@/providers/query-provider";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
@@ -61,10 +62,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} antialiased`}>
-        {children}
-        <Footer />
-      </body>
+      <QueryProvider>
+        <body className={`${openSans.className} antialiased`}>
+          {children}
+          <Footer />
+        </body>
+      </QueryProvider>
     </html>
   );
 }
