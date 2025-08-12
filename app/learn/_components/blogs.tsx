@@ -30,7 +30,9 @@ type BlogResponse = {
 const getPublishedBlogs = async (): Promise<BlogResponse["data"]> => {
   const response: BlogResponse = await api.get("/blogs", {
     params: {
+      page: 1,
       limit: 3,
+      sort: "updatedAt",
       status: "Published",
     },
   });
