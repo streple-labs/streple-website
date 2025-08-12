@@ -29,14 +29,9 @@ type CoursesResponse = {
 };
 
 const getPublishedCourses = async (): Promise<CoursesResponse["data"]> => {
-  const response: CoursesResponse = await api.get("/learnings", {
-    params: {
-      page: 1,
-      limit: 6,
-      sort: "updatedAt",
-      status: "Published",
-    },
-  });
+  const response: CoursesResponse = await api.get(
+    "/learnings?page=1&limit=6&sort=updatedAt&status=Published"
+  );
 
   return response.data;
 };
