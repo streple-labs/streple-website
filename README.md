@@ -40,8 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Add Asterisk (*) here, update the readme, and commit.
 This will trigger deployment on Vercel.
 
-Add Asterisk (*) here:
+Add or Remove Asterisk (*) here:
 
 ```
-****************************************
+**********************
 ```
