@@ -2,6 +2,8 @@ import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
+import { Metadata } from "next";
+import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -25,15 +27,53 @@ type CoursesResponse = {
   };
 };
 
+const getCourse = unstable_cache(
+  async (course_slug: string): Promise<Course> => {
+    const response: CoursesResponse = await api.get(
+      `/learning?id=${course_slug}`
+    );
+    return response.data.data;
+  },
+  ["course", "course-detail"],
+  {
+    revalidate: 60,
+    tags: ["course", "course-detail"],
+  }
+);
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ course_slug: string }>;
+}): Promise<Metadata> {
+  const { course_slug } = await params;
+  const course = await getCourse(course_slug);
+
+  return {
+    title: course.title,
+    description: course.description.slice(0, 150),
+    openGraph: {
+      title: course.title,
+      description: course.description.slice(0, 150),
+      images: [course.thumbnail || "/article-cover-img.webp"],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: course.title,
+      description: course.description.slice(0, 150),
+      images: [course.thumbnail || "/article-cover-img.webp"],
+    },
+  };
+}
+
 export default async function page({
   params,
 }: {
-  params: Promise<{ course_id: string }>;
+  params: Promise<{ course_slug: string }>;
 }) {
-  const { course_id } = await params;
-  const {
-    data: { data: course },
-  }: CoursesResponse = await api.get(`/learning?id=${course_id}`);
+  const { course_slug } = await params;
+  const course = await getCourse(course_slug);
 
   return (
     <main>

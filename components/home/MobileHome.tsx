@@ -154,16 +154,16 @@ export default function MobileHome() {
 
           <Image
             loading="lazy"
-            src="/debit-card.webp"
-            alt="debit card"
+            src="/learn-from-the-best.png"
+            alt="learn from the best"
             width={564}
             height={650}
             className="md:hidden mt-12 mx-auto"
           />
           <Image
             loading="lazy"
-            src="/debit-card.webp"
-            alt="debit card"
+            src="/learn-from-the-best.png"
+            alt="learn from the best"
             width={564}
             height={650}
             className="hidden md:block h-[491px] w-[380px]"
@@ -213,8 +213,8 @@ export default function MobileHome() {
           />
           <Image
             loading="lazy"
-            src="/zero-knowledge.webp"
-            alt="zero knowledge"
+            src="/learn-the-why.webp"
+            alt="learn the why"
             width={564}
             height={650}
             className="hidden md:block h-[491px] w-[380px] mt-12 mx-auto"

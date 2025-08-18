@@ -3,7 +3,6 @@ import axios, {
   AxiosResponse,
   InternalAxiosRequestConfig,
 } from "axios";
-// import { deleteCookie, getCookie } from "cookies-next";
 import { base_url } from "./constants";
 
 interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {

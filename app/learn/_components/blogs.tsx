@@ -1,14 +1,19 @@
+"use client";
+
 import { anton } from "@/app/fonts";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+import ArticleSkeleton from "./skeleton";
 
 type Blog = {
   id: string;
   title: string;
   content: string;
+  description: string;
   thumbnail: string;
   createdAt: string;
   view: number;
@@ -16,24 +21,23 @@ type Blog = {
 };
 
 type BlogResponse = {
-  data: {
-    data: Blog[];
-    totalCount: number;
-    currentPage: number;
-    totalPages: number;
-    hasNextPage: boolean;
-    hasPrevPage: boolean;
-  };
+  data: Blog[];
+  totalCount: number;
+  currentPage: number;
+  totalPages: number;
+  hasNextPage: boolean;
+  hasPrevPage: boolean;
 };
 
-export default async function Blogs() {
-  const {
-    data: { data: blogs, totalCount },
-  }: BlogResponse = await api.get("/blogs", {
-    params: {
-      limit: 3,
-      status: "Published",
-    },
+export default function Blogs() {
+  const { data: blogs, isPending: loading } = useQuery<BlogResponse>({
+    queryKey: ["blog-data"],
+    queryFn: async () =>
+      (
+        await api.get("/blogs", {
+          params: { page: 1, limit: 3, status: "Published" },
+        })
+      ).data,
   });
 
   return (
@@ -45,57 +49,63 @@ export default async function Blogs() {
           Blogs
         </h4>
 
-        {!blogs.length && (
-          <div className="flex items-center justify-center size-full">
-            <p className="text-white/50 text-sm font-normal">
-              No blogs uploaded yet.
-            </p>
-          </div>
-        )}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
-          {blogs.map((blog, i) => (
-            <Link
-              href={"/learn/blog/" + blog.slug}
-              className="space-y-5"
-              key={i}
-            >
-              <Image
-                alt="blog thumbnail"
-                src={blog.thumbnail || "/guide-1.png"}
-                width={401}
-                height={237}
-                className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}
-              />
-              <div className="space-y-2">
-                <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
-                  <span>{estimateReadingMinutes(blog.content)} min</span>
-                  <span className="size-0.5 bg-white/50" />
-                  <span>
-                    {new Date(blog.createdAt).toLocaleDateString("en-GB", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
-                    })}
-                  </span>
-                  <span className="size-0.5 bg-white/50" />
-                  <span>{blog.view} views</span>
-                </p>
-                <p
-                  className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders max-w-[400px] whitespace-nowrap text-ellipsis overflow-hidden`}
-                >
-                  {blog.title}
-                </p>
-                <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px] whitespace-nowrap text-ellipsis overflow-hidden">
-                  {blog.content.replace(/<[^>]+>/g, "")}
+        {loading ? (
+          <ArticleSkeleton length={3} />
+        ) : (
+          <>
+            {!blogs?.data.length && (
+              <div className="flex items-center justify-center size-full">
+                <p className="text-white/50 text-sm font-normal">
+                  No blogs uploaded yet.
                 </p>
               </div>
-            </Link>
-          ))}
-        </div>
+            )}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+              {blogs?.data.map((blog, i) => (
+                <Link
+                  href={"/learn/blogs/" + blog.id}
+                  className="space-y-5"
+                  key={i}
+                >
+                  <Image
+                    alt="blog thumbnail"
+                    src={blog.thumbnail || "/guide-1.png"}
+                    width={401}
+                    height={237}
+                    className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}
+                  />
+                  <div className="space-y-2">
+                    <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
+                      <span>{estimateReadingMinutes(blog.content)} min</span>
+                      <span className="size-0.5 bg-white/50" />
+                      <span>
+                        {new Date(blog.createdAt).toLocaleDateString("en-GB", {
+                          day: "2-digit",
+                          month: "short",
+                          year: "numeric",
+                        })}
+                      </span>
+                      <span className="size-0.5 bg-white/50" />
+                      <span>{blog.view} views</span>
+                    </p>
+                    <p
+                      className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders max-w-[400px] whitespace-nowrap text-ellipsis overflow-hidden`}
+                    >
+                      {blog.title}
+                    </p>
+                    <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px] whitespace-nowrap text-ellipsis overflow-hidden">
+                      {blog.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
 
-        {totalCount > 3 && (
+        {(blogs?.totalCount || 0) > 3 && (
           <Link
-            href={"/learn/blog"}
+            href={"/learn/blogs"}
             className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
           >
             View all

@@ -5,6 +5,11 @@ import SwigglyLine from "@/public/swiggly-line";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Streple",
+};
 
 export default function Page() {
   return (

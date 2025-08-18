@@ -2,6 +2,8 @@ import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
+import { Metadata } from "next";
+import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -23,15 +25,51 @@ type BlogResponse = {
   };
 };
 
+const getBlog = unstable_cache(
+  async (blog_slug: string): Promise<Blog> => {
+    const response: BlogResponse = await api.get(`/blog?id=${blog_slug}`);
+    return response.data.data;
+  },
+  ["blog", "blog-detail"],
+  {
+    revalidate: 60,
+    tags: ["blog", "blog-detail"],
+  }
+);
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ blog_slug: string }>;
+}): Promise<Metadata> {
+  const { blog_slug } = await params;
+  const blog = await getBlog(blog_slug);
+
+  return {
+    title: blog.title,
+    description: blog.content.slice(0, 150),
+    openGraph: {
+      title: blog.title,
+      description: blog.content.slice(0, 150),
+      images: [blog.thumbnail || "/article-cover-img.webp"],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.content.slice(0, 150),
+      images: [blog.thumbnail || "/article-cover-img.webp"],
+    },
+  };
+}
+
 export default async function page({
   params,
 }: {
   params: Promise<{ blog_slug: string }>;
 }) {
   const { blog_slug } = await params;
-  const {
-    data: { data: blog },
-  }: BlogResponse = await api.get(`/blog?slug=${blog_slug}`);
+  const blog = await getBlog(blog_slug);
 
   return (
     <main>

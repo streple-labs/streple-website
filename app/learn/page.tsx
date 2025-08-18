@@ -1,12 +1,18 @@
 import Navbar from "@/components/navbar/Navbar";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
-import Courses from "./_components/courses";
 import Blogs from "./_components/blogs";
-import { Suspense } from "react";
-import ArticleSkeleton from "./_components/skeleton";
+import Courses from "./_components/courses";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Courses and Blogs",
+    template: "Streple | %s",
+  },
+};
 
 export default async function page() {
   return (
@@ -87,13 +93,9 @@ export default async function page() {
         </div>
       </section>
 
-      <Suspense fallback={<ArticleSkeleton length={6} />}>
-        <Courses />
-      </Suspense>
+      <Courses />
 
-      <Suspense fallback={<ArticleSkeleton length={3} />}>
-        <Blogs />
-      </Suspense>
+      <Blogs />
 
       <section className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.webp')]">
         <div className="flex flex-col items-center md:min-h-[610px] justify-center my-16 md:my-24 w-full mw">
