@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-6 md:gap-8">
               <a
-                href="https://t.me/streplenetwork"
+                href="https://t.me/StrepleCommunity"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="size-[45px] bg-[#5A555C4D] rounded-full flex items-center justify-center"
