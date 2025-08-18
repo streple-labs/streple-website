@@ -81,18 +81,18 @@ export default function DesktopHome() {
             {[
               {
                 img: "/follow-trade.svg",
-                title: "Follow top traders",
-                desc: "Browse verified expert traders, check their stats, risk levels, and trading style before following.",
+                title: "Awareness",
+                desc: "Get introduced to digital finance, assets, and tools in plain language, with relatable, real-life examples.",
               },
               {
                 img: "/copy-trades.svg",
-                title: "Copy Trades in Real Time",
-                desc: "Once you follow a trader, Streple mirrors their trades to your simulated account.",
+                title: "Understanding",
+                desc: "Each trade comes with tips, insights, and clear breakdowns so you understand the reason behind every move.",
               },
               {
                 img: "/learn-more.svg",
-                title: "Learn As you Grow",
-                desc: "Each trade comes with tips, insights, and clear breakdowns so you understand the reason behind every move.",
+                title: "Participation",
+                desc: "Build skills, take action, and step into digital ownership with full support and a thriving community",
               },
             ].map(({ img, desc, title }, i) => (
               <div
@@ -180,17 +180,15 @@ export default function DesktopHome() {
             </div>
 
             <h3
-              className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-36-lg text-46-xl xxl:text-[52px] 2xl:text-[56px] ${anton.className}`}
+              className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-24-lg text-30-xl xxl:text-[34px] 2xl:text-[36px] ${anton.className}`}
             >
-              Learn the Why Behind Every Trade
+              Send, Receive and Withdraw.
+              <br />Anytime, Anywhwere
             </h3>
 
             <div className="flex flex-col gap-[60px]">
               <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] ">
-                Get clear, step-by-step breakdowns of every trading decision. We
-                explain the reasoning, market conditions, and key factors behind
-                each move so you can learn, understand, and make informed
-                decisions with confidence.
+                Fund your Streple wallet from any Nigerian bank, receive money globally and withdraw instantly
               </p>
 
               <a
@@ -207,7 +205,7 @@ export default function DesktopHome() {
 
           <Image
             loading="lazy"
-            src="/learn-the-why.webp"
+            src="/send-and-receive.png"
             alt="learn the why"
             width={564}
             height={650}
@@ -367,7 +365,7 @@ export default function DesktopHome() {
               className="flex flex-row items-center rounded-[20px] px-[16px] py-[12px] gap-2.5 bg-[#F4E90E] hover:bg-[#CEC510]"
             >
               <span className="font-bold leading-[150%] tracking-[2px] text-sm md:text-base text-[#2C2C26]">
-                Secure your spot
+                Start copying trades
               </span>
               <GoArrowRight className="text-[#2C2D28] size-4 md:size-6" />
             </a>

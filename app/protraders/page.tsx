@@ -20,7 +20,8 @@ export default function page() {
               <h3
                 className={`justify-center items-center font-normal leading-[150%] tracking-[2%] text-2xl xs:text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] lg:max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
               >
-                Already confident? Start to Earn While You Trade
+                Start to Earn While<br/>
+                You Trade
               </h3>
 
               <p className="font-normal leading-8 text-sm sm:text-base lg:text-[21px] tracking-[1px] text-white/70">

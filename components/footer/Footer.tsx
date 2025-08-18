@@ -9,11 +9,19 @@ export default function Footer() {
     <div className="w-full flex items-center justify-center px-4 sm:px-[6.4%] py-[92px]">
       <footer className="flex flex-col gap-[72px] lg:gap-[92px] w-full max-w-[1356px]">
         <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-[5%]">
-          <h3
-            className={`${anton.className} w-auto text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
-          >
-            Subscribe to Our Newsletter
-          </h3>
+          <div className="flex flex-col gap-2">
+            <h3
+              className={`${anton.className} w-auto text-base xs:text-[18px] sm:text-xl md:text-2xl lg:text-[36px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
+            >
+              Subscribe to Our
+              <br />Newsletter
+            </h3>
+
+            <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-base ">
+              By subscribing, you’ll receive helpful
+              <br/>content and platform updates from Streple. Unsubscribe anytime.
+            </p>
+          </div>
 
           <div className="relative w-full">
             <input
@@ -167,7 +175,7 @@ export default function Footer() {
                 href="/Streple Privacy Policy.docx"
                 className="text-sm leading-[25px] tracking-[1px]"
               >
-                Privacy and Policy
+                Privacy Policy
               </a>
               <a
                 target="_blank"
@@ -175,6 +183,27 @@ export default function Footer() {
                 className="text-sm leading-[25px] tracking-[1px]"
               >
                 Terms and Conditions
+              </a>
+              <a
+                target="_blank"
+                href="#"
+                className="text-sm leading-[25px] tracking-[1px]"
+              >
+                End-User license agreement
+              </a>
+              <a
+                target="_blank"
+                href="#"
+                className="text-sm leading-[25px] tracking-[1px]"
+              >
+                General risk disclosure
+              </a>
+              <a
+                target="_blank"
+                href="#"
+                className="text-sm leading-[25px] tracking-[1px]"
+              >
+                Disclaimer
               </a>
             </div>
           </div>

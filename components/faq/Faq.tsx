@@ -9,6 +9,18 @@ const faqs = [
     answer: "Streple is built for beginners. We guide you step-by-step.",
   },
   {
+    question: "Is Streple secure?",
+    answer: "Yes, Streple runs on a bank-grade, zero-trust security architecture powered by Enet Secured.",
+  },
+  {
+    question: "How do I become a pro trader?",
+    answer: "Visit the Pro Traders page and apply directly from there.",
+  },
+  {
+    question: "Is Streple regulated?",
+    answer: "Yes, Streple is a licensed Virtual Asset Service Provider (VASP) and complies with regulatory standards for secure digital asset operations.",
+  },
+  {
     question: "Can I make quick money here?",
     answer:
       "That’s not the goal. We focus on skill-building. Learning first, profits come second.",

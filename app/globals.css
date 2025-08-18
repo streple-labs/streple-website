@@ -152,6 +152,10 @@ button {
     gap: 37px;
   }
 
+  .text-30-xl {
+    font-size: 30px;
+  }
+
   .text-46-xl {
     font-size: 46px;
   }
@@ -211,6 +215,10 @@ button {
 
   .w-796-lg {
     width: 796px;
+  }
+
+  .text-24-lg {
+    font-size: 24px;
   }
 
   .text-36-lg {
