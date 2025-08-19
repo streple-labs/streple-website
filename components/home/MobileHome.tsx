@@ -76,18 +76,18 @@ export default function MobileHome() {
             {[
               {
                 img: "/follow-trade.svg",
-                title: "Follow top traders",
-                desc: "Browse verified expert traders, check their stats, risk levels, and trading style before following.",
+                title: "Awareness",
+                desc: "Get introduced to digital finance, assets, and tools in plain language, with relatable, real-life examples.",
               },
               {
                 img: "/copy-trades.svg",
-                title: "Copy Trades in Real Time",
-                desc: "Once you follow a trader, Streple mirrors their trades to your simulated account.",
+                title: "Understanding",
+                desc: "Each trade comes with tips, insights, and clear breakdowns so you understand the reason behind every move.",
               },
               {
                 img: "/learn-more.svg",
-                title: "Learn As you Grow",
-                desc: "Each trade comes with tips, insights, and clear breakdowns so you understand the reason behind every move.",
+                title: "Participation",
+                desc: "Build skills, take action, and step into digital ownership with full support and a thriving community.",
               },
             ].map(({ img, desc, title }, i) => (
               <div
@@ -130,14 +130,12 @@ export default function MobileHome() {
             <h3
               className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-2xl xs:text-[27px] md:text-3xl ${anton.className}`}
             >
-              Earn profits without lifting a finger
+              Learn From the Best
             </h3>
 
             <div className="flex flex-col gap-8">
               <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 ">
-                Stop stressing over charts and market news. With Streple, you
-                copy the exact trades of top-performing experts automatically.
-                You trade smarter, even when you&apos;re offline.
+                Copy verified expert traders with proven track records. Analyze their approaches and replicate their success.
               </p>
 
               <a
@@ -182,13 +180,12 @@ export default function MobileHome() {
             <span
               className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-2xl xs:text-[27px] md:text-3xl ${anton.className}`}
             >
-              Learn the Why Behind Every Trade
+              Send, Receive and Withdraw. Anytime, Anywhwere
             </span>
 
             <div className="flex flex-col gap-6">
               <p className="font-normal text-sm md:text-base tracking-[1px] leading-8 ">
-                Go beyond just copying — discover what each trade means, why it
-                happened, and how to build confidence with every move you make.
+                Fund your Streple wallet from any Nigerian bank, receive money globally and withdraw instantly
               </p>
 
               <a
@@ -197,7 +194,7 @@ export default function MobileHome() {
                 rel="noopener noreferrer"
                 className="flex flex-row items-center gap-3 leading-[150%] tracking-[2px] font-bold text-[20px] text-[#DFD735]"
               >
-                Explore Streple Learn
+                Get Started
                 <GoArrowRight size={16} />
               </a>
             </div>
@@ -205,16 +202,16 @@ export default function MobileHome() {
 
           <Image
             loading="lazy"
-            src="/learn-the-why.webp"
-            alt="learn the why"
+            src="/send-and-receive.png"
+            alt="send, receive and withdraw"
             width={564}
             height={650}
             className="md:hidden mt-12 mx-auto"
           />
           <Image
             loading="lazy"
-            src="/learn-the-why.webp"
-            alt="learn the why"
+            src="/send-and-receive.png"
+            alt="send, receive and withdraw"
             width={564}
             height={650}
             className="hidden md:block h-[491px] w-[380px] mt-12 mx-auto"

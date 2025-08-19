@@ -92,7 +92,7 @@ export default function DesktopHome() {
               {
                 img: "/learn-more.svg",
                 title: "Participation",
-                desc: "Build skills, take action, and step into digital ownership with full support and a thriving community",
+                desc: "Build skills, take action, and step into digital ownership with full support and a thriving community.",
               },
             ].map(({ img, desc, title }, i) => (
               <div
@@ -206,7 +206,7 @@ export default function DesktopHome() {
           <Image
             loading="lazy"
             src="/send-and-receive.png"
-            alt="learn the why"
+            alt="send, receive and withdraw"
             width={564}
             height={650}
             className="w-401-h-518-lg w-501-h-647-xl xxl:w-[564px] xxl:h-[650px]"

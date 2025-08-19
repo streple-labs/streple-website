@@ -46,7 +46,7 @@ export default function Blogs() {
         <h4
           className={`${anton.className} text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
         >
-          Blogs
+          Latest Blogs
         </h4>
 
         {loading ? (
