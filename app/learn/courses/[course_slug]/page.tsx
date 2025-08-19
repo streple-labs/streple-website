@@ -134,7 +134,7 @@ export default async function page({
             >
               Next reads
             </h5>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
               {Array.from({ length: 3 }).map((_, i) => (
                 <div className="space-y-5" key={i}>
                   <Image
@@ -318,7 +318,7 @@ export default async function page({
 //               Next watch
 //             </h5>
 
-//             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+//             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
 //               {Array.from({ length: 3 }).map((_, i) => (
 //                 <div className="space-y-5" key={i}>
 //                   <Image

@@ -9,27 +9,7 @@ import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import ArticleSkeleton from "./skeleton";
 
-type Blog = {
-  id: string;
-  title: string;
-  content: string;
-  description: string;
-  thumbnail: string;
-  createdAt: string;
-  view: number;
-  slug: string;
-};
-
-type BlogResponse = {
-  data: Blog[];
-  totalCount: number;
-  currentPage: number;
-  totalPages: number;
-  hasNextPage: boolean;
-  hasPrevPage: boolean;
-};
-
-export default function Blogs() {
+export default function Blogs({ title }: { title?: string }) {
   const { data: blogs, isPending: loading } = useQuery<BlogResponse>({
     queryKey: ["blog-data"],
     queryFn: async () =>
@@ -42,11 +22,11 @@ export default function Blogs() {
 
   return (
     <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-      <div className="relative flex flex-col mw my-16 md:my-24 gap-[40px]">
+      <div className="relative flex flex-col mw my-16 md:my-24 gap-10">
         <h4
           className={`${anton.className} text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
         >
-          Latest Blogs
+          {title || "Latest blog"}
         </h4>
 
         {loading ? (
@@ -60,7 +40,7 @@ export default function Blogs() {
                 </p>
               </div>
             )}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
               {blogs?.data.map((blog, i) => (
                 <Link
                   href={"/learn/blogs/" + blog.id}
