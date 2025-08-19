@@ -35,7 +35,7 @@ export default function page() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
               {Array.from({ length: 6 }).map((_, i) => (
                 <div className="space-y-5" key={i}>
                   <Image
@@ -124,7 +124,7 @@ export default function page() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
               {Array.from({ length: 6 }).map((_, i) => (
                 <div className="space-y-5" key={i}>
                   <Image
@@ -159,14 +159,14 @@ export default function page() {
       </section>
 
       <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center">
-        <div className="relative flex flex-col mw my-16 md:my-24 gap-[40px]">
+        <div className="relative flex flex-col mw my-16 md:my-24 gap-10">
           <h4
             className={`${anton.className} text-2xl xs:text-[27px] sm:text-3xl md:text-4xl lg:text-[52px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
           >
             Latest
           </h4>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[40px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
             {Array.from({ length: 3 }).map((_, i) => (
               <div className="space-y-5" key={i}>
                 <Image

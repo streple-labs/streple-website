@@ -9,27 +9,6 @@ import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import ArticleSkeleton from "./skeleton";
 
-type Course = {
-  id: string;
-  title: string;
-  description: string;
-  contents: string[];
-  document: string | null;
-  thumbnail: string;
-  level: "Beginner" | "Advanced";
-  type: "pdf" | "article";
-  createdAt: string;
-};
-
-type CoursesResponse = {
-  data: Course[];
-  currentPage: number;
-  hasNextPage: boolean;
-  hasPrevPage: boolean;
-  totalCount: number;
-  totalPages: number;
-};
-
 export default function Courses() {
   const { data: courses, isPending: loading } = useQuery<CoursesResponse>({
     queryKey: ["courses-data"],
@@ -43,7 +22,7 @@ export default function Courses() {
 
   return (
     <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center relative">
-      <div className="relative flex flex-col mw my-16 gap-[40px]">
+      <div className="relative flex flex-col mw my-16 gap-10">
         <h4
           className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px]  font-normal`}
         >
@@ -51,7 +30,7 @@ export default function Courses() {
         </h4>
 
         {loading ? (
-          <ArticleSkeleton length={6} />
+          <ArticleSkeleton />
         ) : (
           <>
             {!courses?.data.length && (
@@ -61,7 +40,7 @@ export default function Courses() {
                 </p>
               </div>
             )}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[40px] w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full">
               {courses?.data.map((course, i) => (
                 <Link
                   href={"/learn/courses/" + course.id}

@@ -72,7 +72,7 @@ export default function DesktopHome() {
             </span>
           </div>
 
-          <p className="font-normal text-[20px] text-[#FFFFFFB2] max-w-3xl leading-[40px] text-center mx-auto">
+          <p className="font-normal text-[20px] text-[#FFFFFFB2] max-w-3xl leading-10 text-center mx-auto">
             With just 3 steps, you can start trading like a pro, earn
             automatically.
           </p>
@@ -183,12 +183,14 @@ export default function DesktopHome() {
               className={`text-gradient-earn-profits tracking-[2px] leading-[150%] font-normal text-24-lg text-30-xl xxl:text-[34px] 2xl:text-[36px] ${anton.className}`}
             >
               Send, Receive and Withdraw.
-              <br />Anytime, Anywhwere
+              <br />
+              Anytime, Anywhwere
             </h3>
 
             <div className="flex flex-col gap-[60px]">
               <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-[21px] ">
-                Fund your Streple wallet from any Nigerian bank, receive money globally and withdraw instantly
+                Fund your Streple wallet from any Nigerian bank, receive money
+                globally and withdraw instantly
               </p>
 
               <a

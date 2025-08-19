@@ -22,7 +22,7 @@ export default async function page() {
           <Navbar />
 
           <div className="relative flex flex-col lg:flex-row min-h-[70vh] xxl:min-h-[50vh] items-center justify-between my-16 xl:my-32 gap-16 lg:gap-[5%]">
-            <div className="w-full lg:w-[50%] flex flex-col gap-[40px]">
+            <div className="w-full lg:w-[50%] flex flex-col gap-10">
               <h3
                 className={`justify-center items-center font-normal leading-[150%] tracking-[2%] text-2xl xs:text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] lg:max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
               >
