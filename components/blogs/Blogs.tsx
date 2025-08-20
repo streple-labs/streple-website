@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import ArticleSkeleton from "./skeleton";
+import ArticleSkeleton from "../article-skeleton/ArticleSkeleton";
 
 export default function Blogs({ title }: { title?: string }) {
   const { data: blogs, isPending: loading } = useQuery<BlogResponse>({
@@ -43,7 +43,7 @@ export default function Blogs({ title }: { title?: string }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
               {blogs?.data.map((blog, i) => (
                 <Link
-                  href={"/learn/blogs/" + blog.id}
+                  href={"/blog/" + blog.id}
                   className="space-y-5"
                   key={i}
                 >
@@ -85,7 +85,7 @@ export default function Blogs({ title }: { title?: string }) {
 
         {(blogs?.totalCount || 0) > 3 && (
           <Link
-            href={"/learn/blogs"}
+            href={"/blog"}
             className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
           >
             View all

@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import ArticleSkeleton from "./skeleton";
+import ArticleSkeleton from "../article-skeleton/ArticleSkeleton";
 import { useState } from "react";
 
 export default function Courses() {

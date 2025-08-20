@@ -5,7 +5,7 @@ import { estimateReadingMinutes } from "@/utils/utils";
 import { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
-import Blogs from "../../_components/blogs";
+import Blogs from "../../../components/blogs/Blogs";
 
 type Blog = {
   id: string;
