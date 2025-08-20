@@ -76,7 +76,7 @@ export default function Page() {
           href={"/blog/" + (blogs?.data[0].id || "")}
           className="w-full"
         >
-          <div className="h-[528px] w-full rounded-[28px] overflow-hidden flex flex-col justify-end relative">
+          <div className="h-[528px] w-full rounded-[28px] overflow-hidden flex flex-col justify-end relative mt-10">
             <Image
               src={blogs?.data[0].thumbnail || "/blog-thumbnail.jpg"}
               alt="blog thumbnail"

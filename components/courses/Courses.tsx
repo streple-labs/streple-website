@@ -45,35 +45,32 @@ export default function Courses() {
 
   return (
     <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center relative">
-      <div className="relative flex flex-col mw my-16 gap-10">
-        <h4
-          className={`text-gradient-copy-top-traders ${anton.className} text-2xl lg:text-4xl leading-[150%] tracking-[2px] font-normal`}
+      <div className="relative flex flex-col mw my-16 gap-14">
+        <h1
+          className={`justify-center items-center font-normal leading-[150%] tracking-[2%] text-2xl xs:text-[27px] sm:text-3xl md:text-5xl lg:text-[52px] lg:max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
         >
           Learning guides
-        </h4>
+        </h1>
 
-        <div className="flex flex-row gap-20 items-center">
-          <button
+        <div className="flex items-center gap-8 md:gap-[80px]">
+          <span
             onClick={handleShowAll}
-            className="flex flex-col text-center items-center"
+            className={`text-center min-w-10 md:min-w-20 pb-2 cursor-pointer text-base md:text-[21px] leading-6 md:leading-8 tracking-[1px] font-normal ${showAll && "border-b-[2.5px] border-b-[#F4E90E]"}`}
           >
-            <span className="text-sm lg:text-xl text-white font-normal mb-3.5">All</span>
-            {showAll && <span className="w-21 border-2 border-[#F4E90E] rounded-md transition-all duration-500"></span>}
-          </button>
-          <button
+            All
+          </span>
+          <span
             onClick={handleShowArticles}
-            className="flex flex-col text-center items-center"
+            className={`text-center min-w-10 md:min-w-20 pb-2 cursor-pointer text-base md:text-[21px] leading-6 md:leading-8 tracking-[1px] font-normal ${showArticles && "border-b-[2.5px] border-b-[#F4E90E]"}`}
           >
-            <span className="text-sm lg:text-xl text-white font-normal mb-3.5">Articles</span>
-            {showArticles && <span className="w-21 border-2 border-[#F4E90E] rounded-md transition-all duration-500"></span>}
-          </button>
-          <button
+            Articles
+          </span>
+          <span
             onClick={handleShowVideos}
-            className="flex flex-col text-center items-center"
+            className={`text-center min-w-10 md:min-w-20 pb-2 cursor-pointer text-base md:text-[21px] leading-6 md:leading-8 tracking-[1px] font-normal ${showVideos && "border-b-[2.5px] border-b-[#F4E90E]"}`}
           >
-            <span className="text-sm lg:text-xl text-white font-normal mb-3.5">Videos</span>
-            {showVideos && <span className="w-21 border-2 border-[#F4E90E] rounded-md transition-all duration-500"></span>}
-          </button>
+            Videos
+          </span>
         </div>
 
         {loading ? (
@@ -149,27 +146,42 @@ export default function Courses() {
           </Link>
         )}
 
-        {/* Copy Trading 101 */}
-        {/* TODO: check if mt-10 */}
-        <div className="flex flex-row justify-between mt-10">
-          <div className="flex flex-col gap-6">
-            <h4 className={`${anton.className} font-normal text-4xl leading-[150%] tracking-[2px] text-[#FFFFFFB2]`}>
-              Copy Trading 101: What It Is and How <br />
-              It Works (With Examples)</h4>
-            <button className="bg-[#B39FF0] px-16 py-3 rounded-[20px] w-max text-[#2C2C26] font-bold text-base">View</button>
+        <div className="flex flex-col md:flex-row gap-10">
+          <div className="w-full md:w-1/2 lg:w-[70%] space-y-6">
+            <h4
+              className={`font-normal leading-[150%] tracking-[2%] text-[21px] sm:text-2xl md:text-3xl lg:text-4xl max-w-[615px] text-[#FFFFFFB2] ${anton.className}`}
+            >
+              Copy Trading 101: What It Is and How It Works (With Examples)
+            </h4>
+
+            <button className="text-[#2C2C26] flex items-center justify-center gap-3 font-bold text-base leading-[150%] tracking-[2px] w-[172px] h-12 rounded-[20px] py-3 px-4 bg-[#B39FF0]">
+              View
+            </button>
           </div>
 
-          <div className="flex flex-col gap-6 max-w-80">
-            <h5 className={`${anton.className} font-normal text-[27px] leading-[150%] tracking-[2px] text-white`}>
-              Top guides
+          <div className="space-y-6 w-full md:w-1/2 lg:w-[30%]">
+            <h5
+              className={`text-[21px] md:text-[27px] font-normal leading-[150%] tracking-[2px] ${anton.className} text-white`}
+            >
+              Top Guides
             </h5>
+            <p className="flex flex-col gap-5.5 font-semibold text-sm leading-[25px] tracking-[1px] text-[#FFFFFFB2]">
+              <Link href={"#"}>
+                Why Copy Trading Is Gaining Massive Popularity in 2025
+              </Link>
 
-            <div className="flex flex-col gap-5.5 font-semibold text-sm leading-[25px] tracking-[1px] text-[#FFFFFFB2]">
-              <span>Why Copy Trading Is Gaining Massive Popularity in 2025</span>
-              <span>How to Spot a Reliable Trader Before You Copy</span>
-              <span>Why Copy Trading Is Gaining Massive Popularity in 2025</span>
-              <span>Crypto Market Volatility: What It Means for Copy Traders</span>
-            </div>
+              <Link href={"#"}>
+                How to Spot a Reliable Trader Before You Copy
+              </Link>
+
+              <Link href={"#"}>
+                Why Copy Trading Is Gaining Massive Popularity in 2025
+              </Link>
+
+              <Link href={"#"}>
+                Crypto Market Volatility: What It Means for Copy Traders
+              </Link>
+            </p>
           </div>
         </div>
       </div>
