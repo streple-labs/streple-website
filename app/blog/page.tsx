@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import ArticleSkeleton from "../../components/skeleton";
+import ArticleSkeleton from "../../components/article-skeleton/ArticleSkeleton";
 
 export default function Page() {
   const { data: blogs, isPending: loading } = useQuery<BlogResponse>({
@@ -72,11 +72,8 @@ export default function Page() {
           <Navbar />
         </div>
 
-        <Link
-          href={"/learn/blogs/" + (blogs?.data[0].id || "")}
-          className="w-full"
-        >
-          <div className="h-[528px] w-full rounded-[28px] overflow-hidden flex flex-col justify-end relative">
+        <Link href={"/blog/" + (blogs?.data[0].id || "")} className="w-full">
+          <div className="h-[528px] w-full rounded-[28px] overflow-hidden flex flex-col justify-end relative mt-10">
             <Image
               src={blogs?.data[0].thumbnail || "/blog-thumbnail.jpg"}
               alt="blog thumbnail"
@@ -141,11 +138,7 @@ export default function Page() {
               )}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
                 {blogs?.data.map((blog, i) => (
-                  <Link
-                    href={"/learn/blogs/" + blog.id}
-                    className="space-y-5"
-                    key={i}
-                  >
+                  <Link href={"/blog/" + blog.id} className="space-y-5" key={i}>
                     <Image
                       alt="blog thumbnail"
                       src={blog.thumbnail || "/guide-1.png"}
@@ -187,7 +180,7 @@ export default function Page() {
 
           {(blogs?.totalCount || 0) > 3 && (
             <Link
-              href={"/learn/blogs"}
+              href={"/blog"}
               className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
             >
               View all

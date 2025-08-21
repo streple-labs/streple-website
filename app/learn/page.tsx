@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
-import Courses from "./_components/courses";
-import Blogs from "../blogs/blogs";
+import Blogs from "../../components/blogs/Blogs";
+import Courses from "../../components/courses/Courses";
 
 export const metadata: Metadata = {
   title: {
