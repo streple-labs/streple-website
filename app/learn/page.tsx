@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
-import Blogs from "./_components/blogs";
 import Courses from "./_components/courses";
+import Blogs from "../blogs/blogs";
 
 export const metadata: Metadata = {
   title: {
-    default: "Courses and Blogs",
+    default: "Courses",
     template: "Streple | %s",
   },
 };

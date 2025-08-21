@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import ArticleSkeleton from "../_components/skeleton";
+import ArticleSkeleton from "../../components/skeleton";
 
 export default function Page() {
   const { data: blogs, isPending: loading } = useQuery<BlogResponse>({
