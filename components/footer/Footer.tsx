@@ -1,7 +1,7 @@
 import { anton } from "@/app/fonts";
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
+import { FaInstagram, FaTelegramPlane, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
 
             <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-base ">
               By subscribing, you’ll receive helpful
-              <br/>content and platform updates from Streple. Unsubscribe anytime.
+              <br />content and platform updates from Streple. Unsubscribe anytime.
             </p>
           </div>
 
@@ -86,12 +86,12 @@ export default function Footer() {
                 <FaInstagram size={20} className="text-white/70" />
               </a>
               <a
-                href="https://www.linkedin.com/company/enet-innovation/"
+                href="http://www.youtube.com/@StrepleFinance"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="size-[45px] bg-[#5A555C4D] rounded-full flex items-center justify-center"
               >
-                <FaLinkedin size={20} className="text-white/70" />
+                <FaYoutube size={20} className="text-white/70" />
               </a>
               <a
                 href="https://x.com/streplenetwork"
@@ -146,6 +146,12 @@ export default function Footer() {
                 className="text-sm leading-[25px] tracking-[1px]"
               >
                 Blog
+              </Link>
+              <Link
+                href={"/Streple_Litepaper.pdf"}
+                className="text-sm leading-[25px] tracking-[1px]"
+              >
+                Litepaper
               </Link>
               <a
                 href="mailto:hello@streple.com"
