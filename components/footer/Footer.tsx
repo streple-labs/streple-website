@@ -29,7 +29,7 @@ export default function Footer() {
               placeholder="ENTER EMAIL ADDRESS"
               className={`pr-12 border-b-[3px] border-b-white/70 leading-[150%] tracking-[2px] font-normal text-base sm:text-lg md:text-2xl lg:text-4xl placeholder:text-white/40  w-full ring-0 border-0 outline-0 ${anton.className}`}
             />
-            <span className="w-6 h-5 md:w-7 md:h-6 lg:w-[42px] lg:h-[36px] absolute right-0 top-0 md:top-2 cursor-pointer">
+            <button className="w-6 h-5 md:w-7 md:h-6 lg:w-[42px] lg:h-[36px] absolute right-0 top-0 md:top-2 cursor-pointer">
               <svg
                 viewBox="0 0 42 36"
                 fill="none"
@@ -41,7 +41,7 @@ export default function Footer() {
                   fillOpacity="0.7"
                 />
               </svg>
-            </span>
+            </button>
           </div>
         </div>
 
