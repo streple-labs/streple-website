@@ -101,7 +101,7 @@ button {
 }
 
 .hero-section-bg {
-  background-image: url("../public/hero-bg.webp");
+  background-image: url("../public/images/hero-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@ button {
 }
 
 .section-1-bg {
-  background-image: url("../public/section-1-bg.webp");
+  background-image: url("../public/images/section-1-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -119,7 +119,7 @@ button {
 }
 
 .section-6-bg {
-  background-image: url("../public/section-6-bg.webp");
+  background-image: url("../public/images/section-6-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -128,7 +128,7 @@ button {
 }
 
 .start-trading-bg {
-  background-image: url("../public/start-trading-bg.webp");
+  background-image: url("../public/images/start-trading-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -274,14 +274,14 @@ button {
 }
 
 .hero-section-bg-mobile {
-  background-image: url("../public/hero-bg-mobile.webp");
+  background-image: url("../public/images/hero-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .section-1-bg-mobile {
-  background-image: url("../public/section-1-bg-mobile.webp");
+  background-image: url("../public/images/section-1-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,14 +290,14 @@ button {
 
 .section-2-bg-mobile,
 .section-3-bg-mobile {
-  background-image: url("../public/section-2to5-bg-mobile.webp");
+  background-image: url("../public/images/section-2to5-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .section-4-bg-mobile {
-  background-image: url("../public/section-2to5-bg-mobile.webp");
+  background-image: url("../public/images/section-2to5-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -322,14 +322,14 @@ button {
 }
 
 .section-5-bg-mobile {
-  background-image: url("../public/section-2to5-bg-mobile.webp");
+  background-image: url("../public/images/section-2to5-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .section-6-bg-mobile {
-  background-image: url("../public/section-6-bg-mobile.webp");
+  background-image: url("../public/images/section-6-bg-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -457,11 +457,11 @@ button {
 }
 
 .article-bg {
-  background-image: url("../public/article-thumbnail.webp");
+  background-image: url("../public/images/article-thumbnail.webp");
 }
 
 .article-ci {
-  background-image: url("../public/article-cover-img.webp");
+  background-image: url("../public/images/article-cover-img.webp");
 }
 
 .article-content h1 {

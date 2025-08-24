@@ -43,7 +43,7 @@ export default function page() {
             </div>
             <div className="w-full lg:w-[50%] flex justify-center lg:justify-end">
               <Image
-                src={"/bitcoin-big.webp"}
+                src={"/images/bitcoin-big.webp"}
                 alt="bitcoin img"
                 width={507}
                 height={547}
@@ -53,7 +53,7 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="xl:hidden absolute bottom-0 h-[278px] w-full right-0 bg-no-repeat bg-[url('../public/bottom-purple-bg.webp')]" />
+        <div className="xl:hidden absolute bottom-0 h-[278px] w-full right-0 bg-no-repeat bg-[url('../public/images/bottom-purple-bg.webp')]" />
       </section>
 
       <section className="flex px-4 sm:px-[6.4%] justify-center">
@@ -80,7 +80,7 @@ export default function page() {
               </div>
               <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                 <Image
-                  src={"/chart.webp"}
+                  src={"/images/chart.webp"}
                   alt="chart diagram"
                   width={621}
                   height={312}
@@ -105,7 +105,7 @@ export default function page() {
               </div>
               <div className="w-full flex">
                 <Image
-                  src={"/arrows.webp"}
+                  src={"/images/arrows.webp"}
                   alt="arrow diagram"
                   width={353}
                   height={363}
@@ -130,7 +130,7 @@ export default function page() {
               </div>
               <div className="w-full flex items-center justify-center">
                 <Image
-                  src={"/followings.webp"}
+                  src={"/images/followings.webp"}
                   alt="followings diagram"
                   width={473}
                   height={139}
@@ -145,7 +145,7 @@ export default function page() {
 
       <section className="flex px-4 sm:px-[6.4%] justify-center">
         <div className="relative mw">
-          <div className="absolute -left-[120px] top-0 bg-no-repeat size-[369px] bg-[url('../public/bitcoin-blurred.webp')]" />
+          <div className="absolute -left-[120px] top-0 bg-no-repeat size-[369px] bg-[url('../public/images/bitcoin-blurred.webp')]" />
 
           <div className="relative py-[92px] flex gap-8 flex-col items-center w-full">
             <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-8">
@@ -167,7 +167,7 @@ export default function page() {
                 <Image
                   key={i}
                   alt={`top trader ${i + 1} `}
-                  src={`/top-trader-${i + 1}.webp`}
+                  src={`/images/top-trader-${i + 1}.webp`}
                   width={403}
                   height={481}
                   className={`w-full object-cover object-center rounded-[15px] h-[481px]`}
@@ -180,7 +180,7 @@ export default function page() {
 
       <section className="flex px-4 sm:px-[6.4%] justify-center relative overflow-x-hidden">
         <div className="flex flex-col items-center md:min-h-[610px] justify-center my-8 md:my-16 w-full mw">
-          <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.webp')]" />
+          <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/images/bitcoin-traced.webp')]" />
           <div className="flex flex-col justify-center mx-auto gap-10 start-trading-bg py-[52px] px-3 md:px-8 lg:py-[92px] lg:px-[80px]">
             <h3
               className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px]  max-w-[700px] ${anton.className}`}

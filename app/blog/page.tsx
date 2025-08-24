@@ -75,7 +75,7 @@ export default function Page() {
         <Link href={"/blog/" + (blogs?.data[0].id || "")} className="w-full">
           <div className="h-[528px] w-full rounded-[28px] overflow-hidden flex flex-col justify-end relative mt-10">
             <Image
-              src={blogs?.data[0].thumbnail || "/blog-thumbnail.jpg"}
+              src={blogs?.data[0].thumbnail || "/images/blog-thumbnail.jpg"}
               alt="blog thumbnail"
               aria-label="blog thumbnail"
               width={1440}
@@ -141,7 +141,7 @@ export default function Page() {
                   <Link href={"/blog/" + blog.id} className="space-y-5" key={i}>
                     <Image
                       alt="blog thumbnail"
-                      src={blog.thumbnail || "/guide-1.png"}
+                      src={blog.thumbnail || "/images/guide-1.png"}
                       width={401}
                       height={237}
                       className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}

@@ -50,14 +50,14 @@ export async function generateMetadata({
     openGraph: {
       title: blog.title,
       description: blog.content.slice(0, 150),
-      images: [blog.thumbnail || "/article-cover-img.webp"],
+      images: [blog.thumbnail || "/images/article-cover-img.webp"],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: blog.title,
       description: blog.content.slice(0, 150),
-      images: [blog.thumbnail || "/article-cover-img.webp"],
+      images: [blog.thumbnail || "/images/article-cover-img.webp"],
     },
   };
 }
@@ -111,7 +111,7 @@ export default async function page({
               </div>
             </div>
             <Image
-              src={blog.thumbnail || "/article-cover-img.webp"}
+              src={blog.thumbnail || "/images/article-cover-img.webp"}
               alt="blog cover"
               width={862}
               height={521}

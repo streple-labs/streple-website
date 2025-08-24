@@ -55,14 +55,14 @@ export async function generateMetadata({
     openGraph: {
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail || "/article-cover-img.webp"],
+      images: [course.thumbnail || "/images/article-cover-img.webp"],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail || "/article-cover-img.webp"],
+      images: [course.thumbnail || "/images/article-cover-img.webp"],
     },
   };
 }
@@ -115,7 +115,7 @@ export default async function page({
               </div>
             </div>
             <Image
-              src={course.thumbnail || "/article-cover-img.webp"}
+              src={course.thumbnail || "/images/article-cover-img.webp"}
               alt="course cover"
               width={862}
               height={521}
@@ -323,7 +323,7 @@ export default async function page({
 //                 <div className="space-y-5" key={i}>
 //                   <Image
 //                     alt="image"
-//                     src={`/guide-${i + 1}.png`}
+//                     src={`/images/guide-${i + 1}.png`}
 //                     width={401}
 //                     height={237}
 //                     className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}

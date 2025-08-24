@@ -44,7 +44,7 @@ export default function MobileHome() {
             <div className="flex w-max h-max mx-auto">
               <Image
                 loading="lazy"
-                src="/portfolio.webp"
+                src="/images/portfolio.webp"
                 alt="portfolio"
                 width={372}
                 height={372}
@@ -75,17 +75,17 @@ export default function MobileHome() {
           <div className="mt-[52px] flex flex-col md:flex-row gap-6 md:gap-4 mx-auto w-898-lg w-1122-xl xxl:w-[1262px] 2xl:w-[1346px] justify-between">
             {[
               {
-                img: "/follow-trade.svg",
+                img: "/images/follow-trade.svg",
                 title: "Awareness",
                 desc: "Get introduced to digital finance, assets, and tools in plain language, with relatable, real-life examples.",
               },
               {
-                img: "/copy-trades.svg",
+                img: "/images/copy-trades.svg",
                 title: "Understanding",
                 desc: "Each trade comes with tips, insights, and clear breakdowns so you understand the reason behind every move.",
               },
               {
-                img: "/learn-more.svg",
+                img: "/images/learn-more.svg",
                 title: "Participation",
                 desc: "Build skills, take action, and step into digital ownership with full support and a thriving community.",
               },
@@ -152,7 +152,7 @@ export default function MobileHome() {
 
           <Image
             loading="lazy"
-            src="/learn-from-the-best.png"
+            src="/images/learn-from-the-best.png"
             alt="learn from the best"
             width={564}
             height={650}
@@ -160,7 +160,7 @@ export default function MobileHome() {
           />
           <Image
             loading="lazy"
-            src="/learn-from-the-best.png"
+            src="/images/learn-from-the-best.png"
             alt="learn from the best"
             width={564}
             height={650}
@@ -202,7 +202,7 @@ export default function MobileHome() {
 
           <Image
             loading="lazy"
-            src="/send-and-receive.png"
+            src="/images/send-and-receive.png"
             alt="send, receive and withdraw"
             width={564}
             height={650}
@@ -210,7 +210,7 @@ export default function MobileHome() {
           />
           <Image
             loading="lazy"
-            src="/send-and-receive.png"
+            src="/images/send-and-receive.png"
             alt="send, receive and withdraw"
             width={564}
             height={650}
@@ -240,7 +240,7 @@ export default function MobileHome() {
                 <div className="flex flex-row gap-3 items-center">
                   <Image
                     loading="lazy"
-                    src="/amaka-ugwu.webp"
+                    src="/images/amaka-ugwu.webp"
                     alt="Amaka Ugwu's Photo"
                     width={60}
                     height={60}
@@ -265,7 +265,7 @@ export default function MobileHome() {
                 <div className="flex flex-row gap-3 items-center">
                   <Image
                     loading="lazy"
-                    src="/david-ossai.webp"
+                    src="/images/david-ossai.webp"
                     alt="David Ossai's Photo"
                     width={60}
                     height={60}
@@ -290,7 +290,7 @@ export default function MobileHome() {
                 <div className="flex flex-row gap-3 items-center">
                   <Image
                     loading="lazy"
-                    src="/femi-adetola.webp"
+                    src="/images/femi-adetola.webp"
                     alt="Femi Adetola's Photo"
                     width={60}
                     height={60}
@@ -316,7 +316,7 @@ export default function MobileHome() {
         <section className="flex flex-col md:flex-row gap-10 section-3-bg-mobile mx-auto px-4 pb-8 pt-[72px]">
           <Image
             loading="lazy"
-            src="/earn-while-you-teach.webp"
+            src="/images/earn-while-you-teach.webp"
             alt="earn while you teach"
             width={564}
             height={650}
@@ -324,7 +324,7 @@ export default function MobileHome() {
           />
           <Image
             loading="lazy"
-            src="/earn-while-you-teach.webp"
+            src="/images/earn-while-you-teach.webp"
             alt="earn while you teach"
             width={564}
             height={650}
@@ -365,8 +365,8 @@ export default function MobileHome() {
         {/* <JoinProtraderProgramSection /> */}
 
         {/* Section 6 - Start trading smarter today with Streple */}
-        <section className="flex flex-col section-6-bg-mobile pb-8 bg-[url('../public/section-6-bg.webp')]">
-          <div className="flex flex-col mx-auto mt-18 gap-10 w-[90%] min-h-[424px] bg-[#FFFFFF0D] rounded-[26px] justify-center px-2 bg-no-repeat bg-cover bg-center bg-[url('../public/start-trading-bg.webp')]">
+        <section className="flex flex-col section-6-bg-mobile pb-8 bg-[url('../public/images/section-6-bg.webp')]">
+          <div className="flex flex-col mx-auto mt-18 gap-10 w-[90%] min-h-[424px] bg-[#FFFFFF0D] rounded-[26px] justify-center px-2 bg-no-repeat bg-cover bg-center bg-[url('../public/images/start-trading-bg.webp')]">
             <span
               className={`flex flex-row mx-auto justify-center text-center font-normal leading-[150%] tracking-[2px] text-2xl xs:text-[27px] md:text-3xl  ${anton.className}`}
             >

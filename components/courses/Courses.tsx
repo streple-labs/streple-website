@@ -99,7 +99,7 @@ export default function Courses() {
                 >
                   <Image
                     alt="course thumbnail"
-                    src={course.thumbnail || "/guide-1.png"}
+                    src={course.thumbnail || "/images/guide-1.png"}
                     width={401}
                     height={237}
                     className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}

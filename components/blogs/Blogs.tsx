@@ -45,7 +45,7 @@ export default function Blogs({ title }: { title?: string }) {
                 <Link href={"/blog/" + blog.id} className="space-y-5" key={i}>
                   <Image
                     alt="blog thumbnail"
-                    src={blog.thumbnail || "/guide-1.png"}
+                    src={blog.thumbnail || "/images/guide-1.png"}
                     width={401}
                     height={237}
                     className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}

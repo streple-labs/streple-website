@@ -42,7 +42,7 @@ export default function Page() {
             {submitted ? (
               <div className="flex flex-col gap-6 md:gap-9">
                 <Image
-                  src={"/success.webp"}
+                  src={"/images/success.webp"}
                   alt="success"
                   width={200}
                   height={109}
@@ -145,8 +145,8 @@ export default function Page() {
         <div className="mw md:min-h-screen xl:min-h-auto w-full relative overflow-hidden">
           <Navbar />
 
-          <div className="absolute size-[280px] min-[320px]:size-[315px] sm:size-[650px] xl:size-[868px] -bottom-[220px] sm:-bottom-[480px] xl:-bottom-[600px] left-1/2 -translate-x-1/2 bg-contain bg-no-repeat bg-[url('../public/eclipse.webp')]" />
-          <div className="absolute size-[124px] sm:size-[186px] xl:size-[242px] -bottom-[70px] sm:-bottom-[90px] xl:-bottom-[110px]  left-1/2 -translate-x-1/2 bg-no-repeat bg-contain bg-[url('../public/bitcoin-faq.webp')]" />
+          <div className="absolute size-[280px] min-[320px]:size-[315px] sm:size-[650px] xl:size-[868px] -bottom-[220px] sm:-bottom-[480px] xl:-bottom-[600px] left-1/2 -translate-x-1/2 bg-contain bg-no-repeat bg-[url('../public/images/eclipse.webp')]" />
+          <div className="absolute size-[124px] sm:size-[186px] xl:size-[242px] -bottom-[70px] sm:-bottom-[90px] xl:-bottom-[110px]  left-1/2 -translate-x-1/2 bg-no-repeat bg-contain bg-[url('../public/images/bitcoin-faq.webp')]" />
 
           <div className="relative flex flex-col items-center justify-center gap-12 md:gap-[78px] min-h-[70vh] my-20">
             <h3
@@ -160,8 +160,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center md:min-h-[610px] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/section-6-bg.webp')] mb-8 md:mt-16">
-        {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/bitcoin-traced.webp')]" /> */}
+      <section className="flex flex-col items-center md:min-h-[610px] justify-center relative overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[url('../public/images/section-6-bg.webp')] mb-8 md:mt-16">
+        {/* <div className="absolute -right-[70px] top-0 bg-no-repeat size-[242px] bg-[url('../public/images/bitcoin-traced.webp')]" /> */}
         <div className="flex flex-col justify-center mx-auto gap-10 start-trading-bg my-[52px] px-3 md:px-8 lg:my-[92px] lg:px-[80px]">
           <span
             className={`flex flex-row mx-auto justify-center text-center leading-[150%] tracking-[2px] font-normal text-[27px] sm:text-3xl md:text-5xl lg:text-[52px]  max-w-[700px] ${anton.className}`}

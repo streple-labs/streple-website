@@ -36,7 +36,7 @@ export default function DesktopHome() {
             <div className="container w-max h-max hidden lg:flex">
               <Image
                 loading="lazy"
-                src="/portfolio.webp"
+                src="/images/portfolio.webp"
                 alt="portfolio"
                 width={464}
                 height={528}
@@ -45,7 +45,7 @@ export default function DesktopHome() {
             <div className="flex lg:hidden w-max h-max mx-auto">
               <Image
                 loading="lazy"
-                src="/portfolio.webp"
+                src="/images/portfolio.webp"
                 alt="portfolio"
                 width={372}
                 height={372}
@@ -80,17 +80,17 @@ export default function DesktopHome() {
           <div className="flex gap-8 justify-between">
             {[
               {
-                img: "/follow-trade.svg",
+                img: "/images/follow-trade.svg",
                 title: "Awareness",
                 desc: "Get introduced to digital finance, assets, and tools in plain language, with relatable, real-life examples.",
               },
               {
-                img: "/copy-trades.svg",
+                img: "/images/copy-trades.svg",
                 title: "Understanding",
                 desc: "Each trade comes with tips, insights, and clear breakdowns so you understand the reason behind every move.",
               },
               {
-                img: "/learn-more.svg",
+                img: "/images/learn-more.svg",
                 title: "Participation",
                 desc: "Build skills, take action, and step into digital ownership with full support and a thriving community.",
               },
@@ -160,7 +160,7 @@ export default function DesktopHome() {
 
           <Image
             loading="lazy"
-            src="/learn-from-the-best.png"
+            src="/images/learn-from-the-best.png"
             alt="learn from the best"
             width={564}
             height={650}
@@ -207,7 +207,7 @@ export default function DesktopHome() {
 
           <Image
             loading="lazy"
-            src="/send-and-receive.png"
+            src="/images/send-and-receive.png"
             alt="send, receive and withdraw"
             width={564}
             height={650}
@@ -234,7 +234,7 @@ export default function DesktopHome() {
               <div className="flex flex-row gap-3 items-center">
                 <Image
                   loading="lazy"
-                  src="/amaka-ugwu.webp"
+                  src="/images/amaka-ugwu.webp"
                   alt="Amaka Ugwu's Photo"
                   width={60}
                   height={60}
@@ -258,7 +258,7 @@ export default function DesktopHome() {
               <div className="flex flex-row gap-3 items-center">
                 <Image
                   loading="lazy"
-                  src="/david-ossai.webp"
+                  src="/images/david-ossai.webp"
                   alt="David Ossai's Photo"
                   width={60}
                   height={60}
@@ -282,7 +282,7 @@ export default function DesktopHome() {
               <div className="flex flex-row gap-3 items-center">
                 <Image
                   loading="lazy"
-                  src="/femi-adetola.webp"
+                  src="/images/femi-adetola.webp"
                   alt="Femi Adetola's Photo"
                   width={60}
                   height={60}
@@ -310,7 +310,7 @@ export default function DesktopHome() {
         <div className="flex justify-between gap-[82px] mw my-[96px]">
           <Image
             loading="lazy"
-            src="/earn-while-you-teach.webp"
+            src="/images/earn-while-you-teach.webp"
             alt="earn while you teach"
             width={564}
             height={650}
