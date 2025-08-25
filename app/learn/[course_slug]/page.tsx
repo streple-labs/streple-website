@@ -166,7 +166,7 @@ export default async function page({
             </div>
 
             <Link
-              href={"/learn/courses"}
+              href={"/learn"}
               className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
             >
               View all

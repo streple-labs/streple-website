@@ -16,7 +16,7 @@ export default function Courses() {
     queryFn: async () =>
       (
         await api.get("/learnings", {
-          params: { page: 1, limit: 6, status: "Published" },
+          params: { status: "Published" },
         })
       ).data,
   });
@@ -131,7 +131,7 @@ export default function Courses() {
 
         {(courses?.totalCount || 0) > 6 && (
           <Link
-            href={"/learn/courses"}
+            href={"/learn"}
             className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
           >
             View all
