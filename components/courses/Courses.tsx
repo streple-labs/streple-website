@@ -6,9 +6,9 @@ import { estimateReadingMinutes } from "@/utils/utils";
 import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
 import ArticleSkeleton from "../article-skeleton/ArticleSkeleton";
-import { useState } from "react";
 
 export default function Courses() {
   const { data: courses, isPending: loading } = useQuery<CoursesResponse>({
@@ -21,27 +21,9 @@ export default function Courses() {
       ).data,
   });
 
-  const [showAll, setShowAll] = useState<boolean>(true);
-  const [showArticles, setShowArticles] = useState<boolean>(false);
-  const [showVideos, setShowVideos] = useState<boolean>(false);
-
-  function handleShowAll() {
-    setShowAll(true);
-    setShowArticles(false);
-    setShowVideos(false);
-  }
-
-  function handleShowArticles() {
-    setShowAll(false);
-    setShowArticles(true);
-    setShowVideos(false);
-  }
-
-  function handleShowVideos() {
-    setShowAll(false);
-    setShowArticles(false);
-    setShowVideos(true);
-  }
+  const [articleType, setArticleType] = useState<"all" | "articles" | "videos">(
+    "all"
+  );
 
   return (
     <section className="bg-[#1D1B1E] flex px-4 sm:px-[6.4%] justify-center relative">
@@ -54,25 +36,32 @@ export default function Courses() {
 
         <div className="flex items-center gap-8 md:gap-[80px]">
           <span
-            onClick={handleShowAll}
+            onClick={() => {
+              setArticleType("all");
+            }}
             className={`text-center min-w-10 md:min-w-20 pb-2 cursor-pointer text-base md:text-[21px] leading-6 md:leading-8 tracking-[1px] font-normal ${
-              showAll && "border-b-[2.5px] border-b-[#F4E90E]"
+              articleType === "all" && "border-b-[2.5px] border-b-[#F4E90E]"
             }`}
           >
             All
           </span>
           <span
-            onClick={handleShowArticles}
+            onClick={() => {
+              setArticleType("articles");
+            }}
             className={`text-center min-w-10 md:min-w-20 pb-2 cursor-pointer text-base md:text-[21px] leading-6 md:leading-8 tracking-[1px] font-normal ${
-              showArticles && "border-b-[2.5px] border-b-[#F4E90E]"
+              articleType === "articles" &&
+              "border-b-[2.5px] border-b-[#F4E90E]"
             }`}
           >
             Articles
           </span>
           <span
-            onClick={handleShowVideos}
+            onClick={() => {
+              setArticleType("videos");
+            }}
             className={`text-center min-w-10 md:min-w-20 pb-2 cursor-pointer text-base md:text-[21px] leading-6 md:leading-8 tracking-[1px] font-normal ${
-              showVideos && "border-b-[2.5px] border-b-[#F4E90E]"
+              articleType === "videos" && "border-b-[2.5px] border-b-[#F4E90E]"
             }`}
           >
             Videos
@@ -93,7 +82,7 @@ export default function Courses() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full">
               {courses?.data.map((course, i) => (
                 <Link
-                  href={"/learn/courses/" + course.id}
+                  href={"/learn/" + course.id}
                   className="space-y-5"
                   key={i}
                 >
@@ -123,8 +112,6 @@ export default function Courses() {
                           }
                         )}
                       </span>
-                      {/* <span className="size-0.5 bg-white/50" /> */}
-                      {/* <span>{course.view} views</span> */}
                     </p>
                     <p
                       className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders max-w-[400px] whitespace-nowrap text-ellipsis overflow-hidden`}

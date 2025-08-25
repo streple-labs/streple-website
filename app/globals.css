@@ -532,7 +532,3 @@ button {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
 }
-
-.content-chunk {
-  @apply !space-y-2;
-}
