@@ -2,13 +2,13 @@
 
 import { anton } from "@/app/fonts";
 import api from "@/utils/axios";
-import { estimateReadingMinutes } from "@/utils/utils";
+import { estimateReadingMinutes, formatDate } from "@/utils/utils";
 import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
-import ArticleSkeleton from "../article-skeleton/ArticleSkeleton";
+import ArticleSkeleton from "@/components/article-skeleton/ArticleSkeleton";
 
 export default function Courses() {
   const { data: courses, isPending: loading } = useQuery<CoursesResponse>({
@@ -103,16 +103,10 @@ export default function Courses() {
                       </span>
                       <span className="size-0.5 bg-white/50" />
                       <span>
-                        {new Date(course.createdAt).toLocaleDateString(
-                          "en-GB",
-                          {
-                            day: "2-digit",
-                            month: "short",
-                            year: "numeric",
-                          }
-                        )}
+                        {formatDate(course.createdAt)}
                       </span>
                     </p>
+
                     <p
                       className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders max-w-[400px] whitespace-nowrap text-ellipsis overflow-hidden`}
                     >
@@ -158,22 +152,16 @@ export default function Courses() {
             >
               Top Guides
             </h5>
+            {/* TODO: A better logic for selecting top guides */}
             <p className="flex flex-col gap-5.5 font-semibold text-sm leading-[25px] tracking-[1px] text-[#FFFFFFB2]">
-              <Link href={"#"}>
-                Why Copy Trading Is Gaining Massive Popularity in 2025
-              </Link>
-
-              <Link href={"#"}>
-                How to Spot a Reliable Trader Before You Copy
-              </Link>
-
-              <Link href={"#"}>
-                Why Copy Trading Is Gaining Massive Popularity in 2025
-              </Link>
-
-              <Link href={"#"}>
-                Crypto Market Volatility: What It Means for Copy Traders
-              </Link>
+              {
+              courses?.data
+              .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+              .slice(0, 4).map((course, i) => (
+                <Link key={i} href={"/learn/" + course.id}>
+                  {course.title}
+                </Link>
+              ))}
             </p>
           </div>
         </div>

@@ -4,3 +4,11 @@ export function estimateReadingMinutes(text: string): number {
   const minutes = words.length / wordsPerMinute;
   return Math.max(1, Math.ceil(minutes));
 }
+
+export function formatDate(dateString: string) {
+  return new Date(dateString).toLocaleDateString('en-GB', {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}

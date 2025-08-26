@@ -5,8 +5,7 @@ import { estimateReadingMinutes } from "@/utils/utils";
 import { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
-import Link from "next/link";
-import { GoArrowRight } from "react-icons/go";
+import NextReads from "@/components/courses/NextReads";
 
 type Course = {
   id: string;
@@ -128,51 +127,8 @@ export default async function page({
             />
           </div>
 
-          <div className="space-y-6 md:sapce-y-8 w-full">
-            <h5
-              className={`${anton.className} font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-[1px]`}
-            >
-              Next reads
-            </h5>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div className="space-y-5" key={i}>
-                  <Image
-                    alt="image"
-                    src={`/images/guide-${i + 1}.png`}
-                    width={401}
-                    height={237}
-                    className={`w-full h-[237px] object-cover object-center bg-no-repeat rounded-[14px]`}
-                  />
-                  <div className="space-y-2">
-                    <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
-                      <span>7 min</span>{" "}
-                      <span className="size-0.5 bg-white/50" />
-                      <span>Apr 12, 2025</span>
-                      <span className="size-0.5 bg-white/50" />
-                      <span>24k views</span>
-                    </p>
-                    <p
-                      className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders`}
-                    >
-                      How to choose a trader to copy
-                    </p>
-                    <p className="text-sm font-normal leading-[25px] tracking-[1px] text-white/70 max-w-[312px]">
-                      Spot real performance vs hype. Avoid common beginner traps
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
 
-            <Link
-              href={"/learn"}
-              className="text-[#EBF0D5] w-[200px] mx-auto text-base font-bold leading-[150%] tracking-[2px] flex items-center justify-center gap-3 border border-white/20 py-4 px-3 rounded-[15px]"
-            >
-              View all
-              <GoArrowRight size={16} className="text-[#EBF0D5]" />
-            </Link>
-          </div>
+          <NextReads currentCourseId={course_slug} />
         </div>
       </section>
     </main>
