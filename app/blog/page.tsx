@@ -68,14 +68,21 @@ export default function Page() {
       </span>
 
       <section className="flex flex-col px-4 sm:px-[6.4%] items-center ">
-        <div className="mw md:min-h-screen xl:min-h-auto relative overflow-hidden">
+        <div className="mw relative overflow-hidden">
           <Navbar />
         </div>
 
-        <Link href={"/blog/" + (blogs?.data[0].id || "")} className="w-full">
+        <Link
+          href={"/blog/" + (blogs?.data.length ? blogs.data[0].id : "")}
+          className="w-full"
+        >
           <div className="h-[528px] w-full rounded-[28px] overflow-hidden flex flex-col justify-end relative mt-10">
             <Image
-              src={blogs?.data[0].thumbnail || "/images/blog-thumbnail.jpg"}
+              src={
+                blogs?.data.length
+                  ? blogs.data[0].thumbnail
+                  : "/images/blog-thumbnail.jpg"
+              }
               alt="blog thumbnail"
               aria-label="blog thumbnail"
               width={1440}
@@ -83,17 +90,17 @@ export default function Page() {
               className="absolute size-full"
             />
 
-            {blogs && (
+            {!!blogs?.data.length && (
               <div className="relative flex items-center gap-1 m-8">
                 <div className="space-y-4 max-w-[912px]">
                   <h4
                     className={`${anton.className} text-4xl leading-[150%] tracking-[2px] font-normal`}
                   >
-                    {blogs?.data[0].title}
+                    {blogs.data[0].title}
                   </h4>
 
                   <p className="text-[21px]/8 font-semibold tracking-[1px]">
-                    {blogs?.data[0].description.slice(0, 200)}
+                    {blogs.data[0].description.slice(0, 200)}
                   </p>
                 </div>
 
