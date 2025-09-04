@@ -46,17 +46,17 @@ export async function generateMetadata({
 
   return {
     title: blog.title,
-    description: blog.content.slice(0, 150),
+    description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
     openGraph: {
       title: blog.title,
-      description: blog.content.slice(0, 150),
+      description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
       images: [blog.thumbnail || "/images/article-cover-img.webp"],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: blog.title,
-      description: blog.content.slice(0, 150),
+      description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
       images: [blog.thumbnail || "/images/article-cover-img.webp"],
     },
   };

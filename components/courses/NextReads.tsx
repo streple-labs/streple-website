@@ -20,34 +20,27 @@ function getNextThreeCourses(
   allCourses: Course[],
   currentCourseId: string
 ): Course[] {
-  // Edge Case 1: If the initial array is empty or has only one item, there's nothing to recommend.
   if (!allCourses || allCourses.length <= 1) {
     return [];
   }
 
-  // Find the index of the course the user just read.
   const currentIndex = allCourses.findIndex(
     (course) => course.id === currentCourseId
   );
 
-  // If the current course wasn't found, return the first 3 from the main list as a fallback.
   if (currentIndex === -1) {
     return allCourses.slice(0, 3);
   }
 
-  // Edge Case 2: If there are 3 or fewer total courses, the recommendation is simply all the *other* courses.
   if (allCourses.length <= 3) {
     return allCourses.filter((course) => course.id !== currentCourseId);
   }
 
-  // Core Logic: Create an ordered list of potential recommendations.
   const itemsAfter = allCourses.slice(currentIndex + 1);
   const itemsBefore = allCourses.slice(0, currentIndex);
 
-  // The final ordered list wraps around by combining items after, then items before.
   const potentialRecommendations = [...itemsAfter, ...itemsBefore];
 
-  // Return the Next Three Courses.
   return potentialRecommendations.slice(0, 3);
 }
 
