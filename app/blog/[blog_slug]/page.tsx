@@ -59,6 +59,19 @@ export async function generateMetadata({
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
       images: [blog.thumbnail || "/images/article-cover-img.webp"],
     },
+    keywords: [
+      ...blog.tags,
+      "copy trading",
+      "automated trading",
+      "top traders",
+      "crypto trading",
+      "Streple",
+      "mirror trades",
+      "trading app",
+      "earn with trading",
+      "passive income",
+      "crypto investing",
+    ],
   };
 }
 
@@ -98,7 +111,7 @@ export default async function page({
                   <span>|</span>
                   <span>{blog.view} VIEWS</span>
                 </p>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   {blog.tags.map((tag, i) => (
                     <span
                       key={i}
