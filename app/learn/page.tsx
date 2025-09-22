@@ -42,13 +42,19 @@ export default async function page() {
                 Watch now
               </Link>
             </div>
-            <div className="">
-              <Image
-                src={"/images/about-us-hero-img.webp"}
-                alt="hero img"
-                width={564}
-                height={413}
-              />
+            <div className="max-w-[564px] max-h-[413px] size-full">
+              <video
+                autoPlay={false}
+                preload="metadata"
+                loop
+                playsInline
+                className="rounded-2xl size-full object-cover object-center"
+                controls
+                poster="/images/learn-hero.jpg"
+              >
+                <source src="/videos/new-trader-tips.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>

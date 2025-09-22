@@ -127,7 +127,6 @@ export default async function page({
             />
           </div>
 
-
           <NextReads currentCourseId={course_slug} />
         </div>
       </section>
