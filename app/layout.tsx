@@ -3,6 +3,8 @@ import Footer from "@/components/footer/Footer";
 import QueryProvider from "@/providers/query-provider";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -62,6 +64,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <SpeedInsights />
+      <Analytics />
       <QueryProvider>
         <body className={`${openSans.className} antialiased`}>
           {children}
