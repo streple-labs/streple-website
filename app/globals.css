@@ -5,6 +5,10 @@
   --breakpoint-xxl: 1440px;
 }
 
+html {
+  scroll-behavior: none;
+}
+
 body {
   background: #1b191c;
   color: #ffffff;
@@ -137,6 +141,16 @@ button {
   min-height: 524px;
   /* padding: 92px 80px; */
   border-radius: 26px;
+}
+
+@media (max-width: 768px) {
+  .section-6-bg {
+    min-height: 400px;
+  }
+
+  .start-trading-bg {
+    min-height: 320px;
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1439.98px) {
