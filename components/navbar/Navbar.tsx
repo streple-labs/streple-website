@@ -15,6 +15,7 @@ const navItems = [
   { href: "/faq", label: "FAQs" },
   { href: "/protraders", label: "ProTraders" },
   { href: "/blog", label: "Blog" },
+  { href: "/partnership", label: "Partnership" },
 ];
 
 export default function Navbar() {
@@ -44,10 +45,11 @@ export default function Navbar() {
               <Link
                 key={Math.random()}
                 href={item.href}
-                className={`leading-6 tracking-[1px] ${pathname.startsWith(item.href)
-                  ? "text-[#F4E90EB2]"
-                  : "text-white"
-                  }`}
+                className={`leading-6 tracking-[1px] ${
+                  pathname.startsWith(item.href)
+                    ? "text-[#F4E90EB2]"
+                    : "text-white"
+                }`}
               >
                 {item.label}
               </Link>
@@ -131,10 +133,11 @@ export default function Navbar() {
                     <Link
                       key={Math.random()}
                       href={item.href}
-                      className={`leading-6 tracking-[1px] ${pathname === item.href
-                        ? "text-[#F4E90EB2]"
-                        : "text-white"
-                        }`}
+                      className={`leading-6 tracking-[1px] ${
+                        pathname === item.href
+                          ? "text-[#F4E90EB2]"
+                          : "text-white"
+                      }`}
                     >
                       {item.label}
                     </Link>
