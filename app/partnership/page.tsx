@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar/Navbar";
 import { GoArrowRight } from "react-icons/go";
 import { anton } from "../fonts";
 import React from "react";
+import RequestDeckForm from "./request-deck-form";
 
 export default function page() {
   return (
@@ -246,25 +247,7 @@ export default function page() {
               profitability.
             </p>
 
-            <form className="flex flex-col md:flex-row items-center gap-6 w-full justify-center">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                aria-label="email"
-                className="h-[70px] max-w-[573px] w-full rounded-[20px] py-3 px-4 md:py-5 md:px-6 bg-[#302D30] text-white/50 tracking-[1px] ring-0 border-0 outline-0"
-                placeholder="Input your email address"
-              />
-              <a
-                href="https://forms.gle/FZmzQX3SbVjiHPo18"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex justify-center items-center rounded-3xl p-4 gap-3 bg-[#B39FF0] font-bold tracking-[1px] leading-6 text-sm md:text-base text-[#2C2D28]"
-              >
-                Request Investor Deck
-                <GoArrowRight size={20} />
-              </a>
-            </form>
+            <RequestDeckForm />
 
             <div></div>
           </div>
@@ -334,11 +317,10 @@ export default function page() {
             </defs>
           </svg>
         </span>
-        <span className="absolute bottom-0 left-1/2 -translate-x-1/2">
+        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
           <svg
-            width="1440"
-            height="505"
             viewBox="0 0 1440 505"
+            className="h-[505px] w-full"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
