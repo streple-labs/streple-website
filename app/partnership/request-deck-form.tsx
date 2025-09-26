@@ -11,9 +11,19 @@ export default function RequestDeckForm() {
     <>
       {showDeckForm && (
         <div className="fixed inset-0 items-center justify-center z-50">
-          <div className="absolute inset-0 bg-black/10" />
+          <div
+            className="absolute inset-0 bg-black/10"
+            onClick={() => {
+              setShowDeckForm(false);
+            }}
+          />
 
-          <div className="overflow-y-auto w-full h-full flex items-center justify-center relative p-6">
+          <div
+            className="overflow-y-auto w-full h-full flex items-center justify-center relative p-6"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             <form
               className="bg-[#262427] py-10 px-4 flex flex-col items-center text-start gap-9 rounded-[10px] w-full max-w-[637px]"
               onSubmit={(e) => {
