@@ -14,12 +14,14 @@ export default function Footer() {
               className={`${anton.className} w-auto text-base xs:text-[18px] sm:text-xl md:text-2xl lg:text-[36px] text-gradient-copy-top-traders leading-[150%] tracking-[2px]`}
             >
               Subscribe to Our
-              <br />Newsletter
+              <br />
+              Newsletter
             </h3>
 
             <p className="font-normal text-sm tracking-[1px] leading-8 xl:text-base ">
               By subscribing, you’ll receive helpful
-              <br />content and platform updates from Streple. Unsubscribe anytime.
+              <br />
+              content and platform updates from Streple. Unsubscribe anytime.
             </p>
           </div>
 
@@ -145,7 +147,7 @@ export default function Footer() {
                 href={"/blog"}
                 className="text-sm leading-[25px] tracking-[1px]"
               >
-                Blog
+                Press
               </Link>
               <Link
                 href={"/documents/whitepaper/streple-litepaper.pdf"}
@@ -153,22 +155,12 @@ export default function Footer() {
               >
                 Litepaper
               </Link>
-              <a
-                href="mailto:hello@streple.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={"/partnership"}
                 className="text-sm leading-[25px] tracking-[1px]"
               >
-                Hello@streple.com
-              </a>
-              <a
-                href="mailto:partnership@streple.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm leading-[25px] tracking-[1px]"
-              >
-                Partnership@streple.com
-              </a>
+                Partnership
+              </Link>
             </div>
             <div className="gap-4 flex flex-col">
               <h5
@@ -176,41 +168,27 @@ export default function Footer() {
               >
                 Legal
               </h5>
-              <a
-                target="_blank"
+              <Link
                 href="/documents/privacy-policy/streple-privacy-policy.docx"
                 className="text-sm leading-[25px] tracking-[1px]"
               >
                 Privacy Policy
-              </a>
-              <a
-                target="_blank"
+              </Link>
+              <Link
                 href="/documents/terms/streple-terms-and-conditions.docx"
                 className="text-sm leading-[25px] tracking-[1px]"
               >
                 Terms and Conditions
-              </a>
-              <a
-                target="_blank"
-                href="#"
-                className="text-sm leading-[25px] tracking-[1px]"
-              >
+              </Link>
+              <Link href="#" className="text-sm leading-[25px] tracking-[1px]">
                 End-User license agreement
-              </a>
-              <a
-                target="_blank"
-                href="#"
-                className="text-sm leading-[25px] tracking-[1px]"
-              >
+              </Link>
+              <Link href="#" className="text-sm leading-[25px] tracking-[1px]">
                 General risk disclosure
-              </a>
-              <a
-                target="_blank"
-                href="#"
-                className="text-sm leading-[25px] tracking-[1px]"
-              >
+              </Link>
+              <Link href="#" className="text-sm leading-[25px] tracking-[1px]">
                 Disclaimer
-              </a>
+              </Link>
             </div>
           </div>
         </div>

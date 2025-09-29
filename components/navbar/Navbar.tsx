@@ -15,7 +15,6 @@ const navItems = [
   { href: "/faq", label: "FAQs" },
   { href: "/protraders", label: "ProTraders" },
   { href: "/blog", label: "Blog" },
-  { href: "/partnership", label: "Partnership" },
 ];
 
 export default function Navbar() {
