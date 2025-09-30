@@ -56,12 +56,19 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-row items-center gap-6">
-            <Link href="#" className="font-normal text-base ">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://app.streple.com"
+              className="font-normal text-base"
+            >
               Login
             </Link>
 
             <Link
-              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://app.streple.com"
               className="flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-[#2C2C26]"
             >
               Sign up
@@ -86,7 +93,9 @@ export default function Navbar() {
 
             <div className="flex flex-row gap-4 items-center">
               <Link
-                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://app.streple.com"
                 className="max-[300px]:hidden flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-3 py-2 gap-2 font-bold text-sm text-[#2C2C26]"
               >
                 Sign up
@@ -145,14 +154,18 @@ export default function Navbar() {
 
                 <div className="flex flex-col gap-3 mt-12 text-center">
                   <Link
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://app.streple.com"
                     className="items-center border border-[#EBF0D5] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base "
                   >
                     Login
                   </Link>
 
                   <Link
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://app.streple.com"
                     className="flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-[#2C2C26]"
                   >
                     Sign up
