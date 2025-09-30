@@ -59,16 +59,17 @@ export default function Navbar() {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://app.streple.com"
+              href="https://app.streple.com/login"
               className="font-normal text-base"
             >
               Login
             </Link>
 
             <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.streple.com"
+              // target="_blank"
+              // rel="noopener noreferrer"
+              // href="https://app.streple.com"
+              href=""
               className="flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-[#2C2C26]"
             >
               Sign up
@@ -93,9 +94,10 @@ export default function Navbar() {
 
             <div className="flex flex-row gap-4 items-center">
               <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://app.streple.com"
+                // target="_blank"
+                // rel="noopener noreferrer"
+                // href="https://app.streple.com"
+                href=""
                 className="max-[300px]:hidden flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-3 py-2 gap-2 font-bold text-sm text-[#2C2C26]"
               >
                 Sign up
@@ -156,16 +158,17 @@ export default function Navbar() {
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://app.streple.com"
+                    href="https://app.streple.com/login"
                     className="items-center border border-[#EBF0D5] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base "
                   >
                     Login
                   </Link>
 
                   <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://app.streple.com"
+                    // target="_blank"
+                    // rel="noopener noreferrer"
+                    // href="https://app.streple.com"
+                    href=""
                     className="flex flex-row items-center justify-center bg-[#F4E90E] hover:bg-[#CEC510] rounded-[20px] px-10 py-3 gap-2.5 font-bold text-base text-[#2C2C26]"
                   >
                     Sign up
