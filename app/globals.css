@@ -76,6 +76,8 @@ button {
 }
 
 .testimonial-card {
+  background-color: #ffffff0d;
+  backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   width: 396px;
@@ -87,21 +89,8 @@ button {
   padding-right: 24px;
   padding-bottom: 52px;
   padding-left: 24px;
-  background: #ffffff0d;
   border: 3px solid;
   border-color: #434343c2;
-  backdrop-filter: blur(4px);
-  /* border: 5px solid;
-  border-image-source: linear-gradient(
-      159.57deg,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(255, 255, 255, 0.7) 98.54%
-    ),
-    linear-gradient(
-      160.42deg,
-      rgba(255, 255, 255, 0.2) 0.52%,
-      rgba(0, 0, 0, 0.2) 98.96%
-    ); */
 }
 
 .hero-section-bg {
@@ -545,4 +534,23 @@ button {
   background-color: #8b6af5 !important;
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
+}
+
+.pt-how-card-bg {
+  background: linear-gradient(
+      0deg,
+      rgba(90, 85, 92, 0.05),
+      rgba(90, 85, 92, 0.05)
+    ),
+    linear-gradient(
+      106.01deg,
+      rgba(0, 0, 0, 0) 29.78%,
+      rgba(0, 0, 0, 0.12) 74.68%
+    );
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
 }

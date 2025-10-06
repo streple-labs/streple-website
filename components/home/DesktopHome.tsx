@@ -230,77 +230,48 @@ export default function DesktopHome() {
           </span>
 
           <div className="flex flex-row w-full justify-between">
-            <div className="testimonial-card">
-              <div className="flex flex-row gap-3 items-center">
-                <Image
-                  loading="lazy"
-                  src="/images/amaka-ugwu.webp"
-                  alt="Amaka Ugwu's Photo"
-                  width={60}
-                  height={60}
-                  className="w-[60px] h-[60px] rounded-full"
-                />
-                <span
-                  className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
-                >
-                  Amaka Ugwu
-                </span>
+            {[
+              {
+                name: "Amaka Ugwu",
+                img: "/images/amaka-ugwu.webp",
+                testimonial:
+                  "“I never thought I could trade. I just picked a top trader, week. Streple made me feel like I actually belong in the market.”",
+              },
+              {
+                name: "David Ossai",
+                img: "/images/david-ossai.webp",
+                testimonial:
+                  "“I work full time, so I don’t have time to sit with charts all day. Streple lets me copy traders with proven stats. I just check my phone, adjust my limits, and go about my day.”",
+              },
+              {
+                name: "Femi Adetola",
+                img: "/images/femi-adetola.webp",
+                testimonial:
+                  "“I wanted to grow my savings but had zero knowledge of crypto. Streple made it easy to get started without stress. I feel like my money is working for me now.”",
+              },
+            ].map((testimonial, i) => (
+              <div key={i} className="testimonial-card">
+                <div className="flex flex-row gap-3 items-center">
+                  <Image
+                    loading="lazy"
+                    src={testimonial.img}
+                    alt="Testifier's Photo"
+                    width={60}
+                    height={60}
+                    className="w-[60px] h-[60px] rounded-full"
+                  />
+                  <span
+                    className={`font-normal text-base leading-[150%] tracking-[2px] ${anton.className}`}
+                  >
+                    {testimonial.name}
+                  </span>
+                </div>
+
+                <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
+                  {testimonial.testimonial}
+                </p>
               </div>
-
-              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
-                “I never thought I could trade. I just picked a top trader, set
-                my budget, and boom. I made a small profit in my first week.
-                Streple made me feel like I actually belong in the market.”
-              </p>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="flex flex-row gap-3 items-center">
-                <Image
-                  loading="lazy"
-                  src="/images/david-ossai.webp"
-                  alt="David Ossai's Photo"
-                  width={60}
-                  height={60}
-                  className="w-[60px] h-[60px] rounded-full"
-                />
-                <span
-                  className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
-                >
-                  David Ossai
-                </span>
-              </div>
-
-              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
-                “I work full time, so I don&apos;t have time to sit with charts
-                all day. Streple lets me copy traders with proven stats. I just
-                check my phone, adjust my limits, and go about my day.”
-              </p>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="flex flex-row gap-3 items-center">
-                <Image
-                  loading="lazy"
-                  src="/images/femi-adetola.webp"
-                  alt="Femi Adetola's Photo"
-                  width={60}
-                  height={60}
-                  className="w-[60px] h-[60px] rounded-full"
-                />
-                <span
-                  className={`font-normal text-base leading-[150%] tracking-[2px]  ${anton.className}`}
-                >
-                  Femi Adetola
-                </span>
-              </div>
-
-              <p className="font-normal leading-8 tracking-[1px] text-sm xl:text-[21px] ">
-                “I wanted to grow my savings but had zero knowledge of crypto.
-                Streple made it easy to get started without stress. I feel like
-                my money is working for me now.”
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
