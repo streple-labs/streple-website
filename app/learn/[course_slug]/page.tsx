@@ -1,11 +1,11 @@
 import { anton } from "@/app/fonts";
+import NextReads from "@/components/courses/NextReads";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
 import { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
-import NextReads from "@/components/courses/NextReads";
 
 type Course = {
   id: string;
@@ -33,10 +33,10 @@ const getCourse = unstable_cache(
     );
     return response.data.data;
   },
-  ["course", "course-detail"],
+  ["course"],
   {
     revalidate: 60,
-    tags: ["course", "course-detail"],
+    tags: ["course"],
   }
 );
 
@@ -54,14 +54,14 @@ export async function generateMetadata({
     openGraph: {
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail || "/images/article-cover-img.webp"],
+      images: [course.thumbnail],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail || "/images/article-cover-img.webp"],
+      images: [course.thumbnail],
     },
   };
 }
@@ -103,8 +103,6 @@ export default async function page({
                       estimateReadingMinutes(course.contents.join(""))}{" "}
                     min
                   </span>
-                  {/* <span>|</span> */}
-                  {/* <span>{course.view} VIEWS</span> */}
                 </p>
                 <div className="flex gap-2">
                   <span className="rounded-[21px] border-[#FDF9FF99] border py-2 px-1 min-w-[90px] flex items-center justify-center text-xs leading-4 tracking-[1px] text-white/50">

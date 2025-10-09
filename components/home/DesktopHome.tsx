@@ -11,11 +11,11 @@ export default function DesktopHome() {
           <Navbar />
           {/* HERO Section */}
           <div className="flex flex-col min-h-[678px] mt-16 xl:mt-32 gap-[17px] items-center text-center">
-            <h2
+            <h1
               className={`leading-[150%] tracking-[2px] justify-center items-center font-normal text-2xl xs:text-[27px] sm:text-4xl md:text-5xl lg:text-[52px] max-w-[940px] text-gradient-copy-top-traders ${anton.className}`}
             >
               Learn. Trade. Tokenize
-            </h2>
+            </h1>
 
             <p className="font-normal leading-8 text-[21px] text-sm sm:text-base text-[#FFFFFFB2] max-w-[694px]">
               Your Journey Into Digital Ownership Starts Here

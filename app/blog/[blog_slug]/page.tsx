@@ -2,7 +2,7 @@ import { anton } from "@/app/fonts";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
 import Blogs from "../../../components/blogs/Blogs";
@@ -29,18 +29,21 @@ const getBlog = unstable_cache(
     const response: BlogResponse = await api.get(`/blog?id=${blog_slug}`);
     return response.data.data;
   },
-  ["blog", "blog-detail"],
+  ["blog"],
   {
     revalidate: 60,
-    tags: ["blog", "blog-detail"],
+    tags: ["blog"],
   }
 );
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ blog_slug: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata(
+  {
+    params,
+  }: {
+    params: Promise<{ blog_slug: string }>;
+  },
+  parents: ResolvingMetadata
+): Promise<Metadata> {
   const { blog_slug } = await params;
   const blog = await getBlog(blog_slug);
 
@@ -50,28 +53,16 @@ export async function generateMetadata({
     openGraph: {
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [blog.thumbnail || "/images/article-cover-img.webp"],
+      images: [blog.thumbnail],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [blog.thumbnail || "/images/article-cover-img.webp"],
+      images: [blog.thumbnail],
     },
-    keywords: [
-      ...blog.tags,
-      "copy trading",
-      "automated trading",
-      "top traders",
-      "crypto trading",
-      "Streple",
-      "mirror trades",
-      "trading app",
-      "earn with trading",
-      "passive income",
-      "crypto investing",
-    ],
+    keywords: [...blog.tags, ...((await parents).keywords || [])],
   };
 }
 
@@ -108,8 +99,8 @@ export default async function page({
               <div className="flex flex-wrap justify-between items-center gap-4">
                 <p className="flex gap-1.5 items-center font-semibold text-sm leading-[150%] tracking-[2px]">
                   <span>{estimateReadingMinutes(blog.content)} min</span>
-                  <span>|</span>
-                  <span>{blog.view} VIEWS</span>
+                  {/* <span>|</span>
+                  <span>{blog.view} VIEWS</span> */}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {blog.tags.map((tag, i) => (

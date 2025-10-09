@@ -9,6 +9,8 @@ import Faq from "./faqs";
 
 export const metadata: Metadata = {
   title: "Protraders",
+  description:
+    "Become a pro trader on Streple. Share strategies, earn rewards, and let followers copy your trades in a trusted, gamified trading community.",
 };
 
 export default function page() {
