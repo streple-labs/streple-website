@@ -167,8 +167,8 @@ export default function Page() {
                             }
                           )}
                         </span>
-                        <span className="size-0.5 bg-white/50" />
-                        <span>{blog.view} views</span>
+                        {/* <span className="size-0.5 bg-white/50" />
+                        <span>{blog.view} views</span> */}
                       </p>
                       <p
                         className={`${anton.className} text-xl leading-[150%] tracking-[2%] font-normal text-gradient-copy-top-traders max-w-[400px] whitespace-nowrap text-ellipsis overflow-hidden`}
