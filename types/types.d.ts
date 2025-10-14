@@ -28,6 +28,7 @@ type Course = {
   level: "Beginner" | "Advanced";
   type: "pdf" | "article";
   createdAt: string;
+  slug: string;
 };
 
 type CoursesResponse = {

@@ -29,7 +29,7 @@ type CoursesResponse = {
 const getCourse = unstable_cache(
   async (course_slug: string): Promise<Course> => {
     const response: CoursesResponse = await api.get(
-      `/learning?id=${course_slug}`
+      `/learning?slug=${course_slug}`
     );
     return response.data.data;
   },
@@ -125,7 +125,7 @@ export default async function page({
             />
           </div>
 
-          <NextReads currentCourseId={course_slug} />
+          <NextReads slug={course_slug} />
         </div>
       </section>
     </main>

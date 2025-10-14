@@ -80,7 +80,7 @@ button {
   backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
-  width: 396px;
+  max-width: 396px;
   min-height: 496px;
   gap: 40px;
   border-radius: 24px;

@@ -73,7 +73,7 @@ export default function Page() {
         </div>
 
         <Link
-          href={"/blog/" + (blogs?.data.length ? blogs.data[0].id : "")}
+          href={"/blog/" + (blogs?.data.length ? blogs.data[0].slug : "")}
           className="w-full"
         >
           <div className="h-[528px] w-full rounded-[28px] overflow-hidden flex flex-col justify-end relative mt-10">
@@ -145,7 +145,11 @@ export default function Page() {
               )}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
                 {blogs?.data.map((blog, i) => (
-                  <Link href={"/blog/" + blog.id} className="space-y-5" key={i}>
+                  <Link
+                    href={"/blog/" + blog.slug}
+                    className="space-y-5"
+                    key={i}
+                  >
                     <Image
                       alt="blog thumbnail"
                       src={blog.thumbnail || "/images/guide-1.png"}

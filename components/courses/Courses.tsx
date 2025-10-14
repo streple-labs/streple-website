@@ -1,6 +1,7 @@
 "use client";
 
 import { anton } from "@/app/fonts";
+import ArticleSkeleton from "@/components/article-skeleton/ArticleSkeleton";
 import api from "@/utils/axios";
 import { estimateReadingMinutes, formatDate } from "@/utils/utils";
 import { useQuery } from "@tanstack/react-query";
@@ -8,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
-import ArticleSkeleton from "@/components/article-skeleton/ArticleSkeleton";
 
 export default function Courses() {
   const { data: courses, isPending: loading } = useQuery<CoursesResponse>({
@@ -20,6 +20,8 @@ export default function Courses() {
         })
       ).data,
   });
+
+  console.log(courses);
 
   const [articleType, setArticleType] = useState<"all" | "articles" | "videos">(
     "all"
@@ -82,7 +84,7 @@ export default function Courses() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full">
               {courses?.data.map((course, i) => (
                 <Link
-                  href={"/learn/" + course.id}
+                  href={"/learn/" + course.slug}
                   className="space-y-5"
                   key={i}
                 >
@@ -102,9 +104,7 @@ export default function Courses() {
                         min
                       </span>
                       <span className="size-0.5 bg-white/50" />
-                      <span>
-                        {formatDate(course.createdAt)}
-                      </span>
+                      <span>{formatDate(course.createdAt)}</span>
                     </p>
 
                     <p
@@ -154,14 +154,18 @@ export default function Courses() {
             </h5>
             {/* TODO: A better logic for selecting top guides */}
             <p className="flex flex-col gap-5.5 font-semibold text-sm leading-[25px] tracking-[1px] text-[#FFFFFFB2]">
-              {
-              courses?.data
-              .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-              .slice(0, 4).map((course, i) => (
-                <Link key={i} href={"/learn/" + course.id}>
-                  {course.title}
-                </Link>
-              ))}
+              {courses?.data
+                .sort(
+                  (a, b) =>
+                    new Date(b.createdAt).getTime() -
+                    new Date(a.createdAt).getTime()
+                )
+                .slice(0, 4)
+                .map((course, i) => (
+                  <Link key={i} href={"/learn/" + course.slug}>
+                    {course.title}
+                  </Link>
+                ))}
             </p>
           </div>
         </div>

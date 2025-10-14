@@ -26,7 +26,7 @@ type BlogResponse = {
 
 const getBlog = unstable_cache(
   async (blog_slug: string): Promise<Blog> => {
-    const response: BlogResponse = await api.get(`/blog?id=${blog_slug}`);
+    const response: BlogResponse = await api.get(`/blog?slug=${blog_slug}`);
     return response.data.data;
   },
   ["blog"],

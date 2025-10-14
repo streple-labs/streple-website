@@ -1,39 +1,34 @@
 "use client";
 
 import { anton } from "@/app/fonts";
+import ArticleSkeleton from "@/components/article-skeleton/ArticleSkeleton";
 import api from "@/utils/axios";
 import { estimateReadingMinutes, formatDate } from "@/utils/utils";
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import { useQuery } from "@tanstack/react-query";
-import ArticleSkeleton from "@/components/article-skeleton/ArticleSkeleton";
 
 /**
  * Gets the next recommended courses from an array, wrapping around if necessary.
  *
  * @param {Course[]} allCourses - The complete array of course objects.
- * @param {string} currentCourseId - The unique ID of the course the user just finished.
+ * @param {string} slug - The slug of the course the user just finished.
  * @returns {Course[]} A new array containing up to 3 recommended courses.
  */
-function getNextThreeCourses(
-  allCourses: Course[],
-  currentCourseId: string
-): Course[] {
+function getNextThreeCourses(allCourses: Course[], slug: string): Course[] {
   if (!allCourses || allCourses.length <= 1) {
     return [];
   }
 
-  const currentIndex = allCourses.findIndex(
-    (course) => course.id === currentCourseId
-  );
+  const currentIndex = allCourses.findIndex((course) => course.slug === slug);
 
   if (currentIndex === -1) {
     return allCourses.slice(0, 3);
   }
 
   if (allCourses.length <= 3) {
-    return allCourses.filter((course) => course.id !== currentCourseId);
+    return allCourses.filter((course) => course.slug !== slug);
   }
 
   const itemsAfter = allCourses.slice(currentIndex + 1);
@@ -45,10 +40,10 @@ function getNextThreeCourses(
 }
 
 type NextReadsProps = {
-  currentCourseId: string;
+  slug: string;
 };
 
-export default function NextReads({ currentCourseId }: NextReadsProps) {
+export default function NextReads({ slug }: NextReadsProps) {
   const { data: allCourses, isPending: loading } = useQuery<CoursesResponse>({
     queryKey: ["courses-data"],
     queryFn: async () =>
@@ -60,7 +55,7 @@ export default function NextReads({ currentCourseId }: NextReadsProps) {
   });
 
   const recommendedCourses = allCourses
-    ? getNextThreeCourses(allCourses.data, currentCourseId)
+    ? getNextThreeCourses(allCourses.data, slug)
     : [];
 
   if (loading) return <ArticleSkeleton />;
@@ -76,7 +71,7 @@ export default function NextReads({ currentCourseId }: NextReadsProps) {
       </h5>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full">
         {recommendedCourses.map((course, i) => (
-          <Link key={i} href={"/learn/" + course.id} className="space-y-5">
+          <Link key={i} href={"/learn/" + course.slug} className="space-y-5">
             <Image
               alt="course thumbnail"
               src={course.thumbnail || `/images/guide-${i + 1}.png`}
