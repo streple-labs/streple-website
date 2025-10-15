@@ -56,6 +56,7 @@ export async function generateMetadata(
       images: [{ url: blog.thumbnail }],
       type: "article",
       siteName: blog.title,
+      url: "https://streple.com/blog/" + blog.slug,
     },
     twitter: {
       card: "summary_large_image",

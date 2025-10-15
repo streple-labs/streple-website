@@ -57,6 +57,7 @@ export async function generateMetadata({
       images: [{ url: course.thumbnail }],
       type: "article",
       siteName: course.title,
+      url: "https://streple.com/learn/" + course.slug,
     },
     twitter: {
       card: "summary_large_image",
