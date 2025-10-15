@@ -35,12 +35,10 @@ export const metadata: Metadata = {
     url: "https://streple.com",
     siteName: "Streple",
     images: [
-      "https://streple.com/opengraph-image.png",
-
-      // {
-      //   url: "https://streple.com/opengraph-image.png",
-      //   alt: "Streple - Borderless Finance & Social Trading App",
-      // },
+      {
+        url: "https://streple.com/opengraph-image.png",
+        alt: "Streple - Borderless Finance & Social Trading App",
+      },
     ],
     locale: "en_US",
     type: "website",
