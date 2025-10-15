@@ -37,8 +37,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://streple.com/opengraph-image.png",
-        width: 1200,
-        height: 630,
         alt: "Streple - Borderless Finance & Social Trading App",
       },
     ],
@@ -50,16 +48,18 @@ export const metadata: Metadata = {
     title: "Streple | Borderless Payments & Social Trading",
     description:
       "Streple lets beginners and pros send money internationally, own crypto & tokenized assets, and copy top traders — all in one secure platform.",
-    images: ["https://streple.com/opengraph-image.png"],
+    images: [{ url: "https://streple.com/opengraph-image.png" }],
     creator: "@StrepleNetwork",
   },
   metadataBase: new URL("https://streple.com"),
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

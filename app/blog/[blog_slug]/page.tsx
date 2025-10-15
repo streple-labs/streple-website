@@ -53,14 +53,14 @@ export async function generateMetadata(
     openGraph: {
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [blog.thumbnail],
+      images: [{ url: blog.thumbnail }],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [blog.thumbnail],
+      images: [{ url: blog.thumbnail }],
     },
     keywords: [...blog.tags, ...((await parents).keywords || [])],
   };

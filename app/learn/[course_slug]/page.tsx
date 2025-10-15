@@ -54,14 +54,14 @@ export async function generateMetadata({
     openGraph: {
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail],
+      images: [{ url: course.thumbnail }],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail],
+      images: [{ url: course.thumbnail }],
     },
   };
 }
