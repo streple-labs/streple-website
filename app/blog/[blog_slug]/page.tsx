@@ -55,6 +55,7 @@ export async function generateMetadata(
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
       images: [{ url: blog.thumbnail }],
       type: "article",
+      siteName: blog.title,
     },
     twitter: {
       card: "summary_large_image",

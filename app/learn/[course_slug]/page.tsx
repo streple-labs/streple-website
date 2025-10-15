@@ -56,6 +56,7 @@ export async function generateMetadata({
       description: course.description.slice(0, 150),
       images: [{ url: course.thumbnail }],
       type: "article",
+      siteName: course.title,
     },
     twitter: {
       card: "summary_large_image",
