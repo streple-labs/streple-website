@@ -42,10 +42,12 @@ export async function generateMetadata(
   }: {
     params: Promise<{ blog_slug: string }>;
   },
-  parents: ResolvingMetadata
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { blog_slug } = await params;
   const blog = await getBlog(blog_slug);
+
+  const previousImages = (await parent).openGraph?.images || [];
 
   return {
     title: blog.title,
@@ -53,7 +55,7 @@ export async function generateMetadata(
     openGraph: {
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [{ url: blog.thumbnail }],
+      images: [blog.thumbnail, ...previousImages],
       type: "article",
       siteName: blog.title,
       url: "https://streple.com/blog/" + blog.slug,
@@ -62,9 +64,9 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [{ url: blog.thumbnail }],
+      images: [blog.thumbnail, ...previousImages],
     },
-    keywords: [...blog.tags, ...((await parents).keywords || [])],
+    keywords: [...blog.tags, ...((await parent).keywords || [])],
   };
 }
 
