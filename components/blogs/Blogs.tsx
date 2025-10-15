@@ -42,7 +42,7 @@ export default function Blogs({ title }: { title?: string }) {
             )}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10">
               {blogs?.data.map((blog, i) => (
-                <Link href={"/blog/" + blog.id} className="space-y-5" key={i}>
+                <Link href={"/blog/" + blog.slug} className="space-y-5" key={i}>
                   <Image
                     alt="blog thumbnail"
                     src={blog.thumbnail || "/images/guide-1.png"}
