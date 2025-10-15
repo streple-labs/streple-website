@@ -3,7 +3,7 @@ import NextReads from "@/components/courses/NextReads";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
 
@@ -40,18 +40,13 @@ const getCourse = unstable_cache(
   }
 );
 
-export async function generateMetadata(
-  {
-    params,
-  }: {
-    params: Promise<{ course_slug: string }>;
-  },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ course_slug: string }>;
+}): Promise<Metadata> {
   const { course_slug } = await params;
   const course = await getCourse(course_slug);
-
-  const previousImages = (await parent).openGraph?.images || [];
 
   return {
     title: course.title,
@@ -59,7 +54,7 @@ export async function generateMetadata(
     openGraph: {
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail, ...previousImages],
+      images: [course.thumbnail],
       type: "article",
       siteName: course.title,
       url: "https://streple.com/learn/" + course.slug,
@@ -68,7 +63,7 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail, ...previousImages],
+      images: [course.thumbnail],
     },
   };
 }
