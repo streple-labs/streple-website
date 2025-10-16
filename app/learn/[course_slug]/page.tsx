@@ -7,19 +7,6 @@ import { Metadata, ResolvingMetadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
 
-type Course = {
-  id: string;
-  title: string;
-  description: string;
-  contents: string[];
-  document: string | null;
-  thumbnail: string;
-  level: "Beginner" | "Advanced";
-  type: "pdf" | "article";
-  createdAt: string;
-  slug: string;
-};
-
 type CoursesResponse = {
   data: {
     data: Course;
@@ -107,7 +94,7 @@ export default async function page({
                 <p className="flex gap-1.5 items-center font-semibold text-sm leading-[150%] tracking-[2px]">
                   <span>
                     {course.contents &&
-                      estimateReadingMinutes(course.contents.join(""))}{" "}
+                      estimateReadingMinutes(course.contents || "")}{" "}
                     min
                   </span>
                 </p>
@@ -128,7 +115,7 @@ export default async function page({
 
             <div
               className="w-full article-content"
-              dangerouslySetInnerHTML={{ __html: course.contents.join("") }}
+              dangerouslySetInnerHTML={{ __html: course.contents || "" }}
             />
           </div>
 

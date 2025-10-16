@@ -83,7 +83,7 @@ export default function NextReads({ slug }: NextReadsProps) {
               <p className="flex gap-2 items-center text-xs leading-4 tracking-[1px] text-white/50">
                 <span>
                   {course.type === "article"
-                    ? estimateReadingMinutes(course.contents.join(""))
+                    ? estimateReadingMinutes(course.contents || "")
                     : ""}{" "}
                   min
                 </span>

@@ -22,7 +22,7 @@ type Course = {
   id: string;
   title: string;
   description: string;
-  contents: string[];
+  contents: string;
   document: string | null;
   thumbnail: string;
   level: "Beginner" | "Advanced";
