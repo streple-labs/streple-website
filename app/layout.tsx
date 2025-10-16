@@ -70,6 +70,7 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
     // yandex: 'your-yandex-verification-code',
   },
+  icons: "https://www.streple.com/favicon.ico",
 };
 
 export const viewport: Viewport = {
