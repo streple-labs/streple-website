@@ -1,10 +1,10 @@
 import { openSans } from "@/app/fonts";
 import Footer from "@/components/footer/Footer";
 import QueryProvider from "@/providers/query-provider";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
