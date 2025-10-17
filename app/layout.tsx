@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Streple",
     images: [
       {
-        url: "https://streple.com/opengraph-image.png",
+        url: "/opengraph-image.png",
         alt: "Streple - Borderless Finance & Social Trading App",
       },
     ],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Streple | Borderless Payments & Social Trading",
     description:
       "Streple lets beginners and pros send money internationally, own crypto & tokenized assets, and copy top traders — all in one secure platform.",
-    images: [{ url: "https://streple.com/opengraph-image.png" }],
+    images: [{ url: "/opengraph-image.png" }],
     creator: "@StrepleNetwork",
   },
   metadataBase: new URL("https://streple.com"),
@@ -70,7 +70,26 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
     // yandex: 'your-yandex-verification-code',
   },
-  icons: "https://www.streple.com/favicon.ico",
+  icons: {
+    icon: [
+      { url: "/streple-logo-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/streple-logo-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/streple-logo-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: {
+      url: "/streple-logo-180x180.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/streple-logo-512x512.png",
+        color: "#1b191c",
+      },
+    ],
+  },
+  themeColor: "#1b191c",
 };
 
 export const viewport: Viewport = {
