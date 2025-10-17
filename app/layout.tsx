@@ -89,12 +89,12 @@ export const metadata: Metadata = {
       },
     ],
   },
-  themeColor: "#1b191c",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#1b191c",
 };
 
 export default function RootLayout({
