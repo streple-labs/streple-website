@@ -47,7 +47,7 @@ export async function generateMetadata(
   const { blog_slug } = await params;
   const blog = await getBlog(blog_slug);
 
-  // const previousImages = (await parent).openGraph?.images || [];
+  const previousImages = (await parent).openGraph?.images || [];
 
   return {
     title: blog.title,
@@ -66,7 +66,7 @@ export async function generateMetadata(
       ],
       type: "article",
       siteName: blog.title,
-      url: "https://streple.com/blog/" + blog.slug,
+      url: `https://streple.com/blog/${blog.slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -80,7 +80,7 @@ export async function generateMetadata(
           height: 459,
           type: "image/png",
         },
-        // ...previousImages,
+        ...previousImages,
       ],
     },
     keywords: [...blog.tags, ...((await parent).keywords || [])],

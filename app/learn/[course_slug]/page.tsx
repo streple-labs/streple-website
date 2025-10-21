@@ -3,7 +3,7 @@ import NextReads from "@/components/courses/NextReads";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
-import { Metadata } from "next"; //ResolvingMetadata
+import { Metadata, ResolvingMetadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
 
@@ -27,16 +27,18 @@ const getCourse = unstable_cache(
   }
 );
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ course_slug: string }>;
-}): // parent: ResolvingMetadata,
-Promise<Metadata> {
+export async function generateMetadata(
+  {
+    params,
+  }: {
+    params: Promise<{ course_slug: string }>;
+  },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { course_slug } = await params;
   const course = await getCourse(course_slug);
 
-  // const previousImages = (await parent).openGraph?.images || [];
+  const previousImages = (await parent).openGraph?.images || [];
 
   return {
     title: course.title,
@@ -52,11 +54,11 @@ Promise<Metadata> {
           height: 459,
           type: "image/png",
         },
-        // ...previousImages,
+        ...previousImages,
       ],
       type: "article",
       siteName: course.title,
-      url: "https://streple.com/learn/" + course.slug,
+      url: `https://streple.com/learn/${course.slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -70,7 +72,7 @@ Promise<Metadata> {
           height: 459,
           type: "image/png",
         },
-        // ...previousImages,
+        ...previousImages,
       ],
     },
   };
