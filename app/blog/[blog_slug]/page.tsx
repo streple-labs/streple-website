@@ -33,7 +33,7 @@ const getBlog = unstable_cache(
   {
     revalidate: 60,
     tags: ["blog"],
-  },
+  }
 );
 
 export async function generateMetadata(
@@ -42,12 +42,12 @@ export async function generateMetadata(
   }: {
     params: Promise<{ blog_slug: string }>;
   },
-  parent: ResolvingMetadata,
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { blog_slug } = await params;
   const blog = await getBlog(blog_slug);
 
-  const previousImages = (await parent).openGraph?.images || [];
+  // const previousImages = (await parent).openGraph?.images || [];
 
   return {
     title: blog.title,
@@ -63,7 +63,6 @@ export async function generateMetadata(
           height: 459,
           type: "image/png",
         },
-        ...previousImages,
       ],
       type: "article",
       siteName: blog.title,
@@ -81,7 +80,7 @@ export async function generateMetadata(
           height: 459,
           type: "image/png",
         },
-        ...previousImages,
+        // ...previousImages,
       ],
     },
     keywords: [...blog.tags, ...((await parent).keywords || [])],

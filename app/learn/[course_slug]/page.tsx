@@ -3,7 +3,7 @@ import NextReads from "@/components/courses/NextReads";
 import Navbar from "@/components/navbar/Navbar";
 import api from "@/utils/axios";
 import { estimateReadingMinutes } from "@/utils/utils";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next"; //ResolvingMetadata
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ type CoursesResponse = {
 const getCourse = unstable_cache(
   async (course_slug: string): Promise<Course> => {
     const response: CoursesResponse = await api.get(
-      `/learning?slug=${course_slug}`,
+      `/learning?slug=${course_slug}`
     );
     return response.data.data;
   },
@@ -24,21 +24,19 @@ const getCourse = unstable_cache(
   {
     revalidate: 60,
     tags: ["course"],
-  },
+  }
 );
 
-export async function generateMetadata(
-  {
-    params,
-  }: {
-    params: Promise<{ course_slug: string }>;
-  },
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ course_slug: string }>;
+}): // parent: ResolvingMetadata,
+Promise<Metadata> {
   const { course_slug } = await params;
   const course = await getCourse(course_slug);
 
-  const previousImages = (await parent).openGraph?.images || [];
+  // const previousImages = (await parent).openGraph?.images || [];
 
   return {
     title: course.title,
@@ -54,7 +52,7 @@ export async function generateMetadata(
           height: 459,
           type: "image/png",
         },
-        ...previousImages,
+        // ...previousImages,
       ],
       type: "article",
       siteName: course.title,
@@ -72,7 +70,7 @@ export async function generateMetadata(
           height: 459,
           type: "image/png",
         },
-        ...previousImages,
+        // ...previousImages,
       ],
     },
   };
