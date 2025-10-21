@@ -16,7 +16,7 @@ type CoursesResponse = {
 const getCourse = unstable_cache(
   async (course_slug: string): Promise<Course> => {
     const response: CoursesResponse = await api.get(
-      `/learning?slug=${course_slug}`
+      `/learning?slug=${course_slug}`,
     );
     return response.data.data;
   },
@@ -24,7 +24,7 @@ const getCourse = unstable_cache(
   {
     revalidate: 60,
     tags: ["course"],
-  }
+  },
 );
 
 export async function generateMetadata(
@@ -33,7 +33,7 @@ export async function generateMetadata(
   }: {
     params: Promise<{ course_slug: string }>;
   },
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { course_slug } = await params;
   const course = await getCourse(course_slug);
@@ -46,7 +46,16 @@ export async function generateMetadata(
     openGraph: {
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail, ...previousImages],
+      images: [
+        {
+          url: course.thumbnail,
+          alt: course.title,
+          width: 606,
+          height: 459,
+          type: "image/png",
+        },
+        ...previousImages,
+      ],
       type: "article",
       siteName: course.title,
       url: "https://streple.com/learn/" + course.slug,
@@ -55,7 +64,16 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: course.title,
       description: course.description.slice(0, 150),
-      images: [course.thumbnail, ...previousImages],
+      images: [
+        {
+          url: course.thumbnail,
+          alt: course.title,
+          width: 606,
+          height: 459,
+          type: "image/png",
+        },
+        ...previousImages,
+      ],
     },
   };
 }
@@ -114,7 +132,7 @@ export default async function page({
             />
 
             <div
-              className="w-full article-content"
+              className="w-full article-content space-y-3"
               dangerouslySetInnerHTML={{ __html: course.contents || "" }}
             />
           </div>

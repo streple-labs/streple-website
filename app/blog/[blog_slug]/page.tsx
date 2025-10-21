@@ -33,7 +33,7 @@ const getBlog = unstable_cache(
   {
     revalidate: 60,
     tags: ["blog"],
-  }
+  },
 );
 
 export async function generateMetadata(
@@ -42,7 +42,7 @@ export async function generateMetadata(
   }: {
     params: Promise<{ blog_slug: string }>;
   },
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { blog_slug } = await params;
   const blog = await getBlog(blog_slug);
@@ -55,7 +55,16 @@ export async function generateMetadata(
     openGraph: {
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [blog.thumbnail, ...previousImages],
+      images: [
+        {
+          url: blog.thumbnail,
+          alt: blog.title,
+          width: 606,
+          height: 459,
+          type: "image/png",
+        },
+        ...previousImages,
+      ],
       type: "article",
       siteName: blog.title,
       url: "https://streple.com/blog/" + blog.slug,
@@ -64,7 +73,16 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: blog.title,
       description: blog.content.slice(0, 150).replace(/<[^>]+>/g, ""),
-      images: [blog.thumbnail, ...previousImages],
+      images: [
+        {
+          url: blog.thumbnail,
+          alt: blog.title,
+          width: 606,
+          height: 459,
+          type: "image/png",
+        },
+        ...previousImages,
+      ],
     },
     keywords: [...blog.tags, ...((await parent).keywords || [])],
   };
@@ -127,7 +145,7 @@ export default async function page({
             />
 
             <div
-              className="w-full article-content space-y-2"
+              className="w-full article-content space-y-5"
               dangerouslySetInnerHTML={{ __html: blog.content }}
             />
           </div>

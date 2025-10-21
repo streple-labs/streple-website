@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "tokenized asset platform",
     "pro trader network",
   ],
+  authors: { name: "Streple", url: "https://streple.com" },
   openGraph: {
     title: "Streple | Send Money Worldwide & Copy Verified Traders",
     description:
@@ -38,6 +39,9 @@ export const metadata: Metadata = {
       {
         url: "/opengraph-image.png",
         alt: "Streple - Borderless Finance & Social Trading App",
+        width: 606,
+        height: 459,
+        type: "image/png",
       },
     ],
     locale: "en_US",
@@ -48,7 +52,15 @@ export const metadata: Metadata = {
     title: "Streple | Borderless Payments & Social Trading",
     description:
       "Streple lets beginners and pros send money internationally, own crypto & tokenized assets, and copy top traders — all in one secure platform.",
-    images: [{ url: "/opengraph-image.png" }],
+    images: [
+      {
+        url: "/opengraph-image.png",
+        alt: "Streple - Borderless Finance & Social Trading App",
+        width: 606,
+        height: 459,
+        type: "image/png",
+      },
+    ],
     creator: "@StrepleNetwork",
   },
   metadataBase: new URL("https://streple.com"),
